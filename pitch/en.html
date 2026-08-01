@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BHC — Team Pitch Deck</title>
+<style>
+  :root{
+    --bg:#0A0A0B; --panel:#141417; --ink:#EDEDED; --muted:#9AA0A8; --line:#26262b;
+    --accent:#FF3D2E; --blue:#2B6FE4; --gold:#E8B84B;
+    --cond:"Arial Narrow","Barlow Condensed",Oswald,Haettenschweiler,"Impact",sans-serif;
+    --body:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html,body{ height:100%; background:var(--bg); color:var(--ink); font-family:var(--body); overflow:hidden; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .deck{ height:100vh; width:100vw; position:relative; }
+  .slide{ position:absolute; inset:0; display:none; flex-direction:column; justify-content:center; padding:6vh 8vw; opacity:0; transition:opacity .35s ease; }
+  .slide.on{ display:flex; opacity:1; }
+  h1,h2,h3,.cond,.kicker,.big{ font-family:var(--cond); text-transform:uppercase; letter-spacing:.5px; font-weight:700; }
+  .kicker{ color:var(--accent); font-size:clamp(12px,1.4vw,16px); letter-spacing:3px; margin-bottom:14px; }
+  h2{ font-size:clamp(30px,5.2vw,68px); line-height:.98; }
+  .lead{ color:var(--muted); font-size:clamp(15px,1.9vw,23px); max-width:60ch; margin-top:18px; line-height:1.5; }
+  .accentbar{ height:5px; width:80px; background:var(--accent); margin:22px 0; }
+  .mono{ display:inline-flex; align-items:center; gap:14px; }
+  .cover{ align-items:flex-start; }
+  .cover .title{ font-size:clamp(42px,8vw,120px); line-height:.9; margin-top:8px; }
+  .cover .sub{ font-size:clamp(14px,1.7vw,20px); color:var(--muted); letter-spacing:2px; margin-top:22px; }
+  .cover .badge{ margin-top:34px; display:inline-block; border:1px solid var(--line); border-radius:100px; padding:9px 18px; font-family:var(--cond); letter-spacing:2px; font-size:14px; color:var(--ink); background:var(--panel); }
+  .cards{ display:grid; gap:18px; margin-top:30px; }
+  .c3{ grid-template-columns:repeat(3,1fr); } .c4{ grid-template-columns:repeat(4,1fr); } .c2{ grid-template-columns:1fr 1fr; }
+  .card{ background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:22px 20px; }
+  .card .n{ font-family:var(--cond); color:var(--accent); font-size:clamp(26px,3vw,40px); }
+  .card h3{ font-size:clamp(15px,1.5vw,19px); margin:4px 0 8px; }
+  .card p{ color:var(--muted); font-size:clamp(12px,1.15vw,14.5px); line-height:1.5; }
+  .stat{ font-family:var(--cond); font-size:clamp(48px,9vw,120px); color:var(--accent); line-height:.9; }
+  .statwrap{ display:flex; align-items:baseline; gap:20px; flex-wrap:wrap; margin-top:14px; }
+  .statsub{ color:var(--muted); font-size:clamp(14px,1.6vw,20px); max-width:34ch; }
+  ul.check{ list-style:none; margin-top:22px; display:grid; gap:12px; }
+  ul.check li{ padding-left:30px; position:relative; font-size:clamp(14px,1.5vw,19px); line-height:1.4; }
+  ul.check li::before{ content:"›"; position:absolute; left:0; color:var(--accent); font-family:var(--cond); font-size:22px; top:-2px; }
+  .two{ display:grid; grid-template-columns:1fr 1fr; gap:34px; align-items:start; }
+  .collbl{ font-family:var(--cond); color:var(--muted); letter-spacing:2px; font-size:13px; margin-bottom:12px; }
+  table.t{ width:100%; border-collapse:collapse; margin-top:22px; }
+  table.t th,table.t td{ text-align:left; padding:11px 14px; border-bottom:1px solid var(--line); font-size:clamp(13px,1.4vw,17px); }
+  table.t th{ font-family:var(--cond); color:var(--muted); letter-spacing:1px; text-transform:uppercase; font-size:12px; }
+  table.t td.r{ text-align:right; font-family:var(--cond); color:var(--accent); }
+  table.t.c th,table.t.c td{ padding:8px 10px; font-size:clamp(11.5px,1.15vw,15px); }
+  table.t .dim{ color:var(--muted); }
+  .steps{ display:grid; gap:16px; margin-top:26px; }
+  .step{ display:flex; gap:18px; align-items:flex-start; }
+  .step .num{ font-family:var(--cond); font-size:clamp(30px,3.4vw,46px); color:var(--accent); min-width:56px; }
+  .step h3{ font-size:clamp(16px,1.7vw,21px); } .step p{ color:var(--muted); font-size:clamp(13px,1.3vw,16px); margin-top:3px; line-height:1.45; }
+  .tag{ display:inline-block; background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:5px 11px; font-size:13px; color:var(--muted); margin:4px 6px 0 0; }
+  .contact b{ color:var(--ink); }
+  .chrome{ position:fixed; left:0; right:0; bottom:0; display:flex; align-items:center; justify-content:space-between; padding:14px 24px; z-index:20; pointer-events:none; }
+  .dots{ display:flex; gap:8px; pointer-events:auto; }
+  .dot{ width:9px; height:9px; border-radius:50%; background:#2c2c33; border:none; cursor:pointer; padding:0; transition:.2s; }
+  .dot.on{ background:var(--accent); transform:scale(1.25); }
+  .counter{ font-family:var(--cond); letter-spacing:2px; color:var(--muted); font-size:14px; }
+  .brandtag{ position:fixed; top:18px; right:24px; font-family:var(--cond); letter-spacing:3px; font-size:13px; color:var(--muted); z-index:20; }
+  .navzone{ position:fixed; top:0; bottom:0; width:22%; z-index:15; cursor:pointer; }
+  .navzone.left{ left:0; } .navzone.right{ right:0; }
+  .hint{ position:fixed; bottom:14px; left:50%; transform:translateX(-50%); color:#4a4a52; font-size:12px; z-index:5; }
+  @media print{
+    html,body{ overflow:visible; height:auto; }
+    .slide{ display:flex !important; opacity:1 !important; position:relative; inset:auto; height:100vh; page-break-after:always; }
+    .chrome,.brandtag,.navzone,.hint{ display:none !important; }
+    @page{ size:1280px 720px; margin:0; }
+  }
+</style>
+</head>
+<body>
+<div class="brandtag">BHC · 2026/27</div>
+<div class="deck" id="deck">
+
+  <!-- 1 COVER -->
+  <section class="slide cover on">
+    <div class="mono">
+      <svg viewBox="0 0 512 512" width="76" height="76" aria-label="BHC">
+        <circle cx="256" cy="256" r="195" fill="none" stroke="#EDEDED" stroke-width="14"/>
+        <rect x="68" y="248" width="376" height="16" rx="8" fill="#FF3D2E"/>
+        <text x="256" y="262" text-anchor="middle" font-family="'Arial Narrow',Arial,sans-serif" font-weight="700" font-size="150" letter-spacing="2" fill="#EDEDED">BHC</text>
+        <circle cx="256" cy="256" r="13" fill="#2B6FE4"/>
+      </svg>
+    </div>
+    <div class="title cond">Balkan Hockey<br>Championship</div>
+    <div class="sub">International amateur championship · Sarajevo · Season 2026/27</div>
+    <span class="badge">Team pitch deck</span>
+  </section>
+
+  <!-- 2 WHAT -->
+  <section class="slide">
+    <div class="kicker">What it is</div>
+    <h2>A pro-grade format —<br>at the price of a coffee</h2>
+    <div class="accentbar"></div>
+    <p class="lead">An international championship of three countries at one arena in Sarajevo. A single calendar, IIHF officiating and match sheet, every game broadcast. The league is also a media product: we build the audience for Balkan hockey from zero.</p>
+    <div class="cards c3">
+      <div class="card"><div class="n">3</div><h3>countries</h3><p>Serbia, Bosnia &amp; Herzegovina, Bulgaria — in one tournament.</p></div>
+      <div class="card"><div class="n">1</div><h3>arena</h3><p>Every game of the season at one rink in Sarajevo. Logistics and media centralised.</p></div>
+      <div class="card"><div class="n">IIHF</div><h3>standard</h3><p>Rules of play, penalties, overtime and shootouts — per the official rulebook.</p></div>
+    </div>
+  </section>
+
+  <!-- 3 FORMAT -->
+  <section class="slide">
+    <div class="kicker">Season format</div>
+    <h2>October – April · one weekend a month</h2>
+    <div class="accentbar"></div>
+    <div class="two">
+      <ul class="check">
+        <li>One game weekend a month: 2 matches per team (Sat + Sun, one per day — no team plays back-to-back).</li>
+        <li>Round-robin, single table. IIHF points: 3 — win, 2 — OT/shootout win, 1 — OT loss, 0 — loss.</li>
+        <li>No draws: 5-min 3-on-3 overtime → shootout.</li>
+      </ul>
+      <div>
+        <div class="collbl">Play-offs · April</div>
+        <div class="card">
+          <h3 style="color:var(--accent);font-size:clamp(20px,2.4vw,30px)">"Final 3"</h3>
+          <p style="margin-top:8px">One centralised finals weekend. Top 3 advance, 4th is out. 1st place goes straight to the final (bye), 2nd vs 3rd is the semifinal, the winner plays the final. 🏆</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 TEAMS -->
+  <section class="slide">
+    <div class="kicker">Season participants</div>
+    <h2>Four teams · start</h2>
+    <div class="accentbar"></div>
+    <div class="cards c4">
+      <div class="card"><h3>Belgrade</h3><p>Serbia · away</p></div>
+      <div class="card"><h3>Sarajevo-1</h3><p>Bosnia · host</p></div>
+      <div class="card"><h3>Sarajevo-2</h3><p>Bosnia · host</p></div>
+      <div class="card"><h3>Bulgaria</h3><p>Bulgaria · away</p></div>
+    </div>
+    <p class="lead">Two hosts cover the arena and logistics, two teams travel for the weekends. A 5th team (Belgrade-2) is possible — that would move the start earlier, to September.</p>
+  </section>
+
+  <!-- 5 REGULATION -->
+  <section class="slide">
+    <div class="kicker">Regulation</div>
+    <h2>Body-checking hockey — fair and safe</h2>
+    <div class="accentbar"></div>
+    <ul class="check">
+      <li>Full contact (body checking) per IIHF. Match — 3 periods of 20 minutes stop-time.</li>
+      <li>A hard filter on dirty play: checking from behind, to the head, boarding — match penalty and a Disciplinary Committee hearing.</li>
+      <li>Mandatory certified equipment; a visor until age 18. A doctor/paramedic at every weekend.</li>
+      <li>Fair Play Code: respect for opponents, officials and fans is part of the product.</li>
+    </ul>
+    <p class="lead">The full regulation (13 sections, IIHF-based) is on the league website.</p>
+  </section>
+
+  <!-- 6 COST -->
+  <section class="slide">
+    <div class="kicker">Cost of participation</div>
+    <h2>€10 per match — per player</h2>
+    <div class="statwrap">
+      <div class="stat">€180</div>
+      <div class="statsub">the hockey itself, per season — the same for every team. Ice and broadcast included.</div>
+    </div>
+    <div class="two" style="margin-top:22px">
+      <div>
+        <div class="collbl">Per weekend · per player (roster 20, 1 night)</div>
+        <table class="t c">
+          <thead><tr><th>Team</th><th>Fee</th><th>Travel</th><th>Hotel</th><th>Food</th><th>Total</th></tr></thead>
+          <tbody>
+            <tr><td>Sarajevo-1/2</td><td>€30</td><td class="dim">—</td><td class="dim">—</td><td class="dim">—</td><td class="r">≈€30</td></tr>
+            <tr><td>Belgrade</td><td>€30</td><td>€35</td><td>€25</td><td>€25</td><td class="r">≈€115</td></tr>
+            <tr><td>Bulgaria</td><td>€30</td><td>€90</td><td>€25</td><td>€25</td><td class="r">≈€170</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <div class="collbl">Per season · per player (6 away trips + Finals)</div>
+        <table class="t c">
+          <thead><tr><th>Team</th><th>Fee<br>(ice)</th><th>Travel +<br>hotel + food</th><th>Total</th></tr></thead>
+          <tbody>
+            <tr><td>Sarajevo-1/2</td><td>€180</td><td class="dim">—</td><td class="r">≈€180</td></tr>
+            <tr><td>Belgrade</td><td>€180</td><td>≈€510</td><td class="r">≈€690</td></tr>
+            <tr><td>Bulgaria</td><td>€180</td><td>≈€840</td><td class="r">≈€1020</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:16px;font-size:clamp(12.5px,1.35vw,16px);max-width:none">
+      <b style="color:var(--ink)">€180 is the hockey itself — the same for everyone.</b> The gap in the "Total" column is only travel and hotel for away teams across 6 rounds (an estimate, depends on logistics; arriving Friday = +€25). Hosts pay only the fee.
+    </p>
+  </section>
+
+  <!-- 7 BROADCAST/MEDIA -->
+  <section class="slide">
+    <div class="kicker">Broadcast &amp; media</div>
+    <h2>Every match — on air</h2>
+    <div class="accentbar"></div>
+    <div class="cards c3">
+      <div class="card"><div class="n">0</div><h3>Start · €0</h3><p>Arena camera + OBS: free stream and replays. An enthusiast commentator.</p></div>
+      <div class="card"><div class="n">1</div><h3>Upgrade · ~€400</h3><p>AI auto-follow camera, slow-mo, remote commentator for top matches.</p></div>
+      <div class="card"><div class="n">2</div><h3>Sponsor-funded</h3><p>A pro crew or a TV partner. Paid by a partner/bookmaker.</p></div>
+    </div>
+    <p class="lead">Media-first: content builds the audience, the audience attracts teams and sponsors. We start social media before the season.</p>
+  </section>
+
+  <!-- 8 VALUE -->
+  <section class="slide">
+    <div class="kicker">What a team gets</div>
+    <h2>Not just a tournament — a growth platform</h2>
+    <div class="accentbar"></div>
+    <div class="cards c2">
+      <div class="card"><h3>Ready-made infrastructure</h3><p>Ice, slots, referees, match sheet, medical, broadcast — organised by the league. Teams just play.</p></div>
+      <div class="card"><h3>Media &amp; visibility</h3><p>Every match on air, league social media, content about players and teams.</p></div>
+      <div class="card"><h3>Fair sport</h3><p>Unified IIHF rules, a disciplinary committee, Fair Play — no "super-teams" or chaos.</p></div>
+      <div class="card"><h3>A path upward</h3><p>The goal — to grow into an international Balkan league (an Alps Hockey League analogue). You're in from season one.</p></div>
+    </div>
+  </section>
+
+  <!-- 9 HOW TO JOIN -->
+  <section class="slide">
+    <div class="kicker">How to join</div>
+    <h2>Three steps to the start</h2>
+    <div class="steps">
+      <div class="step"><div class="num">01</div><div><h3>Team registration</h3><p>Fill in the registration &amp; roster form (BHC-01): roster, contacts, Council representative.</p></div></div>
+      <div class="step"><div class="num">02</div><div><h3>Player documents</h3><p>Waiver + insurance for each player (BHC-03); for ages 16–17 — parental consent (BHC-02).</p></div></div>
+      <div class="step"><div class="num">03</div><div><h3>Pay the fee — and hit the ice</h3><p>€10/match, €30/weekend or €180/season per player. Deadlines — in the BHC-06 sheet.</p></div></div>
+    </div>
+    <p class="lead">All document templates are ready, on the league website (RU and EN).</p>
+  </section>
+
+  <!-- 10 CONTACT -->
+  <section class="slide cover">
+    <div class="mono">
+      <svg viewBox="0 0 512 512" width="60" height="60" aria-label="BHC">
+        <circle cx="256" cy="256" r="195" fill="none" stroke="#EDEDED" stroke-width="14"/>
+        <rect x="68" y="248" width="376" height="16" rx="8" fill="#FF3D2E"/>
+        <text x="256" y="262" text-anchor="middle" font-family="'Arial Narrow',Arial,sans-serif" font-weight="700" font-size="150" letter-spacing="2" fill="#EDEDED">BHC</text>
+        <circle cx="256" cy="256" r="13" fill="#2B6FE4"/>
+      </svg>
+    </div>
+    <h2 style="margin-top:18px">Join<br>the first season</h2>
+    <div class="accentbar"></div>
+    <p class="lead contact">Early teams and partners get the best terms and exclusivity. Balkan hockey starts now — and you can be there from the very beginning.</p>
+    <p class="lead contact" style="margin-top:18px"><b>Contact:</b> ______________________ · <b>Website:</b> ______________________</p>
+    <div style="margin-top:16px">
+      <span class="tag">Regulation</span><span class="tag">Calendar</span><span class="tag">Cost</span><span class="tag">Documents</span><span class="tag">Sponsors</span>
+    </div>
+  </section>
+
+</div>
+
+<div class="navzone left" onclick="go(-1)"></div>
+<div class="navzone right" onclick="go(1)"></div>
+
+<div class="chrome">
+  <div class="counter"><span id="cur">1</span> / <span id="tot">10</span></div>
+  <div class="dots" id="dots"></div>
+  <div class="counter">← →</div>
+</div>
+<div class="hint">← → or space · F — fullscreen</div>
+
+<script>
+  const slides=[...document.querySelectorAll('.slide')];
+  let i=0; const cur=document.getElementById('cur'), tot=document.getElementById('tot');
+  const dotsWrap=document.getElementById('dots');
+  tot.textContent=slides.length;
+  slides.forEach((_,n)=>{ const b=document.createElement('button'); b.className='dot'+(n===0?' on':''); b.onclick=()=>show(n); dotsWrap.appendChild(b); });
+  const dots=[...dotsWrap.children];
+  function show(n){ i=Math.max(0,Math.min(slides.length-1,n));
+    slides.forEach((s,k)=>s.classList.toggle('on',k===i));
+    dots.forEach((d,k)=>d.classList.toggle('on',k===i));
+    cur.textContent=i+1;
+  }
+  function go(d){ show(i+d); }
+  document.addEventListener('keydown',e=>{
+    if(['ArrowRight','ArrowDown',' ','PageDown'].includes(e.key)){ e.preventDefault(); go(1); }
+    else if(['ArrowLeft','ArrowUp','PageUp'].includes(e.key)){ e.preventDefault(); go(-1); }
+    else if(e.key==='Home'){ show(0); } else if(e.key==='End'){ show(slides.length-1); }
+    else if(e.key==='f'||e.key==='F'){ if(!document.fullscreenElement) document.documentElement.requestFullscreen(); else document.exitFullscreen(); }
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BHC — Team Registration &amp; Roster</title>
+<style>
+  :root{ --ink:#111214; --muted:#5b6068; --line:#d4d7dc; --accent:#FF3D2E; --blue:#2B6FE4; --soft:#f5f6f8; }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; background:#e9ebee; color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; font-size:13px; line-height:1.45; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .page{ background:#fff; max-width:820px; margin:22px auto; padding:34px 40px 40px; box-shadow:0 2px 18px rgba(0,0,0,.12); }
+  h2{ font-family:"Arial Narrow","Barlow Condensed",Oswald,-apple-system,sans-serif; }
+  .lh{ display:flex; align-items:center; gap:14px; border-bottom:3px solid var(--ink); padding-bottom:12px; }
+  .lh .wm .name{ font-family:"Arial Narrow","Barlow Condensed",sans-serif; font-weight:700; font-size:22px; letter-spacing:.5px; text-transform:uppercase; line-height:1; }
+  .lh .wm .sub{ font-size:10px; letter-spacing:2.5px; text-transform:uppercase; color:var(--muted); margin-top:3px; }
+  .lh .meta{ margin-left:auto; text-align:right; font-size:10px; color:var(--muted); line-height:1.5; }
+  .lh .meta b{ color:var(--ink); }
+  .dtitle .ru{ font-family:"Arial Narrow","Barlow Condensed",sans-serif; font-weight:700; font-size:27px; text-transform:uppercase; letter-spacing:.4px; line-height:1.05; margin-top:18px; }
+  .accentbar{ height:4px; width:64px; background:var(--accent); margin:10px 0 4px; }
+  h2.sec{ font-size:15px; text-transform:uppercase; letter-spacing:.6px; margin:22px 0 8px; padding-bottom:5px; border-bottom:1px solid var(--line); }
+  .lbl{ font-size:9.5px; text-transform:uppercase; letter-spacing:.7px; color:var(--muted); }
+  .grid{ display:grid; grid-template-columns:1fr 1fr; gap:10px 22px; margin:8px 0; }
+  .field{ display:flex; flex-direction:column; gap:3px; }
+  .field .line{ border-bottom:1px solid var(--ink); min-height:20px; }
+  table{ width:100%; border-collapse:collapse; margin:8px 0; }
+  th,td{ border:1px solid var(--line); padding:5px 6px; text-align:left; vertical-align:middle; }
+  thead th{ background:var(--soft); font-size:9px; text-transform:uppercase; letter-spacing:.4px; color:var(--muted); font-weight:700; }
+  td.num{ text-align:center; color:var(--muted); width:26px; }
+  .roster td{ font-size:11px; } .roster tbody tr{ height:26px; }
+  .note{ background:var(--soft); border-left:3px solid var(--accent); padding:9px 12px; margin:12px 0; font-size:11px; }
+  .decl{ font-size:11.5px; margin:6px 0; }
+  .sigrow{ display:grid; grid-template-columns:1fr 1fr; gap:26px; margin-top:26px; }
+  .sig .sline{ border-bottom:1px solid var(--ink); height:34px; }
+  .sig .cap{ font-size:9.5px; text-transform:uppercase; letter-spacing:.6px; color:var(--muted); margin-top:4px; }
+  .official{ margin-top:18px; border:1px dashed var(--line); border-radius:6px; padding:10px 12px; background:#fafbfc; }
+  .official .lbl{ color:var(--accent); }
+  .foot{ margin-top:26px; border-top:1px solid var(--line); padding-top:8px; display:flex; justify-content:space-between; font-size:9px; color:#9aa0a8; letter-spacing:.4px; }
+  @media print{ html,body{ background:#fff; font-size:11.5px; } .page{ box-shadow:none; margin:0; max-width:none; padding:0; } @page{ size:A4; margin:14mm 14mm; } .roster tbody tr{ height:22px; } thead{ display:table-header-group; } tr{ page-break-inside:avoid; } }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="lh">
+    <svg viewBox="0 0 512 512" width="48" height="48" aria-label="BHC">
+      <circle cx="256" cy="256" r="195" fill="none" stroke="#111214" stroke-width="14"/>
+      <rect x="68" y="248" width="376" height="16" rx="8" fill="#FF3D2E"/>
+      <text x="256" y="262" text-anchor="middle" font-family="'Arial Narrow',Arial,sans-serif" font-weight="700" font-size="150" letter-spacing="2" fill="#111214">BHC</text>
+      <circle cx="256" cy="256" r="13" fill="#2B6FE4"/>
+    </svg>
+    <div class="wm"><div class="name">Balkan Hockey Championship</div><div class="sub">Season 2026&nbsp;/&nbsp;27 · Sarajevo</div></div>
+    <div class="meta">Document <b>BHC-01</b><br>Revision v1<br>English version</div>
+  </div>
+
+  <div class="dtitle"><div class="ru">Team Registration &amp; Season Roster</div></div>
+  <div class="accentbar"></div>
+
+  <div class="note">Submit to the League sports office before the season starts (Regulation §3.1). Season roster — up to 30 players; match sheet — up to 20 skaters + 2 goalies (§3.4). Minimum age 16; players aged 16–17 must attach the Parental Consent (BHC-02, §3.3). Every player must hold valid sports insurance (§3.7).</div>
+
+  <h2 class="sec">1. Team</h2>
+  <div class="grid">
+    <div class="field"><span class="lbl">Team name</span><span class="line"></span></div>
+    <div class="field"><span class="lbl">City &amp; country</span><span class="line"></span></div>
+    <div class="field"><span class="lbl">Kit colours — dark</span><span class="line"></span></div>
+    <div class="field"><span class="lbl">Kit colours — light</span><span class="line"></span></div>
+  </div>
+
+  <h2 class="sec">2. Contacts</h2>
+  <div class="grid">
+    <div class="field"><span class="lbl">Manager / captain</span><span class="line"></span></div>
+    <div class="field"><span class="lbl">Phone / e-mail</span><span class="line"></span></div>
+    <div class="field"><span class="lbl">Council representative</span><span class="line"></span></div>
+    <div class="field"><span class="lbl">Phone / e-mail</span><span class="line"></span></div>
+  </div>
+
+  <h2 class="sec">3. Player roster (up to 30)</h2>
+  <table class="roster">
+    <thead><tr><th>#</th><th>Full name</th><th>DOB</th><th>Nat.</th><th>Pos. (GK/D/F)</th><th>Jersey</th><th>Insurance ✓</th><th>16–17: consent ✓</th></tr></thead>
+    <tbody>
+      <tr><td class="num">1</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="num">2</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="num">3</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="num">4</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="num">5</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="num">6</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="num">7</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="num">8</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="num">9</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="num">10</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="num">11</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="num">12</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="num">13</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="num">14</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="num">15</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="num">16</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="num">17</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="num">18</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="num">19</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="num">20</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="num">21</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="num">22</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="num">23</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="num">24</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="num">25</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="num">26</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="num">27</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="num">28</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="num">29</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td class="num">30</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="sec">4. Declaration</h2>
+  <p class="decl">By signing this form, the team manager confirms that: the roster is accurate; every listed player holds valid sports insurance and has no medical contraindications (§3.7); written parental/guardian consent is attached for players aged 16–17 (§3.3); and the team accepts the BHC 2026/27 Regulation and the Fair Play Code (§12).</p>
+
+  <div class="sigrow">
+    <div class="sig"><div class="sline"></div><div class="cap">Team manager — signature</div></div>
+    <div class="sig"><div class="sline"></div><div class="cap">Date</div></div>
+  </div>
+
+  <div class="official"><span class="lbl">For League use only</span>
+    <div class="grid" style="margin-top:8px">
+      <div class="field"><span class="lbl">Received by</span><span class="line"></span></div>
+      <div class="field"><span class="lbl">Date received</span><span class="line"></span></div>
+    </div>
+  </div>
+
+  <div class="foot"><span>BHC-01 · Team Registration &amp; Roster · v1</span><span>Balkan Hockey Championship · 2026/27</span></div>
+</div>
+</body>
+</html>
