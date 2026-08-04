@@ -69,218 +69,168 @@ footer{padding:38px 0 0;color:#6b656a;border-top:1px solid var(--line);margin-to
     <div>
       <p class="ey">Официальный документ · Сезон 2026/27</p>
       <h1>Календарь</h1>
-      <div class="sub">Balkan Hockey Championship · Сараево · помесячно, по матчам</div>
+      <div class="sub">Balkan Hockey Championship · Сараево · блоки, уикенды, дерби-вечера</div>
     </div>
   </header>
 
   <section style="border-top:none;padding-top:22px">
-    <p class="eyebrow">Формат уикенда</p>
-    <h2>Полный круг каждый уикенд</h2>
-    <p class="lead">Каждый игровой уикенд — фестиваль: команда играет всех соперников, <b>3 матча за уикенд</b> (2 в субботу с паузой между своими играми — не подряд, + 1 в воскресенье). Слоты субботы: 10:00 / 12:30 / 15:00 / 17:30; воскресенья: 10:00 / 12:30. Болгария и выездные — воскресный ранний слот, уезжают. Даты реальные, финализируются под слоты арены.</p>
+    <p class="eyebrow">Версия v4 · 4 августа 2026</p>
+    <h2>Сезон играется блоками</h2>
+    <p class="lead">Болгария может приехать <b>не более трёх раз</b> и заканчивает сезон <b>10 января</b> — дальше чемпионаты мира. Зато приезжает длинным блоком с четверга по воскресенье. Отсюда новая архитектура сезона: регулярка сжата в <b>октябрь → 8 января</b>, плей-офф проведён внутри последнего блока. Объём соревнования сохранён полностью — <b>36 матчей, по 18 на команду, каждая пара встречается 6 раз</b>.</p>
+
+    <div class="tbl"><table>
+      <thead><tr><th>Тип события</th><th>Кто приезжает</th><th>Дни</th><th>Матчей</th></tr></thead>
+      <tbody>
+        <tr><td><b>Блок</b> — визит Болгарии</td><td>Болгария (весь блок) + Белград (выходные)</td><td>чт – вс</td><td class="num">8</td></tr>
+        <tr><td><b>Уикенд</b> — визит Белграда</td><td>Белград</td><td>пт – вс</td><td class="num">4</td></tr>
+        <tr><td><b>Дерби-вечер</b></td><td>никто не приезжает</td><td>пт</td><td class="num">1</td></tr>
+      </tbody>
+    </table></div>
+
+    <p class="lead">Будни блока отданы сараевцам — свой каток, без выезда. Выходные — Белграду, его обычный режим приезда. Дерби Сараево-1 – Сараево-2 не требует ничьего приезда: это самый дешёвый матч в лиге, он заполняет паузы между блоками и служит календарным резервом.</p>
   </section>
 
-  <!-- 4 TEAMS -->
   <section>
-    <p class="eyebrow">Вариант A</p>
-    <h2>4 команды <span class="b">— рекомендуемый</span></h2>
-    <p class="lead"><b>Белград · Сараево-1 · Сараево-2 · Болгария.</b> 6 туров окт–мар, полный круг каждый уикенд → 36 матчей, по 18 игр на команду, каждая пара встречается 6 раз. Помесячно:</p>
+    <p class="eyebrow">Расписание</p>
+    <h2>Полная сетка сезона</h2>
+    <p class="lead">36 матчей регулярного чемпионата и 2 матча плей-офф. Даты подтверждены по дням недели, слоты финализируются под расписание арены.</p>
 
-    <div class="month"><div class="mh"><span class="mn">Тур 1 · Октябрь</span><span class="md">17–18 окт 2026</span></div>
-      <div class="day"><div class="dl">Суббота</div>
-        <div class="m"><span class="t">10:00</span><span>Белград – Сараево-1</span></div>
-        <div class="m"><span class="t">12:30</span><span>Сараево-2 – Болгария</span></div>
+    <div class="month"><div class="mh"><span class="mn">Блок 1 · Октябрь</span><span class="md">15–18 окт 2026</span></div>
+      <div class="bye">Открытие сезона · 8 матчей</div>
+      <div class="day"><div class="dl">Четверг 15</div>
+        <div class="m"><span class="t">17:00</span><span>Болгария – Сараево-1</span></div>
+        <div class="m"><span class="t">20:15</span><span>Болгария – Сараево-2</span></div></div>
+      <div class="day"><div class="dl">Пятница 16</div>
+        <div class="m"><span class="t">17:00</span><span>Болгария – Сараево-2</span></div>
+        <div class="m"><span class="t">20:15</span><span>Болгария – Сараево-1</span></div></div>
+      <div class="day"><div class="dl">Суббота 17</div>
+        <div class="m"><span class="t">15:00</span><span>Болгария – Белград</span></div>
+        <div class="m"><span class="t">17:30</span><span>Сараево-1 – Сараево-2</span></div>
+        <div class="m"><span class="t">20:00</span><span>Болгария – Белград</span></div></div>
+      <div class="day"><div class="dl">Воскресенье 18</div>
+        <div class="m morn"><span class="t">11:00</span><span>Болгария – Белград</span></div></div></div>
+    <div class="month"><div class="mh"><span class="mn">Дерби-вечер</span><span class="md">пт 30 окт 2026</span></div>
+      <div class="day"><div class="dl">Пятница 30</div>
+        <div class="m"><span class="t">19:00</span><span>Сараево-1 – Сараево-2</span></div></div></div>
+    <div class="month"><div class="mh"><span class="mn">Уикенд 1 · Ноябрь</span><span class="md">31 окт – 1 ноя 2026</span></div>
+      <div class="day"><div class="dl">Суббота 31</div>
+        <div class="m"><span class="t">15:00</span><span>Белград – Сараево-1</span></div>
+        <div class="m"><span class="t">19:00</span><span>Белград – Сараево-2</span></div></div>
+      <div class="day"><div class="dl">Воскресенье 1</div>
+        <div class="m morn"><span class="t">11:00</span><span>Белград – Сараево-1</span></div></div></div>
+    <div class="month"><div class="mh"><span class="mn">Дерби-вечер</span><span class="md">пт 13 ноя 2026</span></div>
+      <div class="day"><div class="dl">Пятница 13</div>
+        <div class="m"><span class="t">19:00</span><span>Сараево-1 – Сараево-2</span></div></div></div>
+    <div class="month"><div class="mh"><span class="mn">Уикенд 2 · Ноябрь</span><span class="md">14–15 ноя 2026</span></div>
+      <div class="day"><div class="dl">Суббота 14</div>
         <div class="m"><span class="t">15:00</span><span>Белград – Сараево-2</span></div>
-        <div class="m"><span class="t">17:30</span><span>Сараево-1 – Болгария</span></div></div>
-      <div class="day"><div class="dl">Воскресенье</div>
-        <div class="m morn"><span class="t">10:00</span><span>Белград – Болгария</span></div>
-        <div class="m"><span class="t">12:30</span><span>Сараево-1 – Сараево-2</span></div></div></div>
-
-    <div class="month"><div class="mh"><span class="mn">Тур 2 · Ноябрь</span><span class="md">14–15 ноя 2026</span></div>
-      <div class="day"><div class="dl">Суббота</div>
-        <div class="m"><span class="t">10:00</span><span>Белград – Сараево-2</span></div>
-        <div class="m"><span class="t">12:30</span><span>Сараево-1 – Болгария</span></div>
-        <div class="m"><span class="t">15:00</span><span>Белград – Болгария</span></div>
-        <div class="m"><span class="t">17:30</span><span>Сараево-1 – Сараево-2</span></div></div>
-      <div class="day"><div class="dl">Воскресенье</div>
-        <div class="m morn"><span class="t">10:00</span><span>Сараево-2 – Болгария</span></div>
-        <div class="m"><span class="t">12:30</span><span>Белград – Сараево-1</span></div></div></div>
-
-    <div class="month"><div class="mh"><span class="mn">Тур 3 · Декабрь</span><span class="md">12–13 дек 2026</span></div>
-      <div class="day"><div class="dl">Суббота</div>
-        <div class="m"><span class="t">10:00</span><span>Белград – Болгария</span></div>
-        <div class="m"><span class="t">12:30</span><span>Сараево-1 – Сараево-2</span></div>
-        <div class="m"><span class="t">15:00</span><span>Белград – Сараево-1</span></div>
-        <div class="m"><span class="t">17:30</span><span>Сараево-2 – Болгария</span></div></div>
-      <div class="day"><div class="dl">Воскресенье</div>
-        <div class="m morn"><span class="t">10:00</span><span>Сараево-1 – Болгария</span></div>
-        <div class="m"><span class="t">12:30</span><span>Белград – Сараево-2</span></div></div></div>
-
-    <div class="month"><div class="mh"><span class="mn">Тур 4 · Январь</span><span class="md">16–17 янв 2027</span></div>
-      <div class="day"><div class="dl">Суббота</div>
-        <div class="m"><span class="t">10:00</span><span>Белград – Сараево-1</span></div>
-        <div class="m"><span class="t">12:30</span><span>Сараево-2 – Болгария</span></div>
-        <div class="m"><span class="t">15:00</span><span>Белград – Сараево-2</span></div>
-        <div class="m"><span class="t">17:30</span><span>Сараево-1 – Болгария</span></div></div>
-      <div class="day"><div class="dl">Воскресенье</div>
-        <div class="m morn"><span class="t">10:00</span><span>Белград – Болгария</span></div>
-        <div class="m"><span class="t">12:30</span><span>Сараево-1 – Сараево-2</span></div></div></div>
-
-    <div class="month"><div class="mh"><span class="mn">Тур 5 · Февраль</span><span class="md">13–14 фев 2027</span></div>
-      <div class="day"><div class="dl">Суббота</div>
-        <div class="m"><span class="t">10:00</span><span>Белград – Сараево-2</span></div>
-        <div class="m"><span class="t">12:30</span><span>Сараево-1 – Болгария</span></div>
-        <div class="m"><span class="t">15:00</span><span>Белград – Болгария</span></div>
-        <div class="m"><span class="t">17:30</span><span>Сараево-1 – Сараево-2</span></div></div>
-      <div class="day"><div class="dl">Воскресенье</div>
-        <div class="m morn"><span class="t">10:00</span><span>Сараево-2 – Болгария</span></div>
-        <div class="m"><span class="t">12:30</span><span>Белград – Сараево-1</span></div></div></div>
-
-    <div class="month"><div class="mh"><span class="mn">Тур 6 · Март</span><span class="md">13–14 мар 2027</span></div>
-      <div class="day"><div class="dl">Суббота</div>
-        <div class="m"><span class="t">10:00</span><span>Белград – Болгария</span></div>
-        <div class="m"><span class="t">12:30</span><span>Сараево-1 – Сараево-2</span></div>
-        <div class="m"><span class="t">15:00</span><span>Белград – Сараево-1</span></div>
-        <div class="m"><span class="t">17:30</span><span>Сараево-2 – Болгария</span></div></div>
-      <div class="day"><div class="dl">Воскресенье</div>
-        <div class="m morn"><span class="t">10:00</span><span>Сараево-1 – Болгария</span></div>
-        <div class="m"><span class="t">12:30</span><span>Белград – Сараево-2</span></div></div></div>
-
-    <p class="lead"><b>Итого:</b> 36 матчей · по 18 на команду · каждая пара 6 раз. <b>Finals</b> — апрель (ниже).</p>
-  </section>
-
-  <!-- 5 TEAMS -->
-  <section>
-    <p class="eyebrow">Вариант B</p>
-    <h2>5 команд <span class="b" style="color:var(--muted)">— сен–мар</span></h2>
-    <p class="lead"><b>Белград · Белград-2 · Сараево-1 · Сараево-2 · Болгария.</b> Старт в сентябре визитом Белграда, окт–мар — 6 фестивалей (съезжаются все 5). Два варианта интенсивности — <b>B-2</b> (по 2 игры/фестиваль) и <b>B-4</b> (по 4). Оба расписаны помесячно.</p>
-
-    <h3>B-2 · по 2 игры за фестиваль</h3>
-    <p class="lead">5 матчей/уикенд, каждая играет 2. Каждый фестиваль — свой набор пар (не повторяемся).</p>
-
-    <div class="month"><div class="mh"><span class="mn">Сентябрь · Визит Белграда</span><span class="md">19–20 сен 2026</span></div>
-      <div class="day"><div class="dl">Суббота</div>
-        <div class="m"><span class="t">16:00</span><span>Белград – Сараево-1</span></div>
-        <div class="m"><span class="t">18:30</span><span>Сараево-1 – Сараево-2</span></div></div>
-      <div class="day"><div class="dl">Воскресенье</div>
-        <div class="m"><span class="t">12:30</span><span>Белград – Сараево-2</span></div></div></div>
-
-    <div class="month"><div class="mh"><span class="mn">Октябрь · Фестиваль 1</span><span class="md">17–18 окт 2026</span></div>
-      <div class="day"><div class="dl">Суббота</div>
-        <div class="m"><span class="t">15:00</span><span>Белград-2 – Сараево-1</span></div>
-        <div class="m"><span class="t">17:00</span><span>Сараево-1 – Сараево-2</span></div>
-        <div class="m"><span class="t">19:00</span><span>Белград – Болгария</span></div></div>
-      <div class="day"><div class="dl">Воскресенье</div>
-        <div class="m morn"><span class="t">10:00</span><span>Сараево-2 – Болгария</span></div>
-        <div class="m"><span class="t">12:30</span><span>Белград – Белград-2</span></div></div></div>
-
-    <div class="month"><div class="mh"><span class="mn">Ноябрь · Фестиваль 2</span><span class="md">14–15 ноя 2026</span></div>
-      <div class="day"><div class="dl">Суббота</div>
-        <div class="m"><span class="t">15:00</span><span>Белград-2 – Сараево-2</span></div>
-        <div class="m"><span class="t">17:00</span><span>Белград – Сараево-2</span></div>
-        <div class="m"><span class="t">19:00</span><span>Сараево-1 – Болгария</span></div></div>
-      <div class="day"><div class="dl">Воскресенье</div>
-        <div class="m morn"><span class="t">10:00</span><span>Белград-2 – Болгария</span></div>
-        <div class="m"><span class="t">12:30</span><span>Белград – Сараево-1</span></div></div></div>
-
-    <div class="month"><div class="mh"><span class="mn">Декабрь · Фестиваль 3</span><span class="md">12–13 дек 2026</span></div>
-      <div class="day"><div class="dl">Суббота</div>
-        <div class="m"><span class="t">15:00</span><span>Белград-2 – Сараево-2</span></div>
-        <div class="m"><span class="t">17:00</span><span>Сараево-1 – Сараево-2</span></div>
-        <div class="m"><span class="t">19:00</span><span>Белград – Болгария</span></div></div>
-      <div class="day"><div class="dl">Воскресенье</div>
-        <div class="m morn"><span class="t">10:00</span><span>Сараево-1 – Болгария</span></div>
-        <div class="m"><span class="t">12:30</span><span>Белград – Белград-2</span></div></div></div>
-
-    <div class="month"><div class="mh"><span class="mn">Январь · Фестиваль 4</span><span class="md">16–17 янв 2027</span></div>
-      <div class="day"><div class="dl">Суббота</div>
-        <div class="m"><span class="t">15:00</span><span>Белград – Сараево-1</span></div>
-        <div class="m"><span class="t">17:00</span><span>Белград-2 – Сараево-1</span></div>
-        <div class="m"><span class="t">19:00</span><span>Сараево-2 – Болгария</span></div></div>
-      <div class="day"><div class="dl">Воскресенье</div>
-        <div class="m morn"><span class="t">10:00</span><span>Белград-2 – Болгария</span></div>
-        <div class="m"><span class="t">12:30</span><span>Белград – Сараево-2</span></div></div></div>
-
-    <div class="month"><div class="mh"><span class="mn">Февраль · Фестиваль 5</span><span class="md">13–14 фев 2027</span></div>
-      <div class="day"><div class="dl">Суббота</div>
-        <div class="m"><span class="t">15:00</span><span>Сараево-1 – Болгария</span></div>
-        <div class="m"><span class="t">17:00</span><span>Сараево-1 – Сараево-2</span></div>
-        <div class="m"><span class="t">19:00</span><span>Белград – Белград-2</span></div></div>
-      <div class="day"><div class="dl">Воскресенье</div>
-        <div class="m morn"><span class="t">10:00</span><span>Белград-2 – Болгария</span></div>
-        <div class="m"><span class="t">12:30</span><span>Белград – Сараево-2</span></div></div></div>
-
-    <div class="month"><div class="mh"><span class="mn">Март · Фестиваль 6</span><span class="md">13–14 мар 2027</span></div>
-      <div class="day"><div class="dl">Суббота</div>
-        <div class="m"><span class="t">15:00</span><span>Белград-2 – Сараево-2</span></div>
-        <div class="m"><span class="t">17:00</span><span>Сараево-2 – Болгария</span></div>
         <div class="m"><span class="t">19:00</span><span>Белград – Сараево-1</span></div></div>
-      <div class="day"><div class="dl">Воскресенье</div>
-        <div class="m morn"><span class="t">10:00</span><span>Белград – Болгария</span></div>
-        <div class="m"><span class="t">12:30</span><span>Белград-2 – Сараево-1</span></div></div></div>
+      <div class="day"><div class="dl">Воскресенье 15</div>
+        <div class="m morn"><span class="t">11:00</span><span>Белград – Сараево-2</span></div></div></div>
+    <div class="month"><div class="mh"><span class="mn">Дерби-вечер</span><span class="md">пт 27 ноя 2026</span></div>
+      <div class="day"><div class="dl">Пятница 27</div>
+        <div class="m"><span class="t">19:00</span><span>Сараево-1 – Сараево-2</span></div></div></div>
+    <div class="month"><div class="mh"><span class="mn">Уикенд 3 · Ноябрь</span><span class="md">28–29 ноя 2026</span></div>
+      <div class="day"><div class="dl">Суббота 28</div>
+        <div class="m"><span class="t">15:00</span><span>Белград – Сараево-1</span></div>
+        <div class="m"><span class="t">19:00</span><span>Белград – Сараево-2</span></div></div>
+      <div class="day"><div class="dl">Воскресенье 29</div>
+        <div class="m morn"><span class="t">11:00</span><span>Белград – Сараево-1</span></div></div></div>
+    <div class="month"><div class="mh"><span class="mn">Блок 2 · Декабрь</span><span class="md">10–13 дек 2026</span></div>
+      <div class="bye">Второй визит Болгарии · 8 матчей</div>
+      <div class="day"><div class="dl">Четверг 10</div>
+        <div class="m"><span class="t">17:00</span><span>Болгария – Сараево-2</span></div>
+        <div class="m"><span class="t">20:15</span><span>Болгария – Сараево-1</span></div></div>
+      <div class="day"><div class="dl">Пятница 11</div>
+        <div class="m"><span class="t">17:00</span><span>Болгария – Сараево-1</span></div>
+        <div class="m"><span class="t">20:15</span><span>Болгария – Сараево-2</span></div></div>
+      <div class="day"><div class="dl">Суббота 12</div>
+        <div class="m"><span class="t">15:00</span><span>Болгария – Белград</span></div>
+        <div class="m"><span class="t">17:30</span><span>Сараево-1 – Сараево-2</span></div>
+        <div class="m"><span class="t">20:00</span><span>Болгария – Белград</span></div></div>
+      <div class="day"><div class="dl">Воскресенье 13</div>
+        <div class="m morn"><span class="t">11:00</span><span>Болгария – Белград</span></div></div></div>
+    <div class="month"><div class="mh"><span class="mn">Дерби-вечер</span><span class="md">пт 18 дек 2026</span></div>
+      <div class="day"><div class="dl">Пятница 18</div>
+        <div class="m"><span class="t">19:00</span><span>Сараево-1 – Сараево-2</span></div></div></div>
+    <div class="month"><div class="mh"><span class="mn">Уикенд 4 · Декабрь</span><span class="md">19–20 дек 2026</span></div>
+      <div class="bye">Закрытие ростеров — 20 декабря</div>
+      <div class="day"><div class="dl">Суббота 19</div>
+        <div class="m"><span class="t">15:00</span><span>Белград – Сараево-2</span></div>
+        <div class="m"><span class="t">19:00</span><span>Белград – Сараево-1</span></div></div>
+      <div class="day"><div class="dl">Воскресенье 20</div>
+        <div class="m morn"><span class="t">11:00</span><span>Белград – Сараево-2</span></div></div></div>
+    <div class="month"><div class="mh"><span class="mn">Блок 3 + Finals · Январь</span><span class="md">7–10 янв 2027</span></div>
+      <div class="bye">Третий визит Болгарии · регулярка + плей-офф</div>
+      <div class="day"><div class="dl">Четверг 7</div>
+        <div class="m"><span class="t">17:00</span><span>Болгария – Сараево-1</span></div>
+        <div class="m"><span class="t">20:15</span><span>Болгария – Сараево-2</span></div></div>
+      <div class="day"><div class="dl">Пятница 8 · последний тур регулярки</div>
+        <div class="m"><span class="t">17:00</span><span>Болгария – Сараево-2</span></div>
+        <div class="m"><span class="t">20:15</span><span>Болгария – Сараево-1</span></div></div>
+      <div class="day"><div class="dl">Суббота 9 · Полуфинал</div>
+        <div class="m morn"><span class="t">17:00</span><span>2-е место – 3-е место</span></div></div>
+      <div class="day"><div class="dl">Воскресенье 10 · Финал</div>
+        <div class="m morn"><span class="t">15:00</span><span>1-е место – победитель полуфинала</span></div></div></div>
+  </section>
 
-    <p class="lead"><b>Итого B-2:</b> ~12 игр/команда с фестивалей + сентябрь.</p>
-
-    <h3>B-4 · по 4 игры за фестиваль</h3>
-    <p class="lead">Полный круг впятером: все <b>10 пар</b> за фестиваль (каждая команда — 4 игры). Чтобы <b>никто не играл два матча подряд</b> и разгрузить выходные: <b>дерби хозяев (Сараево-1 – Сараево-2) — в пятницу</b> (им не нужен выезд), а матчи дня расставлены с паузой между играми одной команды. Выездные в пятницу не играют.</p>
-    <div class="callout"><span class="lbl">Как убираем «игры подряд»</span><p>1) <b>Пятница</b> снимает дерби хозяев с выходных (5+4 матча вместо 5+5). 2) Порядок матчей в дне подобран так, что между двумя играми любой команды всегда есть чужой матч. Проверено по каждой команде.</p></div>
-    <div class="month"><div class="mh"><span class="mn">Шаблон фестиваля B-4</span><span class="md">1 + 5 + 4 матча</span></div>
-      <div class="bye"> Пятница — дерби хозяев (без выездных)</div>
-      <div class="day"><div class="dl">Пятница</div>
-        <div class="m"><span class="t">19:00</span><span>Сараево-1 – Сараево-2</span></div></div>
-      <div class="day"><div class="dl">Суббота · 5 матчей</div>
-        <div class="m"><span class="t">10:00</span><span>Белград – Сараево-1</span></div>
-        <div class="m"><span class="t">12:00</span><span>Белград-2 – Болгария</span></div>
-        <div class="m"><span class="t">14:00</span><span>Белград – Сараево-2</span></div>
-        <div class="m"><span class="t">16:00</span><span>Белград-2 – Сараево-1</span></div>
-        <div class="m"><span class="t">18:00</span><span>Сараево-2 – Болгария</span></div></div>
-      <div class="day"><div class="dl">Воскресенье · 4 матча</div>
-        <div class="m morn"><span class="t">10:00</span><span>Белград – Болгария</span></div>
-        <div class="m"><span class="t">12:00</span><span>Белград-2 – Сараево-2</span></div>
-        <div class="m"><span class="t">14:00</span><span>Сараево-1 – Болгария</span></div>
-        <div class="m"><span class="t">16:00</span><span>Белград – Белград-2</span></div></div></div>
+  <section>
+    <p class="eyebrow">Баланс</p>
+    <h2>По 18 игр у каждой команды</h2>
     <div class="tbl"><table>
-      <thead><tr><th>Фестиваль</th><th>Дата</th><th>Формат</th></tr></thead>
+      <thead><tr><th>Команда</th><th>В блоках</th><th>В уикендах</th><th>Дерби-вечера</th><th>Итого</th></tr></thead>
       <tbody>
-        <tr><td>Сентябрь · визит Белграда</td><td>19–20 сен</td><td>двойной визит (6 матчей)</td></tr>
-        <tr><td>Фестиваль 1</td><td>17–18 окт</td><td>полный круг (10 матчей)</td></tr>
-        <tr><td>Фестиваль 2</td><td>14–15 ноя</td><td>полный круг (10)</td></tr>
-        <tr><td>Фестиваль 3</td><td>12–13 дек</td><td>полный круг (10)</td></tr>
-        <tr><td>Фестиваль 4</td><td>16–17 янв</td><td>полный круг (10)</td></tr>
-        <tr><td>Фестиваль 5</td><td>13–14 фев</td><td>полный круг (10)</td></tr>
-        <tr><td>Фестиваль 6</td><td>13–14 мар</td><td>полный круг (10)</td></tr>
+        <tr><td>Болгария</td><td>7 + 7 + 4</td><td>—</td><td>—</td><td class="num">18</td></tr>
+        <tr><td>Белград</td><td>3 + 3</td><td>3 + 3 + 3 + 3</td><td>—</td><td class="num">18</td></tr>
+        <tr><td>Сараево-1</td><td>3 + 3 + 2</td><td>2 + 1 + 2 + 1</td><td class="num">4</td><td class="num">18</td></tr>
+        <tr><td>Сараево-2</td><td>3 + 3 + 2</td><td>1 + 2 + 1 + 2</td><td class="num">4</td><td class="num">18</td></tr>
       </tbody>
     </table></div>
-    <p class="lead"><b>Итого B-4:</b> ~24 игры/команда. Март — при 5 командах можно оставить под Winter Classic.</p>
-  </section>
 
-  <!-- FINALS -->
-  <section>
-    <p class="eyebrow">Плей-офф</p>
-    <h2>Finals «Финал 3» · апрель 2027</h2>
-    <p class="lead">Один централизованный Finals-уикенд в Сараево (предв. 18–19 апреля). Топ-3, остальные вылетают.</p>
-    <div class="month"><div class="mh"><span class="mn">Апрель · Finals</span><span class="md">18–19 апр 2027</span></div>
-      <div class="day"><div class="dl">Суббота · Полуфинал</div>
-        <div class="m"><span class="t">17:00</span><span>2-е место – 3-е место</span></div></div>
-      <div class="day"><div class="dl">Воскресенье · Финал</div>
-        <div class="m"><span class="t">15:00</span><span>1-е место – победитель полуфинала → </span></div></div></div>
-    <p class="lead">1-е место — bye прямо в финал. Проигравший полуфинала — . ОТ плей-офф: 5 мин 3-на-3 → буллиты.</p>
-  </section>
-
-  <!-- COMPARE -->
-  <section>
-    <p class="eyebrow">Сравнение</p>
-    <h2>4 vs 5 команд</h2>
+    <h3>Каждая пара — ровно 6 матчей</h3>
     <div class="tbl"><table>
-      <thead><tr><th></th><th>4 команды</th><th>5 команд · B-2</th><th>5 команд · B-4</th></tr></thead>
+      <thead><tr><th>Пара</th><th>Где играются</th><th>Всего</th></tr></thead>
       <tbody>
-        <tr><td>Сезон</td><td>окт–мар</td><td>сен–мар</td><td>сен–мар</td></tr>
-        <tr><td>Игровых уикендов</td><td class="num">6</td><td class="num">7</td><td class="num">7</td></tr>
-        <tr><td>Матчей за уикенд</td><td class="num">6</td><td class="num">5</td><td class="num">10</td></tr>
-        <tr><td>Игр на команду</td><td class="num">18</td><td class="num">~12</td><td class="num">~24</td></tr>
+        <tr><td>Болгария – Белград</td><td>по 3 в блоках 1 и 2</td><td class="num">6</td></tr>
+        <tr><td>Болгария – Сараево-1</td><td>по 2 в каждом блоке</td><td class="num">6</td></tr>
+        <tr><td>Болгария – Сараево-2</td><td>по 2 в каждом блоке</td><td class="num">6</td></tr>
+        <tr><td>Белград – Сараево-1</td><td>2+1+2+1 по уикендам</td><td class="num">6</td></tr>
+        <tr><td>Белград – Сараево-2</td><td>1+2+1+2 по уикендам</td><td class="num">6</td></tr>
+        <tr><td>Сараево-1 – Сараево-2</td><td>2 в субботах блоков + 4 дерби-вечера</td><td class="num">6</td></tr>
       </tbody>
     </table></div>
   </section>
 
-  <footer>BHC · Календарь · 2026/27 — даты предварительные, под слоты арены. Strength · Heritage · Altitude</footer>
+  <section>
+    <p class="eyebrow">Нагрузка</p>
+    <h2>Два матча в день</h2>
+    <p class="lead">Общее правило Лиги — команда не играет два матча подряд в один день. В блочном календаре есть два согласованных отступления.</p>
+    <div class="callout">
+      <span class="lbl">Отступление 1 · Болгария</span>
+      <p>Два матча в будние дни блока (четверг и пятница), пауза между ними не менее 60 минут. Это собственное предложение команды — без него 18 матчей в три визита не помещаются. <b>Требует состава от 14 полевых игроков и 2 вратарей.</b></p>
+    </div>
+    <div class="callout">
+      <span class="lbl">Отступление 2 · Белград</span>
+      <p>Два матча в субботу локального уикенда, пауза не менее 90 минут. Математически неизбежно: три команды на четыре матча за уикенд — кто-то играет дважды в день. Назначено Белграду сознательно: он единственный, кто едет, и заинтересован в максимуме игр за поездку.</p>
+    </div>
+    <p class="lead">В субботах блоков подряд не играет никто — дерби Сараево-1 – Сараево-2 стоит между двумя матчами Болгария – Белград и разводит их паузой около 2:45.</p>
+  </section>
+
+  <section>
+    <p class="eyebrow">Резерв</p>
+    <h2>Если визит срывается</h2>
+    <p class="lead">Блок концентрирует до 8 матчей в одном событии, поэтому неприезд разбирается отдельно от неявки на отдельный матч. Четыре механизма работают вместе — подробности в Регламенте, раздел 11.</p>
+    <div class="tbl"><table>
+      <thead><tr><th>Механизм</th><th>Как работает</th></tr></thead>
+      <tbody>
+        <tr><td><b>Теневое расписание</b></td><td>Событие не отменяется: на каждый блок заранее готов запасной набор матчей между остающимися командами, он занимает те же слоты льда</td></tr>
+        <tr><td><b>Процент очков</b></td><td>Место в таблице = очки ÷ (3 × сыгранные матчи). Команда с 11 матчами корректно стоит рядом с командой с 18</td></tr>
+        <tr><td><b>Разделение вины</b></td><td>Вина команды — технические поражения 0:5 и невозврат доли льда. Форс-мажор — матчи аннулируются, работает процент очков</td></tr>
+        <tr><td><b>Оплата вперёд</b></td><td>Взнос целиком до старта сезона; снятие с блока позже чем за 21 день — доля льда не возвращается</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <footer>BHC · Календарь · сезон 2026/27 · версия v4 — даты предварительные, под слоты арены. Strength · Heritage · Altitude</footer>
 
 </div>
