@@ -1,0 +1,55 @@
+{
+  "league": {
+    "name": "Balkan Hockey Championship",
+    "abbr": "BHC",
+    "baseArena": "Sarajevo, Bosnia and Herzegovina",
+    "website": "[LEAGUE WEBSITE]",
+    "youtube": "[YOUTUBE CHANNEL]",
+    "contact": {
+      "instagram": "@bhc.championship",
+      "whatsapp": "+66 95 683 4772",
+      "email": "[E-MAIL]"
+    }
+  },
+  "season": {
+    "id": "2026-27",
+    "name": "Season 2026/27",
+    "startsText": "October 2026",
+    "endsText": "January 2027",
+    "status": "preseason",
+    "notes": "Regular season October 2026 – January 2027, play-offs in a single weekend in January 2027. The season calendar is published separately."
+  },
+  "updated": "2026-09-19",
+  "teams": [
+    {
+      "id": "nsd",
+      "name": "IH Pro Stars",
+      "city": "Novi Sad",
+      "country": "Serbia",
+      "logo": "../logos/nsd.png"
+    },
+    {
+      "id": "bel",
+      "name": "Wolves",
+      "city": "Belgrade",
+      "country": "Serbia",
+      "logo": "../logos/bel.png"
+    },
+    {
+      "id": "sar",
+      "name": "Vukovi",
+      "city": "Sarajevo",
+      "country": "Bosnia and Herzegovina",
+      "logo": "../logos/sar.png"
+    },
+    {
+      "id": "bul",
+      "name": "Bulgaria Select",
+      "city": "Sofia",
+      "country": "Bulgaria",
+      "logo": "../logos/bul.png"
+    }
+  ],
+  "players": [],
+  "games": []
+}

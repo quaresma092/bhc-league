@@ -1,0 +1,108 @@
+{
+  "_comment": "ОБРАЗЕЦ структуры. Не используется на сайте: реальные данные только в season-2026-27.json. Проверить генератор на этом файле: python3 tools/build_stats.py --data site-v2/en/data/_example.json --out /tmp/bhc-stats-test",
+  "league": {
+    "name": "Balkan Hockey Championship",
+    "abbr": "BHC",
+    "baseArena": "Sarajevo, Bosnia and Herzegovina",
+    "website": "https://example.org",
+    "youtube": "https://youtube.com/@example",
+    "contact": { "instagram": "@bhc.championship", "whatsapp": "+66 95 683 4772", "email": "stats@example.org" }
+  },
+  "season": {
+    "id": "2026-27",
+    "name": "Season 2026/27",
+    "startsText": "October 2026",
+    "endsText": "January 2027",
+    "status": "running",
+    "notes": "Образец: один сыгранный матч."
+  },
+  "updated": "2026-10-17",
+  "teams": [
+    { "id": "sar", "name": "Vukovi", "city": "Sarajevo", "country": "Bosnia and Herzegovina", "logo": "../logos/sar.png" },
+    { "id": "bel", "name": "Wolves", "city": "Belgrade", "country": "Serbia", "logo": "../logos/bel.png" }
+  ],
+  "players": [
+    {
+      "_comment": "Поля в формате Elite Prospects. id — внутренний, используется в событиях матча.",
+      "id": "sar-17",
+      "team": "sar",
+      "name": "Player Example",
+      "dob": "2001-03-14",
+      "position": "F",
+      "shoots": "L",
+      "heightCm": 183,
+      "weightKg": 84,
+      "nationality": "Bosnia and Herzegovina",
+      "jersey": 17,
+      "previousClub": "HK Example, Example League"
+    },
+    {
+      "id": "sar-1",
+      "team": "sar",
+      "name": "Goalie Example",
+      "dob": "1998-11-02",
+      "position": "G",
+      "catches": "L",
+      "heightCm": 188,
+      "weightKg": 90,
+      "nationality": "Bosnia and Herzegovina",
+      "jersey": 1,
+      "previousClub": "HK Example 2"
+    },
+    {
+      "id": "bel-9",
+      "team": "bel",
+      "name": "Opponent Example",
+      "dob": "2000-06-21",
+      "position": "D",
+      "shoots": "R",
+      "heightCm": 186,
+      "weightKg": 88,
+      "nationality": "Serbia",
+      "jersey": 9,
+      "previousClub": "HK Example 3"
+    },
+    {
+      "id": "bel-30",
+      "team": "bel",
+      "name": "Opponent Goalie",
+      "dob": "1997-01-09",
+      "position": "G",
+      "catches": "R",
+      "heightCm": 185,
+      "weightKg": 86,
+      "nationality": "Serbia",
+      "jersey": 30,
+      "previousClub": "HK Example 4"
+    }
+  ],
+  "games": [
+    {
+      "id": "G001",
+      "date": "2026-10-16",
+      "time": "19:30",
+      "venue": "Sarajevo",
+      "round": "Round 1",
+      "home": "sar",
+      "away": "bel",
+      "status": "final",
+      "result": "REG",
+      "score": {
+        "home": { "periods": [1, 2, 0], "total": 3 },
+        "away": { "periods": [0, 1, 0], "total": 1 }
+      },
+      "gameSheet": "game-sheets/BHC-2026-27-G001-2026-10-16-VUK-WOL.pdf",
+      "video": "https://youtube.com/watch?v=EXAMPLE",
+      "lineups": { "home": ["sar-17", "sar-1"], "away": ["bel-9", "bel-30"] },
+      "events": [
+        { "type": "goal", "period": 1, "time": "12:34", "team": "sar", "scorer": "sar-17", "assists": ["bel-9"], "strength": "EV" },
+        { "type": "goal", "period": 2, "time": "04:02", "team": "bel", "scorer": "bel-9", "assists": [], "strength": "PP" },
+        { "type": "penalty", "period": 2, "time": "08:15", "team": "bel", "player": "bel-9", "minutes": 2, "reason": "Tripping" }
+      ],
+      "goalies": [
+        { "player": "sar-1", "team": "sar", "minutes": 60, "shotsAgainst": 24, "goalsAgainst": 1, "decision": "W" },
+        { "player": "bel-30", "team": "bel", "minutes": 60, "shotsAgainst": 31, "goalsAgainst": 3, "decision": "L" }
+      ]
+    }
+  ]
+}

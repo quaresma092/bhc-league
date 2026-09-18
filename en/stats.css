@@ -1,0 +1,94 @@
+/* BHC — English stats section. Стиль сайта site-v2 (Instagram-посты): бумага, синий, красный. */
+:root{
+  --paper:#FBFAFE; --card:#FFFFFF; --strip:#F5F5F5;
+  --blue:#0139AC; --red:#C90508; --pale:#DDE8FC; --pale2:#C6D7F0;
+  --ink:#112F63; --mid:#43557A; --dim:#7A87A3; --hair:rgba(1,57,172,.16);
+  --display:"Big Shoulders","Sofia Sans Extra Condensed","Arial Narrow",sans-serif;
+  --body:"Inter",system-ui,-apple-system,sans-serif;
+  --wrap:1160px; --gut:clamp(18px,4vw,40px);
+  --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .07 0 0 0 0 .12 0 0 0 0 .25 0 0 0 1.6 -1'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.5;
+     -webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::after{content:"";position:fixed;inset:0;background:var(--grain);opacity:.35;pointer-events:none;z-index:50}
+a{color:inherit}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-inline:var(--gut)}
+
+/* шапка: логотип на красной «центральной линии», линия не пересекает буквы */
+.top{position:relative;overflow:hidden}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;padding-block:18px;gap:14px}
+.brand{display:flex;align-items:center;text-decoration:none;position:relative}
+.brand::before{content:"";position:absolute;left:-100vw;width:300vw;top:47.1%;height:2px;background:var(--red);transform:translateY(-50%)}
+.brand img{position:relative;z-index:1;width:64px;height:auto;border-radius:50%}
+.nav{display:flex;gap:6px;list-style:none;position:relative;z-index:1;flex-wrap:wrap}
+.nav a{display:block;background:var(--paper);padding:4px 10px;white-space:nowrap;text-decoration:none;
+       font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--ink)}
+.nav a:hover{color:var(--red)}
+.nav a.on{color:var(--red);font-weight:600}
+
+/* заголовок страницы */
+.page-head{padding-block:clamp(28px,5vw,56px) clamp(20px,3vw,32px)}
+.kick{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--ink);font-weight:500;margin-bottom:12px}
+h1{font-family:var(--display);font-weight:900;text-transform:uppercase;color:var(--blue);
+   font-size:clamp(44px,7vw,92px);line-height:.88;letter-spacing:0}
+h1 .accent{color:var(--red)}
+.lead{font-size:clamp(16px,1.8vw,19px);color:var(--mid);max-width:70ch;margin-top:16px}
+h2{font-family:var(--display);font-weight:900;text-transform:uppercase;color:var(--blue);
+   font-size:clamp(28px,3.4vw,42px);line-height:.92;margin:clamp(32px,5vw,52px) 0 14px}
+h3{font-family:var(--display);font-weight:900;text-transform:uppercase;color:var(--blue);font-size:24px;line-height:1;margin:26px 0 10px}
+p{margin:10px 0;color:var(--mid)}
+p b,li b{color:var(--ink);font-weight:600}
+main{padding-bottom:clamp(48px,7vw,88px)}
+
+/* таблицы: прокручиваются только они, страница — нет */
+.tbl-wrap{overflow-x:auto;border-top:2px solid var(--blue);background:var(--card);margin-top:10px;
+          -webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;font-size:15px;min-width:640px}
+table.narrow{min-width:420px}
+th{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);background:var(--pale);
+   font-weight:600;text-align:center;padding:12px 10px;white-space:nowrap}
+td{padding:11px 10px;border-bottom:1px solid var(--hair);text-align:center;font-variant-numeric:tabular-nums}
+th.l,td.l{text-align:left}
+tbody tr:last-child td{border-bottom:0}
+td b{font-weight:600;color:var(--ink)}
+td.empty{color:var(--dim);padding:40px 16px;text-align:center}
+.legend{font-size:13px;color:var(--dim);margin-top:12px}
+.tm{display:flex;align-items:center;gap:10px;justify-content:flex-start}
+.tm img{width:26px;height:26px;object-fit:contain;mix-blend-mode:multiply;filter:brightness(1.04)}
+
+/* карточки команд */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:14px}
+.card{background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);border-top:3px solid var(--blue);padding:20px 18px}
+.card.open{border-top-color:var(--red);background:transparent}
+.card .nm{font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:24px;line-height:1;color:var(--blue)}
+.card .ct{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--mid);margin-top:8px}
+.card img{width:74px;height:74px;object-fit:contain;mix-blend-mode:multiply;filter:brightness(1.04);margin-bottom:14px}
+
+/* ссылки-кнопки и список */
+.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.links a{background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);padding:9px 16px;text-decoration:none;
+         font-size:13px;font-weight:500;color:var(--ink)}
+.links a:hover{box-shadow:inset 0 0 0 1px var(--red);color:var(--red)}
+ul.plain{list-style:none;margin:10px 0}
+ul.plain li{padding:9px 0;border-bottom:1px solid var(--hair);color:var(--mid)}
+ul.plain li b{color:var(--ink)}
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.facts span{background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);padding:7px 14px;font-size:13px;font-weight:500}
+a.dl{color:var(--red);font-weight:600;text-decoration:none;white-space:nowrap}
+a.dl:hover{text-decoration:underline}
+.note{background:var(--pale);padding:16px 18px;margin-top:18px;font-size:15px;color:var(--ink)}
+
+/* подвал: официальный источник для Elite Prospects */
+footer{border-top:2px solid var(--pale);padding-block:28px 40px;margin-top:clamp(40px,6vw,72px)}
+footer .src{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--mid);font-weight:600}
+footer p{font-size:14px;margin-top:8px}
+footer a{color:var(--red)}
+
+@media (max-width:760px){
+  .top .wrap{flex-wrap:wrap;row-gap:10px}
+  .brand{flex:1 1 100%;max-width:max-content}
+  .nav{width:100%;gap:4px}
+  .nav a{padding-inline:0 10px}
+}
