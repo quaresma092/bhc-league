@@ -241,7 +241,8 @@
     /* телефон: фоновый логотип — справа от заголовка (а не по центру экрана за абзацем), красная линия — через его центр.
        Заголовок на 390 px стоит на 174–333 px от верха; линия в PNG на 47,1% высоты, высота PNG = 0,97 ширины */
     .hero{--logo-w:min(150px,calc(100vw - 225px));--ly:calc(254px - var(--logo-w) * .5);--lx:calc(100% - var(--logo-w) + 8px);
-          --cy:calc(var(--ly) + var(--logo-w) * .501);
+          --ch:calc(var(--logo-w) * .0265);
+          --cy:calc(var(--ly) + var(--logo-w) * .501 - var(--ch) / 2);  /* в px позиция = ВЕРХНИЙ край полосы, поэтому −половина толщины */
           --cline:linear-gradient(var(--c),var(--c)) left var(--cy) / calc(var(--lx) + var(--logo-w) * .02) var(--ch) no-repeat}
     .hero::before{background-position:right -8px top var(--ly)}
     .hero::after{background:var(--cline)}  /* без дымки: на телефоне она лежала сверху и почти стирала знак */
