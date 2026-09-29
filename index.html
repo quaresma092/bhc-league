@@ -237,6 +237,13 @@
     .nav a{padding-inline:0 8px}
   }
   @media (max-width:560px){
+    /* телефон: фоновый логотип — справа от заголовка (а не по центру экрана за абзацем), красная линия — через его центр.
+       Заголовок на 390 px стоит на 174–333 px от верха; линия в PNG на 47,1% высоты, высота PNG = 0,97 ширины */
+    .hero{--logo-w:min(180px,calc(100vw - 225px));--ly:calc(254px - var(--logo-w) * .485);--lx:calc(100% - var(--logo-w) + 10px);--cy:calc(var(--ly) + var(--logo-w) * .457);
+          --cline:linear-gradient(var(--c),var(--c)) left var(--cy) / calc(var(--lx) + var(--logo-w) * .10) var(--ch) no-repeat,
+                  linear-gradient(var(--c),var(--c)) right var(--cy) / calc(var(--logo-w) * .095 - 10px) var(--ch) no-repeat}
+    .hero::before{background-position:right -10px top var(--ly)}
+    .hero::after{background:var(--cline)}  /* без дымки: на телефоне она лежала сверху и почти стирала знак */
     body{font-size:16px}
     .brand img{width:50px}
     .brush{margin-left:24px}
