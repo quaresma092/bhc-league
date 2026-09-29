@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Schedule 2026/27 · BHC</title>
+<meta name="description" content="Balkan Hockey Championship 2026/27 regular season: 5 teams, 3 rounds, 30 games. Round 1 22–25 October, Round 2 12–15 November, Round 3 17–20 December.">
+<link rel="icon" href="assets/bhc-logo-white.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@700;800;900&family=Sofia+Sans+Extra+Condensed:wght@800;900&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="inner.css">
+<style>
+/* Календарь сезона 2026/27 по xlsx владельца от 24.09 (утверждён 27.09): 5 команд, 3 одинаковых тура чт–вс, 30 матчей. */
+.page-head h1 .accent{display:block;font-size:.62em;margin-top:.08em}
+.brush{position:absolute;right:var(--gut);top:clamp(30px,6vw,70px);width:clamp(150px,22vw,280px);transform:rotate(6deg);pointer-events:none}  /* ровно, как на главной */
+
+/* ключевые цифры */
+.facts{display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid var(--blue);border-bottom:2px solid var(--blue);margin-bottom:clamp(48px,7vw,80px)}
+.facts div{padding:18px 16px 16px;border-left:1px solid var(--hair)}
+.facts div:first-child{border-left:0;padding-left:0}
+.facts b{display:block;font-family:var(--display);font-weight:900;font-size:clamp(44px,6vw,72px);line-height:.9;color:var(--blue)}
+.facts b em{font-style:normal;color:var(--red)}
+.facts span{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--mid);font-weight:500}
+
+/* три тура — таймлайн */
+.rounds{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-bottom:clamp(40px,6vw,64px);position:relative}
+.rounds::before{content:"";position:absolute;left:0;right:0;top:9px;height:2px;background:var(--blue)}
+.rounds a{text-decoration:none;padding:34px 16px 0 0;position:relative;display:block}
+.rounds a::before{content:"";position:absolute;top:2px;left:0;width:16px;height:16px;border-radius:50%;background:var(--paper);border:2px solid var(--blue)}
+.rounds a:hover::before{background:var(--red);border-color:var(--red)}
+.rounds .k{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--red);font-weight:600}
+.rounds b{display:block;font-family:var(--display);font-weight:900;text-transform:uppercase;color:var(--blue);font-size:clamp(34px,4.6vw,58px);line-height:.9;margin-top:8px}
+.rounds span{display:block;color:var(--mid);font-size:15px;margin-top:6px}
+
+/* фильтр по команде */
+.filter{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:clamp(40px,6vw,64px)}
+.filter .lbl{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--mid);font-weight:500;margin-right:6px}
+.filter button{all:unset;cursor:pointer;display:flex;align-items:center;gap:10px;padding:8px 14px 8px 10px;background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:18px;letter-spacing:.03em;color:var(--ink);transition:box-shadow .15s,color .15s}
+.filter button img{height:30px;width:auto;mix-blend-mode:multiply}
+.filter button:hover{box-shadow:inset 0 0 0 2px var(--blue)}
+.filter button.on{box-shadow:inset 0 0 0 2px var(--red);color:var(--red)}
+.filter button.all{padding-left:14px}
+
+/* тур */
+.round{margin-bottom:clamp(64px,9vw,110px);scroll-margin-top:20px}
+.round-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;border-bottom:2px solid var(--blue);padding-bottom:14px;margin-bottom:26px}
+.round-head h2{font-family:var(--display);font-weight:900;text-transform:uppercase;color:var(--blue);font-size:clamp(48px,7vw,92px);line-height:.84}
+.round-head h2 span{color:var(--red);display:block;font-size:.62em;margin-top:.06em}
+.round-head .where{text-align:right;font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:var(--mid);font-weight:500;line-height:1.8}
+.round-head .where b{display:block;font-family:var(--display);font-size:28px;letter-spacing:.02em;color:var(--ink);font-weight:800}
+
+.days{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.day h3{font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:26px;line-height:1;color:var(--ink);display:flex;align-items:baseline;gap:8px;padding-bottom:10px;margin-bottom:12px;border-bottom:1px solid var(--hair)}
+.day h3 small{font-size:12px;letter-spacing:.28em;color:var(--red);font-family:var(--body);font-weight:600}
+.game{background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);padding:12px 14px 14px;margin-bottom:12px;transition:opacity .2s, box-shadow .2s}
+.game .t{display:flex;justify-content:space-between;align-items:baseline}
+.game .t b{font-family:var(--display);font-weight:900;font-size:30px;line-height:1;color:var(--blue)}
+.game .t span{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);font-weight:500}
+.team{display:flex;align-items:center;gap:10px;margin-top:10px}
+.team .lg{width:38px;height:38px;display:flex;align-items:center;justify-content:center;flex:none}
+.team .lg img{max-width:38px;max-height:38px;width:auto;height:auto;mix-blend-mode:multiply}
+.team .lg i{font-style:normal;font-family:var(--display);font-weight:900;font-size:17px;color:var(--red);letter-spacing:.02em;line-height:1}
+.team .nm{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:20px;line-height:1;color:var(--ink)}
+.team .nm small{display:block;font-family:var(--body);font-size:10px;letter-spacing:.24em;color:var(--dim);font-weight:500;margin-top:3px}
+.vs{font-size:10px;letter-spacing:.3em;color:var(--red);font-weight:700;margin:6px 0 0 48px}
+.game.dim{opacity:.22}
+.game.hit{box-shadow:inset 0 0 0 2px var(--red)}
+
+/* выездные матчи тура */
+.away{margin-top:18px;display:grid;grid-template-columns:auto 1fr 1fr;gap:16px;align-items:stretch;background:var(--pale);padding:16px}
+.away .lbl{font-family:var(--display);font-weight:900;text-transform:uppercase;color:var(--blue);font-size:24px;line-height:.95;align-self:center;padding-right:8px}
+.away .lbl small{display:block;font-family:var(--body);font-size:11px;letter-spacing:.24em;color:var(--red);font-weight:600;margin-top:6px}
+.away .game{margin:0}
+.away .game .t b{color:var(--red);font-size:22px}
+
+.note{font-size:14px;color:var(--mid);max-width:760px;margin-top:-40px;margin-bottom:80px}
+.note b{color:var(--ink)}
+
+@media (max-width:900px){
+  .days{grid-template-columns:1fr 1fr}
+  .away{grid-template-columns:1fr}
+  .facts{grid-template-columns:1fr 1fr}
+  .facts div:nth-child(3){border-left:0;padding-left:0}
+}
+@media (max-width:560px){
+  .days{grid-template-columns:1fr}
+  .rounds{grid-template-columns:1fr;row-gap:22px}
+  .rounds::before{display:none}
+  .brush{display:none}
+  .round-head{flex-direction:column;align-items:flex-start}
+  .round-head .where{text-align:left}
+  .nav{display:none}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="assets/bhc-logo-ring.png" alt="BHC"></a>
+    <ul class="nav">
+      <li><a href="teams.html">Teams</a></li>
+      <li><a href="schedule.html" class="on">Schedule</a></li>
+      <li><a href="index.html#format">Format</a></li>
+      <li><a href="index.html#join">Join</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="page-head">
+  <div class="wrap">
+    <img class="brush" src="assets/season-1-red.png" alt="">
+    <div class="kick">Balkan Hockey Championship · Season 2026/27</div>
+    <h1>Schedule<span class="accent">Regular season</span></h1>
+    <p class="lead">Three hockey weekends in Sarajevo, Thursday to Sunday. Every team plays every other team three times — once in each round.</p>
+  </div>
+</section>
+
+<main class="wrap">
+
+  <div class="facts">
+    <div><b>5</b><span>Teams</span></div>
+    <div><b>3</b><span>Rounds</span></div>
+    <div><b>30</b><span>Games</span></div>
+    <div><b>12</b><span>Games per team</span></div>
+  </div>
+
+  <nav class="rounds" id="rounds"></nav>
+
+  <div class="filter" id="filter"><span class="lbl">Show team</span></div>
+
+  <div id="season"></div>
+
+  <p class="note">All games in Sarajevo unless marked. <b>Away games</b> — IH Pro Stars vs Wolves in Novi Sad and Bulgaria Select vs Buzadam in Bulgaria or Turkey — are played once per round; dates and times will be announced.</p>
+</main>
+
+<script>
+// Команды: логотипы из site-v2/logos; у Buzadam логотипа пока нет — показываем инициалы
+const T={
+  vuk:{n:'Vukovi',c:'Sarajevo',lg:'logos/sar-trim.png'},
+  ihp:{n:'IH Pro Stars',c:'Novi Sad',lg:'logos/nsd-trim.png'},
+  wol:{n:'Wolves',c:'Belgrade',lg:'logos/bel-trim.png'},
+  bul:{n:'Bulgaria Select',c:'Sofia',lg:'logos/bul-trim.png'},
+  buz:{n:'Buzadam',c:'Istanbul',lg:'logos/buz-trim.png'},
+};
+// Шаблон тура из xlsx: [день 0–3 (чт–вс), время, хозяин, гость]; все туры одинаковые
+const SLOTS=[[0,'20:00','vuk','bul'],[1,'17:00','vuk','buz'],[1,'20:00','ihp','bul'],[2,'14:00','vuk','wol'],[2,'17:00','ihp','buz'],[2,'20:00','bul','wol'],[3,'10:00','wol','buz'],[3,'13:00','vuk','ihp']];
+const AWAY=[['ihp','wol','Novi Sad'],['bul','buz','Bulgaria / Turkey']];
+const ROUNDS=[{s:'2026-10-22',m:'October'},{s:'2026-11-12',m:'November'},{s:'2026-12-17',m:'December'}];
+const DOW=['Thu','Fri','Sat','Sun'];
+
+const team=(k)=>{const t=T[k];return `<div class="team"><div class="lg">${t.lg?`<img src="${t.lg}" alt="">`:`<i>BA</i>`}</div><div class="nm">${t.n}<small>${t.c}</small></div></div>`};
+const game=(no,time,h,a,where)=>`<div class="game" data-t="${h} ${a}"><div class="t"><b>${time}</b><span>Game ${no}${where?' · '+where:''}</span></div>${team(h)}<div class="vs">VS</div>${team(a)}</div>`;
+
+let html='',nav='';
+ROUNDS.forEach((r,i)=>{
+  const d0=new Date(r.s+'T12:00:00'); const day=(k)=>{const d=new Date(d0);d.setDate(d.getDate()+k);return d.getDate()};
+  const base=i*10;
+  nav+=`<a href="#round-${i+1}"><div class="k">Round ${i+1}</div><b>${day(0)}–${day(3)} ${r.m.slice(0,3)}</b><span>Thu – Sun · Sarajevo</span></a>`;
+  let days='';
+  for(let k=0;k<4;k++){
+    const gs=SLOTS.map((s,j)=>[s,j]).filter(([s])=>s[0]===k).map(([s,j])=>game(base+j+1,s[1],s[2],s[3])).join('');
+    days+=`<div class="day"><h3>${DOW[k]} ${day(k)} <small>${r.m.slice(0,3)}</small></h3>${gs}</div>`;
+  }
+  const aw=AWAY.map((a,j)=>game(base+9+j,'TBD',a[0],a[1],a[2])).join('');
+  html+=`<section class="round" id="round-${i+1}">
+    <div class="round-head"><h2>Round ${i+1}<span>${day(0)}–${day(3)} ${r.m}</span></h2><div class="where">Venue<b>Sarajevo</b></div></div>
+    <div class="days">${days}</div>
+    <div class="away"><div class="lbl">Away games<small>Dates TBD</small></div>${aw}</div>
+  </section>`;
+});
+document.getElementById('season').innerHTML=html;
+document.getElementById('rounds').innerHTML=nav;
+
+// фильтр: подсветка матчей выбранной команды
+const f=document.getElementById('filter');
+f.insertAdjacentHTML('beforeend',`<button class="all on" data-k="">All</button>`+Object.entries(T).map(([k,t])=>`<button data-k="${k}">${t.lg?`<img src="${t.lg}" alt="">`:''}${t.n}</button>`).join(''));
+f.addEventListener('click',e=>{
+  const b=e.target.closest('button'); if(!b) return;
+  f.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));
+  const k=b.dataset.k;
+  document.querySelectorAll('.game').forEach(g=>{const has=!k||g.dataset.t.split(' ').includes(k);g.classList.toggle('dim',!has);g.classList.toggle('hit',!!k&&has)});
+});
+</script>
+</body>
+</html>

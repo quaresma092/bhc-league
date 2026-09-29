@@ -1,0 +1,121 @@
+/* Внутренние страницы BHC — тот же стиль, что главная site-v2/index.html (стиль Instagram-постов, 14.09) */
+:root{
+  --paper:#FBFAFE; --ice:var(--paper); --strip:#F5F5F5; --card:#FFFFFF;
+  --blue:#0139AC; --red:#C90508; --pale:#DDE8FC; --pale2:#C6D7F0;
+  --ink:#112F63; --mid:#43557A; --dim:#7A87A3; --hair:rgba(1,57,172,.16);
+  --display:"Big Shoulders","Sofia Sans Extra Condensed","Arial Narrow",Impact,sans-serif; /* Big Shoulders — шрифт постов; кириллицы в нём нет, её подхватывает Sofia Sans (только для наших RU-черновиков) */
+  --body:"Inter",system-ui,-apple-system,sans-serif;
+  --wrap:1160px; --text:760px; --gut:clamp(18px,4vw,40px);
+  --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .07 0 0 0 0 .12 0 0 0 0 .25 0 0 0 1.6 -1'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::after{content:"";position:fixed;inset:0;background:var(--grain);opacity:.35;pointer-events:none;z-index:50}
+a{color:inherit}
+img{max-width:100%;display:block}
+[hidden]{display:none!important}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-inline:var(--gut)}
+.accent{color:var(--red)}
+.kick{font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--ink);font-weight:500}
+
+/* кнопки */
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:20px;letter-spacing:.05em;text-decoration:none;padding:12px 24px 11px;border-radius:0;transition:transform .15s ease, background .15s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn.red{background:var(--red);color:#fff}
+.btn.red:hover{background:var(--blue)}
+.btn.line{box-shadow:inset 0 0 0 2px var(--blue);color:var(--blue)}
+.btn .arr{font-family:var(--body);font-weight:600;font-size:16px}
+
+/* шапка: логотип на красной «центральной линии» */
+.top{position:relative;overflow:hidden}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;padding-block:16px;gap:0}
+/* линия через всю ширину на высоте линии логотипа; меню на «бумажных» плашках — линия идёт за ними */
+.brand{display:flex;align-items:center;text-decoration:none;position:relative}
+.brand::before{content:"";position:absolute;left:-100vw;width:300vw;top:50.3%;height:2px;background:var(--red);transform:translateY(-50%)}
+.brand img{position:relative;z-index:1;width:57px;height:auto;border-radius:50%}
+.nav{display:flex;gap:4px;list-style:none;position:relative;z-index:1}
+.nav a{display:block;background:var(--paper);padding:4px 9px;white-space:nowrap;text-decoration:none;font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--ink)}
+.nav a:hover,.nav a.on{color:var(--red)}
+
+/* заголовок страницы + диагональный паттерн снизу */
+.page-head{padding-block:clamp(40px,7vw,88px) clamp(32px,5vw,56px);position:relative;margin-bottom:clamp(56px,7vw,96px)}
+.page-head::after{content:"";position:absolute;left:0;right:0;top:100%;height:clamp(56px,7vw,96px);background:url(assets/tex/diag-band.png) left center / auto 100% repeat-x}
+.page-head .kick{margin-bottom:16px}
+.page-head h1{font-family:var(--display);text-transform:uppercase;line-height:.86;font-size:clamp(56px,9vw,120px);font-weight:900;color:var(--blue)}
+.page-head .lead{font-size:clamp(18px,2vw,21px);color:var(--mid);max-width:680px;margin-top:24px}
+.page-head .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.page-head .meta span{background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);padding:7px 14px;font-size:14px;font-weight:500}
+
+/* тело: текст + оглавление */
+.page{display:grid;grid-template-columns:minmax(0,var(--text)) 1fr;gap:clamp(32px,6vw,88px);padding-block:clamp(16px,3vw,32px) clamp(64px,9vw,110px)}
+.page.single{grid-template-columns:minmax(0,var(--text))}
+.toc{position:sticky;top:24px;align-self:start;font-size:14px}
+.toc h4{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--red);font-weight:600;margin-bottom:14px}
+.toc ol{list-style:none;display:flex;flex-direction:column;gap:8px;border-left:2px solid var(--pale);padding-left:16px}
+.toc a{text-decoration:none;color:var(--mid)}
+.toc a:hover{color:var(--red)}
+
+/* типографика текста */
+.prose > * + *{margin-top:18px}
+.prose h2{font-family:var(--display);text-transform:uppercase;font-weight:900;color:var(--blue);font-size:clamp(38px,4.6vw,54px);line-height:.9;margin-top:clamp(48px,6vw,68px);padding-top:18px;border-top:2px solid var(--blue);scroll-margin-top:24px}
+.prose h2:first-child{margin-top:0}
+.prose h3{font-family:var(--display);text-transform:uppercase;font-weight:900;color:var(--blue);font-size:28px;line-height:.95;margin-top:32px}
+.prose p,.prose li{color:#26395F}
+.prose ul,.prose ol{padding-left:22px}
+.prose li + li{margin-top:6px}
+.prose li::marker{color:var(--red)}
+.prose strong,.prose b{color:var(--ink);font-weight:600}
+.prose a{color:var(--red);text-decoration-thickness:1px;text-underline-offset:3px}
+.note{background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);border-left:3px solid var(--red);padding:18px 20px;color:var(--mid);font-size:16px}
+.note b{color:var(--ink)}
+
+/* таблицы */
+.tbl{overflow-x:auto;border-top:2px solid var(--blue);background:var(--card)}
+.tbl table{width:100%;border-collapse:collapse;font-size:15px;min-width:480px}
+.tbl th{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);font-weight:600;text-align:left;padding:12px 10px;border-bottom:1px solid var(--hair);white-space:nowrap}
+.tbl td{padding:12px 10px;border-bottom:1px solid var(--hair);vertical-align:top;font-variant-numeric:tabular-nums}
+.tbl td b{font-weight:600}
+
+/* карточки */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.card{background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);border-top:3px solid var(--blue);padding:22px 20px}
+.card h3{margin-top:0}
+.card p{margin-top:8px;color:var(--mid);font-size:15px}
+.card .big{font-family:var(--display);font-weight:900;font-size:56px;line-height:.9;color:var(--blue)}
+
+/* кнопка-призыв в конце страницы */
+.page-cta{margin-top:clamp(44px,6vw,64px);background:var(--pale);padding:clamp(28px,4vw,40px);display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.page-cta p{color:var(--mid);max-width:440px}
+.prose .page-cta b,.page-cta b{display:block;font-family:var(--display);text-transform:uppercase;font-weight:900;font-size:34px;line-height:.95;color:var(--blue);margin-bottom:8px}
+
+/* футер */
+footer{padding-block:64px 40px;border-top:2px solid var(--pale)}
+.f-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:32px}
+footer h4{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--red);font-weight:600;margin-bottom:16px}
+footer ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+footer ul a{text-decoration:none;font-size:15px;color:var(--ink)}
+footer ul a:hover{color:var(--red)}
+footer .brand{flex:none}
+footer .brand::before,footer .brand::after{display:none}
+footer .brand img{width:73px}
+.f-brand p{color:var(--mid);font-size:15px;margin-top:14px;max-width:280px}
+.ph{color:var(--dim)}
+.f-bottom{margin-top:56px;padding-top:22px;border-top:2px solid var(--pale);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--mid)}
+
+/* адаптив */
+@media (max-width:980px){
+  .top .wrap{flex-wrap:wrap;row-gap:10px}
+  .brand{flex:1 1 100%;max-width:max-content}
+  .nav{width:100%;overflow-x:auto;gap:12px;padding-bottom:4px;scrollbar-width:none}
+  .nav a{padding-inline:0 8px}
+  .page{grid-template-columns:minmax(0,1fr)}
+  .toc{position:static;order:-1}
+  .f-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:560px){
+  body{font-size:16px}
+  .brand img{width:47px}
+  .f-grid{grid-template-columns:1fr}
+  .page-cta .btn{width:100%;justify-content:center}
+}

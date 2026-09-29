@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BHC-01a — Roster: how to fill it in</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@700;800;900&family=Sofia+Sans+Extra+Condensed:wght@800;900&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+/* BHC documents v2 — common style (site-v2 / Instagram): paper, royal blue, red; Big Shoulders + Inter */
+@page{size:A4;margin:14mm}
+@page wide{size:A4 landscape;margin:9mm 11mm}
+:root{--blue:#0139AC;--red:#C90508;--pale:#DDE8FC;--tint:#F4F7FD;--ink:#112F63;--mid:#43557A;--hair:rgba(1,57,172,.16);--cell:rgba(1,57,172,.30);--paper:#FBFAFE;
+  --display:"Big Shoulders","Sofia Sans Extra Condensed",sans-serif;--body:"Inter",system-ui,-apple-system,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{background:#fff;color:var(--ink);font:400 9.4pt/1.42 var(--body)}
+@media screen{
+  body{background:#E6EAF2;padding:24px 12px}
+  .sheet{background:#fff;width:210mm;max-width:100%;min-height:297mm;margin:0 auto 24px;padding:14mm;box-shadow:0 2px 18px rgba(17,47,99,.14)}
+  .sheet.wide{width:297mm;min-height:210mm;padding:9mm 11mm}
+  .wrapx{overflow-x:auto}
+}
+.sheet.wide{page:wide}
+.sheet + .sheet{break-before:page}
+.doc + .doc{break-before:page}
+
+/* header: logo on the rink centre line (line at 47.1% of logo height, never crosses the letters) */
+.hdr{display:flex;align-items:flex-start;height:12mm}
+.hdr::before,.hdr::after{content:"";height:2px;background:var(--red);margin-top:calc(12mm * .471 - 1px)}
+.hdr::before{width:5mm}
+.hdr::after{flex:1}
+.hdr img{height:12mm;width:auto;display:block;mix-blend-mode:multiply}
+.wide .hdr,.compact .hdr{height:12mm}
+.wide .hdr::before,.wide .hdr::after,.compact .hdr::before,.compact .hdr::after{margin-top:calc(12mm * .471 - 1px)}
+.wide .hdr img,.compact .hdr img{height:12mm}
+.meta{display:flex;justify-content:space-between;gap:6mm;margin-top:2.5mm;font:600 6.8pt/1.3 var(--body);letter-spacing:.26em;text-transform:uppercase;color:var(--mid)}
+.kick{font:600 7.2pt var(--body);letter-spacing:.3em;text-transform:uppercase;color:var(--red);margin-top:2.5mm}
+h1{font:900 22pt/.9 var(--display);text-transform:uppercase;color:var(--blue);margin:.8mm 0 1.8mm;letter-spacing:.004em}
+.wide h1,.compact h1{font-size:18pt;margin:2mm 0 1.2mm}
+.lead{color:var(--mid);font-size:8pt;max-width:175mm}
+.lead b,.note b{color:var(--ink);font-weight:600}
+.contact{margin-top:1.6mm;font:500 8.4pt var(--body);color:var(--ink)}
+.contact b{color:var(--red);font-weight:700;letter-spacing:.04em}
+
+h2{display:flex;gap:2.5mm;align-items:baseline;font:900 14pt/1 var(--display);text-transform:uppercase;color:var(--blue);
+   border-top:2px solid var(--blue);padding-top:1.4mm;margin:3mm 0 1.3mm;break-after:avoid}
+h2 i{font-style:normal;color:var(--red)}
+h2 small{font:500 7pt var(--body);letter-spacing:.14em;color:var(--mid);text-transform:uppercase;margin-left:auto}
+section{break-inside:avoid}
+section.flow{break-inside:auto}
+
+table{width:100%;border-collapse:collapse;font-size:8.6pt}
+th{background:var(--pale);color:var(--blue);font:700 6.8pt/1.2 var(--body);letter-spacing:.07em;text-transform:uppercase;text-align:left;
+   padding:1.4mm 1.8mm;border:1px solid var(--cell);vertical-align:bottom}
+td{border:1px solid var(--cell);padding:1.3mm 1.8mm;vertical-align:top}
+tr{break-inside:avoid}
+td.c,th.c{text-align:center}
+.fields td{font-size:7pt;line-height:1.22;padding:.7mm 1.5mm}
+.fields td.f{font-weight:600;color:var(--ink);width:38mm}
+.fields td.ex{color:var(--mid);width:38mm;font-variant-numeric:tabular-nums}
+.fields td.ex b{color:var(--blue);font-weight:600}
+.hl{color:var(--red);font-weight:700}
+
+ul.dot{list-style:none}
+ul.dot li{position:relative;padding-left:4mm;margin:.5mm 0;font-size:8pt;line-height:1.32}
+ul.dot li::before{content:"";position:absolute;left:0;top:1.5mm;width:1.3mm;height:1.3mm;border-radius:50%;background:var(--red)}
+/* две колонки таблицей, а не grid: Chrome не фрагментирует grid-контейнер и целиком уносит его на следующую страницу */
+table.cols{width:100%;border-collapse:separate;border-spacing:0;margin:0}
+table.cols > tbody > tr > td{border:0;padding:0;vertical-align:top;width:50%}
+table.cols > tbody > tr > td + td{padding-left:5mm}
+table.cols section{break-inside:avoid}
+
+.note{background:var(--tint);border-left:3px solid var(--red);padding:1.2mm 2.4mm;margin:2mm 0;font-size:7.4pt;color:var(--mid);break-inside:avoid}
+.foot{margin-top:3mm;padding-top:1.8mm;border-top:2px solid var(--pale);display:flex;justify-content:space-between;gap:6mm;
+  font:600 6.3pt var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--mid);break-inside:avoid}
+</style>
+</head>
+<body>
+<div class="doc"><div class="sheet">
+<div class="hdr"><img src="../assets/bhc-logo.png" alt="BHC"></div>
+<div class="meta"><span>Balkan Hockey Championship · Season 2026/27</span><span>BHC-01a · Rev. v1 · 19 September 2026</span></div>
+<div class="kick">Document BHC-01a · For teams</div>
+<h1>Roster —<br>how to fill it in</h1>
+<p class="lead">This sheet explains the roster file <b>roster-template-ep.csv</b>, which is submitted together with the Team Registration form (BHC-01, Regulation §3.1). Fill it in a spreadsheet editor and send it back as CSV or XLSX — <b>one row per player</b>, goaltenders with position G.</p>
+<p class="contact"><b>Contact:</b> WhatsApp +66 95 683 4772 · Instagram @bhc.championship</p>
+
+<div class="note"><b>Why the format is strict.</b> These fields build the player's profile in the League statistics and in hockey databases, where the player's games, goals, assists and penalty minutes stay for good. A name spelled differently in two rounds, or a date of birth written in a local format, creates a second player who did not exist. Five extra minutes now save the player's season record later.</div>
+
+<section class="flow"><h2><i>1</i> Fields<small>column by column</small></h2>
+<table class="fields">
+<thead><tr><th style="width:38mm">Field</th><th>How to fill it in</th><th style="width:38mm">Example</th></tr></thead>
+<tbody>
+<tr><td class="f">Last name</td><td>In Latin script, exactly as in the passport. If the passport is in Cyrillic, use the transliteration printed in it.</td><td class="ex">Primjerovic</td></tr>
+<tr><td class="f">First name</td><td>In Latin script, as in the passport. No nicknames or short forms.</td><td class="ex">Marko</td></tr>
+<tr><td class="f">Full name (Latin)</td><td>First name, then last name. This is the form used on the match sheet, in statistics and in the broadcast.</td><td class="ex">Marko Primjerovic</td></tr>
+<tr><td class="f">Date of birth</td><td><b>YYYY-MM-DD only.</b> Not 14.03.2001 and not 03/14/2001. The date confirms the age limit (§3.3) and identifies the player in databases.</td><td class="ex"><b>2001-03-14</b></td></tr>
+<tr><td class="f">Nationality</td><td>Citizenship as in the passport, country name in English.</td><td class="ex">Bosnia and Herzegovina</td></tr>
+<tr><td class="f">Position</td><td>One letter: <b>G</b> goaltender, <b>D</b> defence, <b>F</b> forward.</td><td class="ex">F</td></tr>
+<tr><td class="f">Shoots / Catches</td><td><b>L</b> or <b>R</b>. For skaters — the shooting side; for goaltenders — the catching-glove hand.</td><td class="ex">L</td></tr>
+<tr><td class="f">Jersey number</td><td>1–99, unique within the team (§3.9). The number is printed on the match sheet and shown in the broadcast.</td><td class="ex">17</td></tr>
+<tr><td class="f">Height (cm)</td><td>Whole centimetres. Optional, but it completes the profile.</td><td class="ex">182</td></tr>
+<tr><td class="f">Weight (kg)</td><td>Whole kilograms. Optional.</td><td class="ex">81</td></tr>
+<tr><td class="f">Previous club</td><td>The club the player last played for. Write a dash if there is none.</td><td class="ex">HK Example</td></tr>
+<tr><td class="f">Previous league</td><td>The competition that club played in. Dash if unknown.</td><td class="ex">Example National League</td></tr>
+<tr><td class="f">Insurance</td><td><b>yes</b> only if the player holds a valid sports insurance policy covering ice hockey, valid abroad (§3.7). Without it the player is not admitted to matches.</td><td class="ex">yes</td></tr>
+<tr><td class="f">Parental consent 16–17</td><td><b>yes</b> or <b>no</b> for players aged 16 and 17, <b>n-a</b> for adults. A <b>yes</b> means the signed Parental Consent BHC-02 is attached (§3.3).</td><td class="ex">n-a</td></tr>
+<tr><td class="f">Contact e-mail</td><td>For League use only — squad lists, documents, statistics questions. <b>Not published</b> and not passed to partners without the player's separate consent.</td><td class="ex">marko@example.com</td></tr>
+<tr><td class="f">EP profile URL</td><td>If the player already has an Elite Prospects profile, paste the link. It prevents a duplicate profile being created.</td><td class="ex">eliteprospects.com/…</td></tr>
+</tbody>
+</table>
+</section>
+
+<table class="cols"><tr><td>
+<section><h2><i>2</i> Deadlines<small>Regulation §3.1.1, §3.1.2, §3.6</small></h2>
+<ul class="dot">
+<li><b>By 30 September 2026</b> — minimum registration: <b>11 players</b> (10 skaters + 1 goaltender).</li>
+<li>The <b>main roster</b> is completed before the start of the championship; season roster up to 30 players, match sheet up to 20 skaters + 2 goaltenders.</li>
+<li>New players may be added <b>until the last round of the regular season, free of charge</b> — the team fee does not depend on roster size.</li>
+<li>Documents of a newly added player (roster row, Player Waiver BHC-03, medical clearance and insurance, BHC-02 for ages 16–17) must reach the League secretariat <b>by that player's first game</b>, before the match sheet is signed.</li>
+<li>To be eligible for the play-offs a player must have played <b>at least one regular-season game</b> for the team.</li>
+</ul>
+</section>
+</td><td>
+<section><h2><i>3</i> Before you send</h2>
+<ul class="dot">
+<li>Delete the example row marked <b class="hl">EXAMPLE — delete this row</b>.</li>
+<li>Check that every date of birth is written as YYYY-MM-DD and every jersey number is unique.</li>
+<li>Keep the file name in the form <b>BHC-roster-[team]-2026-27.csv</b>.</li>
+<li>Send it together with BHC-01, BHC-03 for every player and BHC-02 for players aged 16–17.</li>
+</ul>
+</section>
+</td></tr></table>
+
+<div class="foot"><span>BHC-01a · Roster: how to fill it in · v1</span><span>Balkan Hockey Championship · 2026/27</span></div>
+</div></div>
+</body>
+</html>

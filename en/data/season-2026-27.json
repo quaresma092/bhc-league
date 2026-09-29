@@ -3,53 +3,418 @@
     "name": "Balkan Hockey Championship",
     "abbr": "BHC",
     "baseArena": "Sarajevo, Bosnia and Herzegovina",
-    "website": "[LEAGUE WEBSITE]",
-    "youtube": "[YOUTUBE CHANNEL]",
+    "website": "https://quaresma092.github.io/bhc-league/",
+    "youtube": "",
     "contact": {
       "instagram": "@bhc.championship",
       "whatsapp": "+66 95 683 4772",
-      "email": "[E-MAIL]"
+      "email": "",
+      "telegram": "@bhc_championship"
     }
   },
   "season": {
     "id": "2026-27",
     "name": "Season 2026/27",
     "startsText": "October 2026",
-    "endsText": "January 2027",
+    "endsText": "December 2026",
     "status": "preseason",
-    "notes": "Regular season October 2026 – January 2027, play-offs in a single weekend in January 2027. The season calendar is published separately."
+    "notes": "Regular season 22 October – 20 December 2026 in three Thu–Sun rounds; play-offs (Final Four) — dates and venue TBA."
   },
-  "updated": "2026-09-19",
+  "updated": "2026-09-29",
   "teams": [
     {
       "id": "nsd",
       "name": "IH Pro Stars",
       "city": "Novi Sad",
       "country": "Serbia",
-      "logo": "../logos/nsd.png"
+      "logo": "../logos/nsd.png",
+      "slug": "ih-pro-stars",
+      "abbr": "IHP",
+      "founded": "",
+      "homeRink": "",
+      "headCoach": "",
+      "captain": "",
+      "colors": "",
+      "instagram": "",
+      "website": "",
+      "about": ""
     },
     {
       "id": "bel",
       "name": "Wolves",
       "city": "Belgrade",
       "country": "Serbia",
-      "logo": "../logos/bel.png"
+      "logo": "../logos/bel.png",
+      "slug": "wolves",
+      "abbr": "WOL",
+      "founded": "",
+      "homeRink": "",
+      "headCoach": "",
+      "captain": "",
+      "colors": "",
+      "instagram": "",
+      "website": "",
+      "about": ""
     },
     {
       "id": "sar",
       "name": "Vukovi",
       "city": "Sarajevo",
       "country": "Bosnia and Herzegovina",
-      "logo": "../logos/sar.png"
+      "logo": "../logos/sar.png",
+      "slug": "vukovi",
+      "abbr": "VUK",
+      "founded": "",
+      "homeRink": "",
+      "headCoach": "",
+      "captain": "",
+      "colors": "",
+      "instagram": "",
+      "website": "",
+      "about": ""
     },
     {
       "id": "bul",
       "name": "Bulgaria Select",
       "city": "Sofia",
       "country": "Bulgaria",
-      "logo": "../logos/bul.png"
+      "logo": "../logos/bul.png",
+      "slug": "bulgaria-select",
+      "abbr": "BUL",
+      "founded": "",
+      "homeRink": "",
+      "headCoach": "",
+      "captain": "",
+      "colors": "",
+      "instagram": "",
+      "website": "",
+      "about": ""
+    },
+    {
+      "id": "buz",
+      "name": "Buzadam",
+      "city": "Istanbul",
+      "country": "Turkey",
+      "logo": "../logos/buz-trim.png",
+      "slug": "buzadam",
+      "abbr": "BUZ",
+      "founded": 2009,
+      "homeRink": "Silivrikapı Ice Rink, Istanbul",
+      "headCoach": "",
+      "captain": "",
+      "colors": "",
+      "instagram": "buzadamgsk",
+      "website": "https://www.buzadam.org/",
+      "about": ""
     }
   ],
   "players": [],
-  "games": []
+  "games": [
+    {
+      "id": "G001",
+      "date": "2026-10-22",
+      "time": "20:00",
+      "venue": "Sarajevo",
+      "round": "Round 1",
+      "home": "sar",
+      "away": "bul",
+      "status": "scheduled"
+    },
+    {
+      "id": "G002",
+      "date": "2026-10-23",
+      "time": "17:00",
+      "venue": "Sarajevo",
+      "round": "Round 1",
+      "home": "sar",
+      "away": "buz",
+      "status": "scheduled"
+    },
+    {
+      "id": "G003",
+      "date": "2026-10-23",
+      "time": "20:00",
+      "venue": "Sarajevo",
+      "round": "Round 1",
+      "home": "nsd",
+      "away": "bul",
+      "status": "scheduled"
+    },
+    {
+      "id": "G004",
+      "date": "2026-10-24",
+      "time": "14:00",
+      "venue": "Sarajevo",
+      "round": "Round 1",
+      "home": "sar",
+      "away": "bel",
+      "status": "scheduled"
+    },
+    {
+      "id": "G005",
+      "date": "2026-10-24",
+      "time": "17:00",
+      "venue": "Sarajevo",
+      "round": "Round 1",
+      "home": "nsd",
+      "away": "buz",
+      "status": "scheduled"
+    },
+    {
+      "id": "G006",
+      "date": "2026-10-24",
+      "time": "20:00",
+      "venue": "Sarajevo",
+      "round": "Round 1",
+      "home": "bul",
+      "away": "bel",
+      "status": "scheduled"
+    },
+    {
+      "id": "G007",
+      "date": "2026-10-25",
+      "time": "10:00",
+      "venue": "Sarajevo",
+      "round": "Round 1",
+      "home": "bel",
+      "away": "buz",
+      "status": "scheduled"
+    },
+    {
+      "id": "G008",
+      "date": "2026-10-25",
+      "time": "13:00",
+      "venue": "Sarajevo",
+      "round": "Round 1",
+      "home": "sar",
+      "away": "nsd",
+      "status": "scheduled"
+    },
+    {
+      "id": "G009",
+      "date": "",
+      "dateText": "TBD",
+      "time": "",
+      "venue": "Novi Sad",
+      "round": "Round 1",
+      "home": "nsd",
+      "away": "bel",
+      "status": "scheduled"
+    },
+    {
+      "id": "G010",
+      "date": "",
+      "dateText": "TBD",
+      "time": "",
+      "venue": "Bulgaria / Turkey",
+      "round": "Round 1",
+      "home": "bul",
+      "away": "buz",
+      "status": "scheduled"
+    },
+    {
+      "id": "G011",
+      "date": "2026-11-12",
+      "time": "20:00",
+      "venue": "Sarajevo",
+      "round": "Round 2",
+      "home": "sar",
+      "away": "bul",
+      "status": "scheduled"
+    },
+    {
+      "id": "G012",
+      "date": "2026-11-13",
+      "time": "17:00",
+      "venue": "Sarajevo",
+      "round": "Round 2",
+      "home": "sar",
+      "away": "buz",
+      "status": "scheduled"
+    },
+    {
+      "id": "G013",
+      "date": "2026-11-13",
+      "time": "20:00",
+      "venue": "Sarajevo",
+      "round": "Round 2",
+      "home": "nsd",
+      "away": "bul",
+      "status": "scheduled"
+    },
+    {
+      "id": "G014",
+      "date": "2026-11-14",
+      "time": "14:00",
+      "venue": "Sarajevo",
+      "round": "Round 2",
+      "home": "sar",
+      "away": "bel",
+      "status": "scheduled"
+    },
+    {
+      "id": "G015",
+      "date": "2026-11-14",
+      "time": "17:00",
+      "venue": "Sarajevo",
+      "round": "Round 2",
+      "home": "nsd",
+      "away": "buz",
+      "status": "scheduled"
+    },
+    {
+      "id": "G016",
+      "date": "2026-11-14",
+      "time": "20:00",
+      "venue": "Sarajevo",
+      "round": "Round 2",
+      "home": "bul",
+      "away": "bel",
+      "status": "scheduled"
+    },
+    {
+      "id": "G017",
+      "date": "2026-11-15",
+      "time": "10:00",
+      "venue": "Sarajevo",
+      "round": "Round 2",
+      "home": "bel",
+      "away": "buz",
+      "status": "scheduled"
+    },
+    {
+      "id": "G018",
+      "date": "2026-11-15",
+      "time": "13:00",
+      "venue": "Sarajevo",
+      "round": "Round 2",
+      "home": "sar",
+      "away": "nsd",
+      "status": "scheduled"
+    },
+    {
+      "id": "G019",
+      "date": "",
+      "dateText": "TBD",
+      "time": "",
+      "venue": "Novi Sad",
+      "round": "Round 2",
+      "home": "nsd",
+      "away": "bel",
+      "status": "scheduled"
+    },
+    {
+      "id": "G020",
+      "date": "",
+      "dateText": "TBD",
+      "time": "",
+      "venue": "Bulgaria / Turkey",
+      "round": "Round 2",
+      "home": "bul",
+      "away": "buz",
+      "status": "scheduled"
+    },
+    {
+      "id": "G021",
+      "date": "2026-12-17",
+      "time": "20:00",
+      "venue": "Sarajevo",
+      "round": "Round 3",
+      "home": "sar",
+      "away": "bul",
+      "status": "scheduled"
+    },
+    {
+      "id": "G022",
+      "date": "2026-12-18",
+      "time": "17:00",
+      "venue": "Sarajevo",
+      "round": "Round 3",
+      "home": "sar",
+      "away": "buz",
+      "status": "scheduled"
+    },
+    {
+      "id": "G023",
+      "date": "2026-12-18",
+      "time": "20:00",
+      "venue": "Sarajevo",
+      "round": "Round 3",
+      "home": "nsd",
+      "away": "bul",
+      "status": "scheduled"
+    },
+    {
+      "id": "G024",
+      "date": "2026-12-19",
+      "time": "14:00",
+      "venue": "Sarajevo",
+      "round": "Round 3",
+      "home": "sar",
+      "away": "bel",
+      "status": "scheduled"
+    },
+    {
+      "id": "G025",
+      "date": "2026-12-19",
+      "time": "17:00",
+      "venue": "Sarajevo",
+      "round": "Round 3",
+      "home": "nsd",
+      "away": "buz",
+      "status": "scheduled"
+    },
+    {
+      "id": "G026",
+      "date": "2026-12-19",
+      "time": "20:00",
+      "venue": "Sarajevo",
+      "round": "Round 3",
+      "home": "bul",
+      "away": "bel",
+      "status": "scheduled"
+    },
+    {
+      "id": "G027",
+      "date": "2026-12-20",
+      "time": "10:00",
+      "venue": "Sarajevo",
+      "round": "Round 3",
+      "home": "bel",
+      "away": "buz",
+      "status": "scheduled"
+    },
+    {
+      "id": "G028",
+      "date": "2026-12-20",
+      "time": "13:00",
+      "venue": "Sarajevo",
+      "round": "Round 3",
+      "home": "sar",
+      "away": "nsd",
+      "status": "scheduled"
+    },
+    {
+      "id": "G029",
+      "date": "",
+      "dateText": "TBD",
+      "time": "",
+      "venue": "Novi Sad",
+      "round": "Round 3",
+      "home": "nsd",
+      "away": "bel",
+      "status": "scheduled"
+    },
+    {
+      "id": "G030",
+      "date": "",
+      "dateText": "TBD",
+      "time": "",
+      "venue": "Bulgaria / Turkey",
+      "round": "Round 3",
+      "home": "bul",
+      "away": "buz",
+      "status": "scheduled"
+    }
+  ]
 }

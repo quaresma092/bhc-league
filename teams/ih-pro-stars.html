@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="icon" href="../assets/bhc-64.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@700;800;900&family=Sofia+Sans+Extra+Condensed:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../inner.css">
+
+<title>IH Pro Stars · Teams · BHC</title>
+<meta name="description" content="IH Pro Stars (Novi Sad, Serbia) in the Balkan Hockey Championship Season 2026/27: roster, schedule, results and stats.">
+<style>
+  .th-head{display:grid;grid-template-columns:1fr auto;align-items:center;gap:24px}
+  .th-logo{width:clamp(110px,15vw,190px);height:auto;filter:drop-shadow(0 8px 18px rgba(17,47,99,.18))}
+  .tabs-bar{position:sticky;top:0;z-index:5;background:var(--paper);box-shadow:0 1px 0 var(--hair);margin-bottom:clamp(24px,4vw,40px)}
+  .tabs-bar ul{list-style:none;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+  .tabs-bar a{display:block;padding:16px 16px 13px;text-decoration:none;font-size:13px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--mid);border-bottom:3px solid transparent;white-space:nowrap}
+  .tabs-bar a.on,.tabs-bar a:hover{color:var(--blue);border-bottom-color:var(--red)}
+  .pane{padding-bottom:clamp(56px,8vw,96px)}
+  .pane h2{font-family:var(--display);text-transform:uppercase;font-weight:900;color:var(--blue);font-size:clamp(34px,4vw,48px);line-height:.9;margin:0 0 18px}
+  .pane h3{font-family:var(--display);text-transform:uppercase;font-weight:900;color:var(--ink);font-size:26px;margin:28px 0 10px}
+  .js .pane{display:none}.js .pane.on{display:block}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+  .cards .c{background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);padding:20px 22px}
+  .cards .c .k{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--red);font-weight:600}
+  .cards .c b{display:block;font-family:var(--display);font-weight:900;text-transform:uppercase;color:var(--blue);font-size:34px;line-height:.95;margin-top:8px}
+  .cards .c p{color:var(--mid);font-size:15px;margin-top:6px}
+  .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px;margin-top:26px}
+  .facts div{background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);padding:14px 18px}
+  .facts dt{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--dim);font-weight:600}
+  .facts dd{margin:4px 0 0;font-weight:600;color:var(--ink)}
+  .facts a{color:var(--blue)}
+  .pane .tbl table,main .tbl table{min-width:640px}  /* на телефоне таблица листается вбок, а не сжимается */
+  .pane .tbl td,main .tbl td{white-space:nowrap}
+  .tbl td a{color:var(--blue);font-weight:600;text-decoration:none}
+  .tbl td a:hover{color:var(--red)}
+  .tbl .num{text-align:right}
+  .opp{display:flex;align-items:center;gap:10px}
+  .opp img{width:30px;height:30px;object-fit:contain}
+  .res-w{color:#0E7A3E;font-weight:700}.res-l{color:var(--red);font-weight:700}
+  .empty{background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);border-left:3px solid var(--red);padding:18px 20px;color:var(--mid)}
+  .hub{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px;padding-bottom:clamp(56px,8vw,96px)}
+  .hub a{display:flex;flex-direction:column;align-items:flex-start;gap:14px;text-decoration:none;background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);padding:26px 24px;transition:box-shadow .15s,transform .15s}
+  .hub a:hover{box-shadow:inset 0 0 0 2px var(--red);transform:translateY(-2px)}
+  .hub img{height:96px;width:auto;max-width:100%;object-fit:contain}
+  .hub b{font-family:var(--display);font-weight:900;text-transform:uppercase;color:var(--blue);font-size:30px;line-height:.95}
+  .hub span{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--mid)}
+  .hub i{font-style:normal;font-size:13px;color:var(--red);font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin-top:auto}
+  .pl-num{font-family:var(--display);font-weight:900;color:var(--red)}
+  @media (max-width:640px){.th-head{grid-template-columns:1fr}.th-logo{order:-1;width:96px}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><img src="../assets/bhc-logo-ring.png" alt="BHC"></a>
+    <ul class="nav">
+      <li><a href="../index.html#top">About</a></li>
+      <li><a href="../index.html#news">News</a></li>
+      <li><a href="../teams.html">Teams</a></li>
+      <li><a href="../index.html#format">Format</a></li>
+      <li><a href="../index.html#calendar">Calendar</a></li>
+      <li><a href="../index.html#stats">Stats</a></li>
+      <li><a href="../index.html#join">Join</a></li>
+      <li><a href="../index.html#partners">Partners</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="page-head"><div class="wrap th-head">
+  <div><div class="kick"><a href="../teams.html" style="color:inherit;text-decoration:none">Teams</a> · Season 2026/27</div>
+  <h1>IH Pro Stars</h1>
+  <p class="lead">Novi Sad, Serbia</p></div>
+  <img class="th-logo" src="../logos/nsd-t.png" alt="IH Pro Stars logo">
+</div></section>
+<nav class="tabs-bar"><div class="wrap"><ul>
+  <li><a href="#overview">Overview</a></li><li><a href="#roster">Roster</a></li><li><a href="#schedule">Schedule &amp; results</a></li><li><a href="#stats">Stats</a></li>
+</ul></div></nav>
+<main class="wrap">
+  <section class="pane" id="overview"><h2>Overview</h2><div class="cards"><div class="c"><div class="k">Season</div><b>Starts 22 Oct</b><p>Season 2026/27 · regular season</p></div><div class="c"><div class="k">Next game</div><b>23 Oct 2026</b><p>20:00 · <span class="opp">vs <img src="../logos/bul-t.png" alt=""><a href="bulgaria-select.html">Bulgaria Select</a></span> · Sarajevo</p></div></div><dl class="facts"><div><dt>City</dt><dd>Novi Sad, Serbia</dd></div></dl></section>
+  <section class="pane" id="roster"><h2>Roster</h2><div class="empty">The roster will be published before Round 1.</div></section>
+  <section class="pane" id="schedule"><h2>Schedule &amp; results</h2><div class="tbl"><table><thead><tr><th>Round</th><th>Date</th><th>Time</th><th>Opponent</th><th>Venue</th><th>Result</th><th></th></tr></thead><tbody><tr><td>Round 1</td><td>23 Oct 2026</td><td>20:00</td><td><span class="opp">vs <img src="../logos/bul-t.png" alt=""><a href="bulgaria-select.html">Bulgaria Select</a></span></td><td>Sarajevo</td><td></td><td></td></tr><tr><td>Round 1</td><td>24 Oct 2026</td><td>17:00</td><td><span class="opp">vs <img src="../logos/buz-t.png" alt=""><a href="buzadam.html">Buzadam</a></span></td><td>Sarajevo</td><td></td><td></td></tr><tr><td>Round 1</td><td>25 Oct 2026</td><td>13:00</td><td><span class="opp">@ <img src="../logos/sar-t.png" alt=""><a href="vukovi.html">Vukovi</a></span></td><td>Sarajevo</td><td></td><td></td></tr><tr><td>Round 1</td><td>TBD</td><td></td><td><span class="opp">vs <img src="../logos/bel-t.png" alt=""><a href="wolves.html">Wolves</a></span></td><td>Novi Sad</td><td></td><td></td></tr><tr><td>Round 2</td><td>13 Nov 2026</td><td>20:00</td><td><span class="opp">vs <img src="../logos/bul-t.png" alt=""><a href="bulgaria-select.html">Bulgaria Select</a></span></td><td>Sarajevo</td><td></td><td></td></tr><tr><td>Round 2</td><td>14 Nov 2026</td><td>17:00</td><td><span class="opp">vs <img src="../logos/buz-t.png" alt=""><a href="buzadam.html">Buzadam</a></span></td><td>Sarajevo</td><td></td><td></td></tr><tr><td>Round 2</td><td>15 Nov 2026</td><td>13:00</td><td><span class="opp">@ <img src="../logos/sar-t.png" alt=""><a href="vukovi.html">Vukovi</a></span></td><td>Sarajevo</td><td></td><td></td></tr><tr><td>Round 2</td><td>TBD</td><td></td><td><span class="opp">vs <img src="../logos/bel-t.png" alt=""><a href="wolves.html">Wolves</a></span></td><td>Novi Sad</td><td></td><td></td></tr><tr><td>Round 3</td><td>18 Dec 2026</td><td>20:00</td><td><span class="opp">vs <img src="../logos/bul-t.png" alt=""><a href="bulgaria-select.html">Bulgaria Select</a></span></td><td>Sarajevo</td><td></td><td></td></tr><tr><td>Round 3</td><td>19 Dec 2026</td><td>17:00</td><td><span class="opp">vs <img src="../logos/buz-t.png" alt=""><a href="buzadam.html">Buzadam</a></span></td><td>Sarajevo</td><td></td><td></td></tr><tr><td>Round 3</td><td>20 Dec 2026</td><td>13:00</td><td><span class="opp">@ <img src="../logos/sar-t.png" alt=""><a href="vukovi.html">Vukovi</a></span></td><td>Sarajevo</td><td></td><td></td></tr><tr><td>Round 3</td><td>TBD</td><td></td><td><span class="opp">vs <img src="../logos/bel-t.png" alt=""><a href="wolves.html">Wolves</a></span></td><td>Novi Sad</td><td></td><td></td></tr></tbody></table></div></section>
+  <section class="pane" id="stats"><h2>Stats</h2><h3>Team</h3><div class="tbl"><table><thead><tr><th>GP</th><th>W</th><th>OTW</th><th>OTL</th><th>L</th><th>GF</th><th>GA</th><th>+/−</th><th>PTS</th><th>PIM</th></tr></thead><tbody><tr><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>+0</td><td><b>0</b></td><td>0</td></tr></tbody></table></div><h3>Skaters</h3><div class="empty">Player stats appear after the first games.</div></section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div class="f-brand">
+        <a class="brand" href="../index.html"><img src="../assets/bhc-logo-ring.png" alt="BHC"></a>
+        <p>Balkan Hockey Championship. Sarajevo, Season 2026/27.</p>
+      </div>
+      <div>
+        <h4>Documents</h4>
+        <ul>
+          <li><a href="../regulation.html">Regulation</a></li>
+
+          <li><a href="../join.html">How to join</a></li>
+          <li><a href="../calendar.html">Calendar</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>The League</h4>
+        <ul>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../goals.html">Goals</a></li>
+          <li><a href="../broadcast.html">Broadcasts</a></li>
+          <li><a href="../sponsors.html">Partners</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="https://instagram.com/bhc.championship" target="_blank" rel="noopener">Instagram · @bhc.championship</a></li>
+          
+          <li><a href="https://t.me/bhc_championship" target="_blank" rel="noopener">Telegram · @bhc_championship</a></li>
+          
+          <li><a href="https://wa.me/66956834772" target="_blank" rel="noopener">WhatsApp · +66 95 683 4772</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="f-bottom"><span>© 2026 Balkan Hockey Championship</span><span>Season 2026/27</span></div>
+  </div>
+</footer>
+<script>
+  // вкладки: без JS видны все разделы; с JS — один, по якорю (#roster и т.п.), ссылки можно пересылать
+  document.documentElement.classList.add('js');
+  function showTab(){var h=(location.hash||'#overview').slice(1),p=document.getElementById(h);if(!p||!p.classList.contains('pane'))p=document.querySelector('.pane');
+    document.querySelectorAll('.pane').forEach(function(x){x.classList.toggle('on',x===p)});
+    document.querySelectorAll('.tabs-bar a').forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+p.id)});}
+  addEventListener('hashchange',showTab);showTab();
+</script>
+</body>
+</html>
