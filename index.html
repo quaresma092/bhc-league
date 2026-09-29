@@ -66,19 +66,11 @@
 
   /* ---------- обложка ---------- */
   .hero{min-height:min(100svh,940px);display:flex;flex-direction:column;overflow:hidden}
-  .hero::before{content:"";position:absolute;inset:0;background:url(assets/bhc-logo-ring.png) right 6% center / var(--logo-w) auto no-repeat;
-                filter:grayscale(.55) brightness(1.1);opacity:.38;z-index:-1} /* bhc-logo-ring.png прозрачен за кольцом: без multiply, в Safari нет белого квадрата */
-  /* z-index:-1 — дымка под шапкой, логотип остаётся виден и смешивается с фото */
-  /* центральная линия катка: продолжает линию логотипа на фоне через всю ширину.
-     В PNG линия на 47,1% высоты (строки 303–319 из 660), толщина 2,5% ширины логотипа */
-  /* Внутри круга линию не рисуем: там буквы, а свои куски линии есть в самом PNG.
-     Круг в PNG от 9,3% до 91,3% ширины. Логотип стоит «right 6%», значит его левый край = 0,94 × (100% − ширина логотипа) */
-  .hero{--logo-w:min(51.2vw,595px); --c:#E8D4D7; --cr:#D1A7AA; /* цвета линии = цвет линии знака у левого/правого края кольца после filter+opacity (замер 29.09; в знаке линия с переходом) */
-        --lx:calc((100% - var(--logo-w)) * .94);                 /* левый край знака при «right 6%» */
-        --cy:calc(50% + var(--logo-w) * .001); --ch:calc(var(--logo-w) * .0265);
-        --cline:linear-gradient(var(--c),var(--c)) left var(--cy) / calc(var(--lx) + var(--logo-w) * .02) var(--ch) no-repeat,
-                linear-gradient(var(--cr),var(--cr)) right var(--cy) / calc(100% - var(--lx) - var(--logo-w) * .98) var(--ch) no-repeat}
-  .hero::after{content:"";position:absolute;inset:0;z-index:-1;background:var(--cline), linear-gradient(90deg, var(--paper) 0%, rgba(251,250,254,.8) 42%, rgba(251,250,254,0) 75%)}
+  .hero::before{content:"";position:absolute;z-index:-1;pointer-events:none;
+                width:calc(var(--logo-w) * 11.597);height:var(--logo-w);left:calc(var(--lx) - var(--logo-w) * 5.2986);top:var(--ly);
+                background:url(assets/bhc-hero-mark.png) 0 0 / 100% 100% no-repeat;filter:grayscale(.55) brightness(1.1);opacity:.38}
+  /* bhc-hero-mark.png — знак и линия ОДНОЙ картинкой, одного цвета (30.09): линию больше не рисуем и не двигаем отдельно */
+  .hero{--logo-w:min(51.2vw,595px);--lx:calc((100% - var(--logo-w)) * .94);--ly:calc(50% - var(--logo-w) / 2)}  /* знак справа, по центру по высоте */
   .hero > .wrap{position:relative;z-index:2;width:100%;margin-block:auto;padding-block:48px 110px}
   .hero h1{font-family:var(--display);font-weight:900;text-transform:uppercase;color:var(--blue);line-height:.9;
            font-size:clamp(68px,12vw,164px);letter-spacing:0;margin:24px 0 0}
@@ -222,7 +214,6 @@
 
   /* ---------- адаптив ---------- */
   @media (max-width:980px){
-    .hero::after{background:var(--cline), linear-gradient(180deg, var(--paper) 0%, rgba(251,250,254,.85) 60%, rgba(251,250,254,.4) 100%)}
     .hero > .wrap{padding-block:24px 90px}
     .teams{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:36px}
     .team:nth-child(4){border-left:0}
@@ -240,13 +231,7 @@
   @media (max-width:560px){
     /* телефон: фоновый логотип — справа от заголовка (а не по центру экрана за абзацем), красная линия — через его центр.
        Заголовок на 390 px стоит на 174–333 px от верха; линия в PNG на 47,1% высоты, высота PNG = 0,97 ширины */
-    .hero{--logo-w:min(150px,calc(100vw - 240px));--gap:14px;--ly:calc(254px - var(--logo-w) * .5);--lx:calc(100% - var(--logo-w) - var(--gap));
-          --ch:calc(var(--logo-w) * .0265);
-          --cy:calc(var(--ly) + var(--logo-w) * .501 - var(--ch) / 2);  /* в px позиция = ВЕРХНИЙ край полосы, поэтому −половина толщины */
-          --cline:linear-gradient(var(--c),var(--c)) left var(--cy) / calc(var(--lx) + var(--logo-w) * .02) var(--ch) no-repeat,
-                  linear-gradient(var(--cr),var(--cr)) right var(--cy) / calc(var(--gap) + var(--logo-w) * .02) var(--ch) no-repeat}
-    .hero::before{background-position:right var(--gap) top var(--ly)}  /* знак целиком в экране (владелец 29.09) */
-    .hero::after{background:var(--cline)}  /* без дымки: на телефоне она лежала сверху и почти стирала знак */
+    .hero{--logo-w:min(150px,calc(100vw - 240px));--lx:calc(100% - var(--logo-w) - 14px);--ly:calc(254px - var(--logo-w) / 2)}  /* знак справа от заголовка, целиком в экране */
     body{font-size:16px}
     .brand img{width:50px}
     .brush{margin-left:24px}
