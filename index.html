@@ -194,6 +194,11 @@
   .inv li:nth-child(odd){padding-right:16px}
   .inv li b{display:block;font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:24px;line-height:1;color:var(--blue);margin-bottom:4px}
   .partners .cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:36px}
+  .p-now{margin-top:clamp(40px,6vw,72px);padding-top:28px;border-top:1px solid var(--hair)}
+  .p-now .kick{margin-bottom:18px}
+  .p-logo{display:inline-flex;flex-direction:column;gap:10px;text-decoration:none}
+  .p-logo img{width:clamp(220px,28vw,320px);height:auto}
+  .p-logo span{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--mid)}
 
   /* ---------- футер ---------- */
   footer{padding-block:0 40px}
@@ -334,6 +339,18 @@
       <div><div class="kick">League updates</div><h2 class="h2">News</h2></div>
     </div>
     <div class="news-list">
+    <article class="news-card">
+      <div class="news-img">
+        <img src="assets/news/olympic84.jpg" alt="Olympic '84 Apartments building in Sarajevo" loading="lazy">
+      </div>
+      <div class="news-body">
+        <div class="news-meta"><span class="tag">Partner</span><time datetime="2026-10-03">3 October 2026</time></div>
+        <h3>Olympic&nbsp;&rsquo;84 is our accommodation partner</h3>
+        <p>The hotel is a five minute walk from the arena in Sarajevo. Inside it&rsquo;s all about the 1984 Winter Olympics, and there&rsquo;s a rooftop jacuzzi with a view over the city.</p>
+        <p>BHC teams get a special offer.</p>
+        <p class="news-next"><a href="https://olympic84.com" target="_blank" rel="noopener">olympic84.com →</a> · <a href="https://instagram.com/olympic.84" target="_blank" rel="noopener">@olympic.84</a></p>
+      </div>
+    </article>
     <article class="news-card">
       <div class="news-img">
         <img src="assets/news/buzadam-team.jpg" alt="Buzadam Jolly players celebrating a goal" loading="lazy">
@@ -572,6 +589,13 @@
         <li><b>Awards</b>Player of the Round prize from the partner</li>
         <li><b>Fan zone</b>booth and sampling</li>
       </ul>
+    </div>
+    <div class="p-now">
+      <div class="kick">Our partners</div>
+      <a class="p-logo" href="https://olympic84.com" target="_blank" rel="noopener">
+        <img src="logos/olympic84.svg" alt="Olympic '84 Apartments Sarajevo">
+        <span>Accommodation partner</span>
+      </a>
     </div>
   </div>
 </section>
