@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Schedule 2026/27 · BHC</title>
-<meta name="description" content="Balkan Hockey Championship 2026/27 regular season: 5 teams, 3 rounds, 30 games. Round 1 22–25 October, Round 2 12–15 November, Round 3 17–20 December.">
+<meta name="description" content="Balkan Hockey Championship 2026/27 regular season: 5 teams, 3 rounds, 30 games. Round 1 29 October – 1 November, Round 2 12–15 November, Round 3 17–20 December.">
 <link rel="icon" href="assets/bhc-logo-white.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -147,7 +147,7 @@ const T={
 // Шаблон тура из xlsx: [день 0–3 (чт–вс), время, хозяин, гость]; все туры одинаковые
 const SLOTS=[[0,'20:00','vuk','bul'],[1,'17:00','vuk','buz'],[1,'20:00','ihp','bul'],[2,'14:00','vuk','wol'],[2,'17:00','ihp','buz'],[2,'20:00','bul','wol'],[3,'10:00','wol','buz'],[3,'13:00','vuk','ihp']];
 const AWAY=[['ihp','wol','Novi Sad'],['bul','buz','Bulgaria / Turkey']];
-const ROUNDS=[{s:'2026-10-22',m:'October'},{s:'2026-11-12',m:'November'},{s:'2026-12-17',m:'December'}];
+const ROUNDS=[{s:'2026-10-29',m:'October'},{s:'2026-11-12',m:'November'},{s:'2026-12-17',m:'December'}];
 const DOW=['Thu','Fri','Sat','Sun'];
 
 const team=(k)=>{const t=T[k];return `<div class="team"><div class="lg">${t.lg?`<img src="${t.lg}" alt="">`:`<i>BA</i>`}</div><div class="nm">${t.n}<small>${t.c}</small></div></div>`};
@@ -155,17 +155,20 @@ const game=(no,time,h,a,where)=>`<div class="game" data-t="${h} ${a}"><div class
 
 let html='',nav='';
 ROUNDS.forEach((r,i)=>{
-  const d0=new Date(r.s+'T12:00:00'); const day=(k)=>{const d=new Date(d0);d.setDate(d.getDate()+k);return d.getDate()};
+  const d0=new Date(r.s+'T12:00:00'); const dt=(k)=>{const d=new Date(d0);d.setDate(d.getDate()+k);return d}; const day=(k)=>dt(k).getDate();
+  const mon=(k,long)=>dt(k).toLocaleString('en-GB',{month:long?'long':'short'});
+  // тур может переходить через месяц (Round 1: 29 Oct – 1 Nov)
+  const span=(long)=>mon(0)===mon(3)?`${day(0)}–${day(3)} ${mon(0,long)}`:`${day(0)} ${mon(0,long)} – ${day(3)} ${mon(3,long)}`;
   const base=i*10;
-  nav+=`<a href="#round-${i+1}"><div class="k">Round ${i+1}</div><b>${day(0)}–${day(3)} ${r.m.slice(0,3)}</b><span>Thu – Sun · Sarajevo</span></a>`;
+  nav+=`<a href="#round-${i+1}"><div class="k">Round ${i+1}</div><b>${span(false)}</b><span>Thu – Sun · Sarajevo</span></a>`;
   let days='';
   for(let k=0;k<4;k++){
     const gs=SLOTS.map((s,j)=>[s,j]).filter(([s])=>s[0]===k).map(([s,j])=>game(base+j+1,s[1],s[2],s[3])).join('');
-    days+=`<div class="day"><h3>${DOW[k]} ${day(k)} <small>${r.m.slice(0,3)}</small></h3>${gs}</div>`;
+    days+=`<div class="day"><h3>${DOW[k]} ${day(k)} <small>${mon(k)}</small></h3>${gs}</div>`;
   }
   const aw=AWAY.map((a,j)=>game(base+9+j,'TBD',a[0],a[1],a[2])).join('');
   html+=`<section class="round" id="round-${i+1}">
-    <div class="round-head"><h2>Round ${i+1}<span>${day(0)}–${day(3)} ${r.m}</span></h2><div class="where">Venue<b>Sarajevo</b></div></div>
+    <div class="round-head"><h2>Round ${i+1}<span>${span(true)}</span></h2><div class="where">Venue<b>Sarajevo</b></div></div>
     <div class="days">${days}</div>
     <div class="away"><div class="lbl">Away games<small>Dates TBD</small></div>${aw}</div>
   </section>`;
