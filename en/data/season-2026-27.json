@@ -10,6 +10,18 @@
       "whatsapp": "+66 95 683 4772",
       "email": "",
       "telegram": "@bhc_championship"
+    },
+    "mso": {
+      "league": 77005,
+      "season": 111246,
+      "public": "https://www.mystatsonline.com/BalkanHockeyChampionship",
+      "teams": {
+        "bul": 230379,
+        "buz": 230380,
+        "sar": 230378,
+        "nsd": 230381,
+        "bel": 230382
+      }
     }
   },
   "season": {
