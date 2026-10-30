@@ -57,8 +57,8 @@ def results_fill(p, s):
     if p == 'index':
         if games:
             s = _tbody(s, 'res', ''.join(
-                f'<tr><td>{fmt_date(g["date"])}</td><td class="l"><b>{hesc(tm[g["home"]])}</b></td>'
-                f'<td><b>{g["score"]["home"]["total"]}:{g["score"]["away"]["total"]}</b></td>'
+                f'<tr class="gm-row" onclick="location.href=\'games/{g["id"].lower()}.html\'"><td>{fmt_date(g["date"])}</td><td class="l"><b>{hesc(tm[g["home"]])}</b></td>'
+                f'<td><a href="games/{g["id"].lower()}.html"><b>{g["score"]["home"]["total"]}:{g["score"]["away"]["total"]}</b></a></td>'
                 f'<td class="l"><b>{hesc(tm[g["away"]])}</b></td><td>{res_tag(g)}</td></tr>' for g in games))
         s = _tbody(s, 'tm', ''.join(
             f'<tr><td>{r["pos"] if games else "—"}</td><td class="l"><b>{hesc(tm[r["team"]])}</b></td><td>{r["gp"]}</td><td>{r["w"]}</td>'
@@ -133,5 +133,5 @@ def export_bundle():
         shutil.copy(os.path.join(SRC, f), os.path.join(dst, f))
     shutil.copytree(os.path.join(SRC, 'en'), os.path.join(dst, 'en'), dirs_exist_ok=True,
                     ignore=shutil.ignore_patterns('*.bak*', '*.prev.json', '*.pre-*', '_example.json'))
-    for d in ('teams', 'players'):
+    for d in ('teams', 'players', 'games'):
         os.makedirs(os.path.join(dst, d), exist_ok=True)

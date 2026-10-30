@@ -53,6 +53,9 @@
 .days{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .day h3{font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:26px;line-height:1;color:var(--ink);display:flex;align-items:baseline;gap:8px;padding-bottom:10px;margin-bottom:12px;border-bottom:1px solid var(--hair)}
 .day h3 small{font-size:12px;letter-spacing:.28em;color:var(--red);font-family:var(--body);font-weight:600}
+.game.more,a.game{display:block;text-decoration:none;color:inherit}
+a.game:hover{box-shadow:inset 0 0 0 2px var(--red)}
+.game .more{display:block;margin-top:10px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--red)}
 .game{background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);padding:12px 14px 14px;margin-bottom:12px;transition:opacity .2s, box-shadow .2s}
 .game .t{display:flex;justify-content:space-between;align-items:baseline}
 .game .t b{font-family:var(--display);font-weight:900;font-size:30px;line-height:1;color:var(--blue)}
@@ -159,7 +162,7 @@ const DOW=['Thu','Fri','Sat','Sun'];
 const RES={10:[2,20,''],1:[5,1,'']};
 
 const team=(k,g,w)=>{const t=T[k];return `<div class="team"><div class="lg">${t.lg?`<img src="${t.lg}" alt="">`:`<i>BA</i>`}</div><div class="nm">${t.n}<small>${t.c}</small></div>${g==null?'':`<b class="g${w?' w':''}">${g}</b>`}</div>`};
-const game=(no,time,h,a,where,label)=>{const r=RES[no];return `<div class="game" data-t="${h} ${a}"><div class="t"><b>${time}</b><span>Game ${label||no}${where?' · '+where:''}</span></div>${team(h,r&&r[0],r&&r[0]>r[1])}<div class="vs">${r?'FINAL'+(r[2]?' · '+r[2]:''):'VS'}</div>${team(a,r&&r[1],r&&r[1]>r[0])}</div>`};
+const game=(no,time,h,a,where,label)=>{const r=RES[no];return `<${r?'a href="games/g'+String(no).padStart(3,'0')+'.html"':'div'} class="game" data-t="${h} ${a}"><div class="t"><b>${time}</b><span>Game ${label||no}${where?' · '+where:''}</span></div>${team(h,r&&r[0],r&&r[0]>r[1])}<div class="vs">${r?'FINAL'+(r[2]?' · '+r[2]:''):'VS'}</div>${team(a,r&&r[1],r&&r[1]>r[0])}${r?'<span class="more">Game summary →</span></a>':'</div>'}`};
 
 let html='',nav='';
 ROUNDS.forEach((r,i)=>{

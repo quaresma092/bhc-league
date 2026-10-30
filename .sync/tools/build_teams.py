@@ -9,6 +9,7 @@
     teams.html                 — хаб: все команды
     teams/<slug>.html          — команда: Overview · Roster · Schedule & results · Stats
     players/<id>.html          — игрок: био в формате Elite Prospects, статистика сезона, матч за матчем
+    games/<id>.html            — сыгранный матч: табло, периоды, голы, удаления, вратари, статистика игроков
 Всё уже в HTML (вкладки — якоря + немного JS), чтобы страницы читали и люди, и парсеры (Elite Prospects).
 Шапка, подвал и стили берутся с about.html, чтобы раздел выглядел как весь сайт.
 """
@@ -113,6 +114,22 @@ CSS = """<style>
   .hub span{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--mid)}
   .hub i{font-style:normal;font-size:13px;color:var(--red);font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin-top:auto}
   .pl-num{font-family:var(--display);font-weight:900;color:var(--red)}
+  .gm-board{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:clamp(12px,3vw,40px);margin-top:18px}
+  .gm-team{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;text-decoration:none}
+  .gm-team img{width:clamp(80px,13vw,150px);height:clamp(80px,13vw,150px);object-fit:contain;filter:drop-shadow(0 8px 18px rgba(17,47,99,.18))}
+  .gm-team b{font-family:var(--display);font-weight:900;text-transform:uppercase;color:var(--blue);font-size:clamp(22px,3.4vw,40px);line-height:.95}
+  .gm-team span{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--mid)}
+  .gm-score{text-align:center}
+  .gm-score b{display:block;font-family:var(--display);font-weight:900;color:var(--blue);font-size:clamp(64px,11vw,140px);line-height:.9;white-space:nowrap}
+  .gm-score b i{font-style:normal;color:var(--red);padding:0 .08em}
+  .gm-score span{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--red);font-weight:700}
+  .gm-meta{margin-top:22px;color:var(--mid);font-size:14px;letter-spacing:.06em;text-align:center}
+  .gm-per{font-family:var(--display);font-weight:900;text-transform:uppercase;color:var(--ink);font-size:20px;margin:22px 0 6px}
+  .tag{display:inline-block;font-size:10px;letter-spacing:.16em;font-weight:700;color:#fff;background:var(--blue);padding:3px 6px;margin-left:6px;vertical-align:2px}
+  .tag.sh{background:var(--red)}
+  .tbl td .mini{display:inline-block;width:22px;height:22px;object-fit:contain;vertical-align:-6px;margin-right:6px}
+  a.res-link{text-decoration:none}a.res-link:hover span{text-decoration:underline}
+  @media (max-width:640px){.gm-board{gap:8px}.gm-team b{font-size:18px}.gm-team span{display:none}.gm-score b{font-size:56px}.gm-meta{font-size:12px}}
   @media (max-width:640px){.th-head{grid-template-columns:1fr}.th-logo{order:-1;width:96px}}
 </style>"""
 
@@ -160,6 +177,15 @@ def result_for(g, tid):
     return f'<span class="{"res-w" if a > b else "res-l"}">{"W" if a > b else "L"} {a}:{b}{suf}</span>'
 
 
+def game_url(g, up='../'):
+    return f'{up}games/{g["id"].lower()}.html'
+
+
+def result_link(g, tid, up='../'):
+    r = result_for(g, tid)
+    return f'<a class="res-link" href="{game_url(g, up)}">{r}</a>' if g.get('status') == 'final' else r
+
+
 # ---------------------------------------------------------------- страницы
 def hub(data, tm, table):
     pos = {r['team']: r for r in table}
@@ -203,7 +229,7 @@ def team_page(data, t, tm, pm, table, sk, gk):
     if nxt:
         cards += f'<div class="c"><div class="k">Next game</div><b>{game_date(nxt)}</b><p>{esc(nxt.get("time",""))} · {opp(nxt)} · {esc(nxt["venue"])}</p></div>'
     if last:
-        cards += f'<div class="c"><div class="k">Last result</div><b>{result_for(last, tid)}</b><p>{opp(last)}</p></div>'
+        cards += f'<div class="c"><div class="k">Last result</div><b>{result_link(last, tid)}</b><p>{opp(last)}</p></div>'
     top = sorted([sk[p['id']] for p in roster if p['id'] in sk], key=lambda r: (-r['pts'], -r['g']))
     if top:
         p = pm[top[0]['player']]
@@ -248,7 +274,7 @@ def team_page(data, t, tm, pm, table, sk, gk):
     # Schedule & results
     rows = ''.join(
         f'<tr><td>{esc(g.get("round",""))}</td><td>{game_date(g)}</td><td>{esc(g.get("time",""))}</td><td>{opp(g)}</td>'
-        f'<td>{esc(g.get("venue",""))}</td><td>{result_for(g, tid)}</td>'
+        f'<td>{esc(g.get("venue",""))}</td><td>{result_link(g, tid)}</td>'
         f'<td>{("<a href=../en/" + esc(g["gameSheet"]) + ">Sheet</a>") if g.get("gameSheet") else ""}'
         f'{(" <a href=" + esc(g["video"]) + " target=_blank rel=noopener>Video</a>") if g.get("video") else ""}</td></tr>'
         for g in games)
@@ -325,7 +351,7 @@ def player_page(data, p, tm, sk, gk):
         A = sum(1 for e in g.get('events', []) if e.get('type') == 'goal' and p['id'] in e.get('assists', []))
         PIM = sum(int(e.get('minutes', 0)) for e in g.get('events', []) if e.get('type') == 'penalty' and e.get('player') == p['id'])
         log += (f'<tr><td>{game_date(g)}</td><td>{"vs" if side == "home" else "@"} <a href="../teams/{o["slug"]}.html">{esc(o["name"])}</a></td>'
-                f'<td>{result_for(g, p["team"])}</td><td>{G}</td><td>{A}</td><td>{G + A}</td><td>{PIM}</td></tr>')
+                f'<td>{result_link(g, p["team"])}</td><td>{G}</td><td>{A}</td><td>{G + A}</td><td>{PIM}</td></tr>')
     log_html = (f'<div class="tbl"><table><thead><tr><th>Date</th><th>Opponent</th><th>Result</th><th>G</th><th>A</th><th>PTS</th><th>PIM</th></tr></thead><tbody>{log}</tbody></table></div>'
                 if log else '<div class="empty">Game log appears after the player’s first game.</div>')
     body = f'''<section class="page-head"><div class="wrap th-head">
@@ -343,6 +369,96 @@ def player_page(data, p, tm, sk, gk):
                 f'{p["name"]}, {POS.get(p.get("position",""), "player")} of {t["name"]} — Balkan Hockey Championship {data["season"]["name"]}: bio and stats.', body)
 
 
+def game_page(data, g, tm, pm):
+    """Страница сыгранного матча: табло, счёт и броски по периодам, голы, удаления, вратари, статистика игроков (из протокола)."""
+    H, A = tm[g['home']], tm[g['away']]
+    sc, ev = g['score'], g.get('events', [])
+    pname = lambda pid: pm[pid]['name'] if pid in pm else pid
+    plink = lambda pid: f'<a href="../players/{esc(pid)}.html">{esc(pname(pid))}</a>' if pid in pm else esc(pid)
+    mini = lambda t: f'<img class="mini" src="../{logo_t(t, "")}" alt="">{esc(t.get("abbr") or t["name"])}'
+    res = '' if g.get('result', 'REG') == 'REG' else ' · ' + esc(g['result'])
+    side = lambda t: (f'<a class="gm-team" href="../teams/{t["slug"]}.html"><img src="../{logo_t(t, "")}" alt="{esc(t["name"])} logo">'
+                      f'<b>{esc(t["name"])}</b><span>{esc(t["city"])}</span></a>')
+    when = ' · '.join(x for x in (bs.fmt_date(g.get('date')), g.get('time', ''), g.get('venue', '')) if x)
+    meta = when + (f' · Attendance {g["attendance"]}' if g.get('attendance') else '')
+    num = f' · Game {g["sheetNo"]}' if g.get('sheetNo') else ''
+
+    # по периодам: счёт и броски
+    n = max(len(sc['home'].get('periods') or []), 3)
+    per_lbl = ['1st', '2nd', '3rd', 'OT', 'SO'][:n]
+    def line(label, h, a, th, ta):
+        cells = lambda xs: ''.join(f'<td>{x}</td>' for x in (list(xs) + [''] * n)[:n])
+        return (f'<h3>{label}</h3><div class="tbl"><table><thead><tr><th>Team</th>' + ''.join(f'<th>{x}</th>' for x in per_lbl) +
+                f'<th>T</th></tr></thead><tbody><tr><td>{mini(H)}</td>{cells(h)}<td><b>{th}</b></td></tr>'
+                f'<tr><td>{mini(A)}</td>{cells(a)}<td><b>{ta}</b></td></tr></tbody></table></div>')
+    body = ''
+    if sc['home'].get('periods'):
+        body += line('Score by period', sc['home']['periods'], sc['away']['periods'], sc['home']['total'], sc['away']['total'])
+    sh = g.get('shots')
+    if sh:
+        body += line('Shots on goal', sh['home'], sh['away'], sum(sh['home']), sum(sh['away']))
+
+    # голы и удаления по периодам
+    goals = sorted((e for e in ev if e['type'] == 'goal'), key=lambda e: (e['period'], e['time']))
+    pens = sorted((e for e in ev if e['type'] == 'penalty'), key=lambda e: (e['period'], e['time']))
+    if goals:
+        hs = as_ = 0; rows = ''; cur = None
+        for e in goals:
+            if e['team'] == g['home']: hs += 1
+            else: as_ += 1
+            if e['period'] != cur:
+                cur = e['period']; rows += f'<tr><td colspan="5" class="gm-per">{per_lbl[cur - 1] if cur <= len(per_lbl) else "OT"} period</td></tr>'
+            st = {'PP': '<span class="tag">PP</span>', 'SH': '<span class="tag sh">SH</span>', 'EN': '<span class="tag">EN</span>', 'PS': '<span class="tag">PS</span>'}.get(e.get('strength'), '')
+            ast = ', '.join(plink(x) for x in e.get('assists', [])) or 'Unassisted'
+            rows += (f'<tr><td>{esc(e["time"])}</td><td>{mini(tm[e["team"]])}</td><td>{plink(e["scorer"])}{st}</td>'
+                     f'<td>{ast}</td><td><b>{hs}:{as_}</b></td></tr>')
+        body += f'<h3>Scoring</h3><div class="tbl"><table><thead><tr><th>Time</th><th>Team</th><th>Goal</th><th>Assists</th><th>Score</th></tr></thead><tbody>{rows}</tbody></table></div>'
+    if pens:
+        rows = ''.join(f'<tr><td>{e["period"]}</td><td>{esc(e["time"])}</td><td>{mini(tm[e["team"]])}</td><td>{plink(e["player"])}</td>'
+                       f'<td>{e["minutes"]}</td><td>{esc(e.get("reason", ""))}</td></tr>' for e in pens)
+        body += f'<h3>Penalties</h3><div class="tbl"><table><thead><tr><th>Per</th><th>Time</th><th>Team</th><th>Player</th><th>Min</th><th>Offence</th></tr></thead><tbody>{rows}</tbody></table></div>'
+    if g.get('goalies'):
+        rows = ''
+        for r in g['goalies']:
+            sv = r['shotsAgainst'] - r['goalsAgainst']
+            pct = ('%.3f' % (sv / r['shotsAgainst'])).lstrip('0') if r['shotsAgainst'] else '—'
+            rows += (f'<tr><td>{mini(tm[r["team"]])}</td><td>{plink(r["player"])}</td><td>{r["minutes"]}</td><td>{r["shotsAgainst"]}</td>'
+                     f'<td>{r["goalsAgainst"]}</td><td>{sv}</td><td>{pct}</td></tr>')
+        body += f'<h3>Goalies</h3><div class="tbl"><table><thead><tr><th>Team</th><th>Goalie</th><th>MIN</th><th>SA</th><th>GA</th><th>SV</th><th>SV%</th></tr></thead><tbody>{rows}</tbody></table></div>'
+
+    # статистика игроков каждой команды (состав из протокола)
+    for key, t in (('home', H), ('away', A)):
+        ids = list((g.get('lineups') or {}).get(key) or [])
+        for e in ev:   # кто есть в событиях, но не в составе
+            for x in [e.get('scorer'), e.get('player'), *e.get('assists', [])]:
+                if x and e['team'] == t['id'] and x not in ids: ids.append(x)
+        ids = [x for x in ids if pm.get(x, {}).get('position') != 'G']
+        if not ids: continue
+        st = {x: [0, 0, 0] for x in ids}
+        for e in ev:
+            if e['type'] == 'goal' and e['team'] == t['id']:
+                if e['scorer'] in st: st[e['scorer']][0] += 1
+                for x in e.get('assists', []):
+                    if x in st: st[x][1] += 1
+            if e['type'] == 'penalty' and e.get('player') in st: st[e['player']][2] += int(e.get('minutes', 0))
+        ids.sort(key=lambda x: (-(st[x][0] + st[x][1]), -st[x][0], int(pm.get(x, {}).get('jersey', 999))))
+        rows = ''.join(f'<tr><td class="pl-num">{esc(pm.get(x, {}).get("jersey", ""))}</td><td>{plink(x)}</td><td>{esc(pm.get(x, {}).get("position", ""))}</td>'
+                       f'<td>{st[x][0]}</td><td>{st[x][1]}</td><td><b>{st[x][0] + st[x][1]}</b></td><td>{st[x][2]}</td></tr>' for x in ids)
+        body += (f'<h3>{esc(t["name"])}</h3><div class="tbl"><table><thead><tr><th>#</th><th>Player</th><th>Pos</th><th>G</th><th>A</th>'
+                 f'<th>PTS</th><th>PIM</th></tr></thead><tbody>{rows}</tbody></table></div>')
+    if not ev:
+        body += '<div class="empty" style="margin-top:24px">Goals, penalties and player stats will be added from the official game sheet.</div>'
+
+    head = f'''<section class="page-head"><div class="wrap">
+  <div class="kick" style="text-align:center"><a href="../schedule.html" style="color:inherit;text-decoration:none">{esc(g.get("round", ""))}{num}</a></div>
+  <div class="gm-board">{side(H)}<div class="gm-score"><b>{sc["home"]["total"]}<i>:</i>{sc["away"]["total"]}</b><span>Final{res}</span></div>{side(A)}</div>
+  <p class="gm-meta">{esc(meta)}</p>
+</div></section>
+<main class="wrap"><div class="pane on" style="display:block">{body}</div></main>'''
+    title = f'{H["name"]} {sc["home"]["total"]}:{sc["away"]["total"]} {A["name"]}'
+    return page('../', f'{title} · BHC', f'{title}, {g.get("round", "")}, {when}. Balkan Hockey Championship game summary and box score.', head)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--data', default=bs.DEFAULT_DATA)
@@ -351,6 +467,7 @@ def main():
     data, tm, pm, table, sk, gk = load(a.data)
     os.makedirs(os.path.join(a.out, 'teams'), exist_ok=True)
     os.makedirs(os.path.join(a.out, 'players'), exist_ok=True)
+    os.makedirs(os.path.join(a.out, 'games'), exist_ok=True)
     open(os.path.join(a.out, 'teams.html'), 'w', encoding='utf-8').write(hub(data, tm, table))
     for t in data['teams']:
         open(os.path.join(a.out, 'teams', t['slug'] + '.html'), 'w', encoding='utf-8').write(team_page(data, t, tm, pm, table, sk, gk))
@@ -363,7 +480,15 @@ def main():
     for f in os.listdir(os.path.join(a.out, 'players')):
         if f.endswith('.html') and f not in keep:
             os.remove(os.path.join(a.out, 'players', f))
-    print(f'teams.html + {len(data["teams"])} team pages + {len(keep)} player pages → {a.out}')
+    # страницы сыгранных матчей
+    gkeep = set()
+    for g in bs.final_games(data):
+        f = g['id'].lower() + '.html'; gkeep.add(f)
+        open(os.path.join(a.out, 'games', f), 'w', encoding='utf-8').write(game_page(data, g, tm, pm))
+    for f in os.listdir(os.path.join(a.out, 'games')):
+        if f.endswith('.html') and f not in gkeep:
+            os.remove(os.path.join(a.out, 'games', f))
+    print(f'teams.html + {len(data["teams"])} team pages + {len(keep)} player pages + {len(gkeep)} game pages → {a.out}')
 
 
 if __name__ == '__main__':

@@ -162,6 +162,7 @@
   .tbl-wrap .l{text-align:left}
   .tbl-wrap td.empty{color:var(--dim);padding:40px 10px}
   .tbl-wrap td b{font-weight:600}
+  .tbl-wrap tr.gm-row{cursor:pointer}.tbl-wrap tr.gm-row:hover td{background:#EEF3FC}.tbl-wrap td a{color:var(--blue);text-decoration:none}
   .legend{font-size:13px;color:var(--dim);margin-top:14px}
 
   /* ---------- вступить ---------- */
@@ -540,7 +541,7 @@
     <div class="tbl-wrap" data-pane="res">
       <table>
         <thead><tr><th>Date</th><th class="l">Home</th><th>Score</th><th class="l">Away</th><th></th></tr></thead>
-        <tbody><tr><td>30 Oct 2026</td><td class="l"><b>Bulgaria Select</b></td><td><b>2:20</b></td><td class="l"><b>Buzadam Jolly</b></td><td></td></tr><tr><td>29 Oct 2026</td><td class="l"><b>Vukovi</b></td><td><b>5:1</b></td><td class="l"><b>Bulgaria Select</b></td><td></td></tr></tbody>
+        <tbody><tr class="gm-row" onclick="location.href='games/g010.html'"><td>30 Oct 2026</td><td class="l"><b>Bulgaria Select</b></td><td><a href="games/g010.html"><b>2:20</b></a></td><td class="l"><b>Buzadam Jolly</b></td><td></td></tr><tr class="gm-row" onclick="location.href='games/g001.html'"><td>29 Oct 2026</td><td class="l"><b>Vukovi</b></td><td><a href="games/g001.html"><b>5:1</b></a></td><td class="l"><b>Bulgaria Select</b></td><td></td></tr></tbody>
       </table>
     </div>
 

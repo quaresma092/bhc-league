@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="icon" href="../assets/bhc-64.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@700;800;900&family=Sofia+Sans+Extra+Condensed:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../inner.css">
+
+<title>Bulgaria Select 2:20 Buzadam Jolly · BHC</title>
+<meta name="description" content="Bulgaria Select 2:20 Buzadam Jolly, Round 1, 30 Oct 2026 · 18:00 · Sarajevo. Balkan Hockey Championship game summary and box score.">
+<style>
+  .th-head{display:grid;grid-template-columns:1fr auto;align-items:center;gap:24px}
+  .th-logo{width:clamp(110px,15vw,190px);height:auto;filter:drop-shadow(0 8px 18px rgba(17,47,99,.18))}
+  .tabs-bar{position:sticky;top:0;z-index:5;background:var(--paper);box-shadow:0 1px 0 var(--hair);margin-bottom:clamp(24px,4vw,40px)}
+  .tabs-bar ul{list-style:none;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+  .tabs-bar a{display:block;padding:16px 16px 13px;text-decoration:none;font-size:13px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--mid);border-bottom:3px solid transparent;white-space:nowrap}
+  .tabs-bar a.on,.tabs-bar a:hover{color:var(--blue);border-bottom-color:var(--red)}
+  .pane{padding-bottom:clamp(56px,8vw,96px)}
+  .pane h2{font-family:var(--display);text-transform:uppercase;font-weight:900;color:var(--blue);font-size:clamp(34px,4vw,48px);line-height:.9;margin:0 0 18px}
+  .pane h3{font-family:var(--display);text-transform:uppercase;font-weight:900;color:var(--ink);font-size:26px;margin:28px 0 10px}
+  .js .pane{display:none}.js .pane.on{display:block}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+  .cards .c{background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);padding:20px 22px}
+  .cards .c .k{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--red);font-weight:600}
+  .cards .c b{display:block;font-family:var(--display);font-weight:900;text-transform:uppercase;color:var(--blue);font-size:34px;line-height:.95;margin-top:8px}
+  .cards .c p{color:var(--mid);font-size:15px;margin-top:6px}
+  .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px;margin-top:26px}
+  .facts div{background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);padding:14px 18px}
+  .facts dt{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--dim);font-weight:600}
+  .facts dd{margin:4px 0 0;font-weight:600;color:var(--ink)}
+  .facts a{color:var(--blue)}
+  .pane .tbl table,main .tbl table{min-width:640px}  /* на телефоне таблица листается вбок, а не сжимается */
+  .pane .tbl td,main .tbl td{white-space:nowrap}
+  .tbl td a{color:var(--blue);font-weight:600;text-decoration:none}
+  .tbl td a:hover{color:var(--red)}
+  .tbl .num{text-align:right}
+  .opp{display:flex;align-items:center;gap:10px}
+  .opp img{width:30px;height:30px;object-fit:contain}
+  .res-w{color:#0E7A3E;font-weight:700}.res-l{color:var(--red);font-weight:700}
+  .empty{background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);border-left:3px solid var(--red);padding:18px 20px;color:var(--mid)}
+  .hub{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px;padding-bottom:clamp(56px,8vw,96px)}
+  .hub a{display:flex;flex-direction:column;align-items:flex-start;gap:14px;text-decoration:none;background:var(--card);box-shadow:inset 0 0 0 1px var(--hair);padding:26px 24px;transition:box-shadow .15s,transform .15s}
+  .hub a:hover{box-shadow:inset 0 0 0 2px var(--red);transform:translateY(-2px)}
+  .hub img{height:96px;width:auto;max-width:100%;object-fit:contain}
+  .hub b{font-family:var(--display);font-weight:900;text-transform:uppercase;color:var(--blue);font-size:30px;line-height:.95}
+  .hub span{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--mid)}
+  .hub i{font-style:normal;font-size:13px;color:var(--red);font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin-top:auto}
+  .pl-num{font-family:var(--display);font-weight:900;color:var(--red)}
+  .gm-board{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:clamp(12px,3vw,40px);margin-top:18px}
+  .gm-team{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;text-decoration:none}
+  .gm-team img{width:clamp(80px,13vw,150px);height:clamp(80px,13vw,150px);object-fit:contain;filter:drop-shadow(0 8px 18px rgba(17,47,99,.18))}
+  .gm-team b{font-family:var(--display);font-weight:900;text-transform:uppercase;color:var(--blue);font-size:clamp(22px,3.4vw,40px);line-height:.95}
+  .gm-team span{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--mid)}
+  .gm-score{text-align:center}
+  .gm-score b{display:block;font-family:var(--display);font-weight:900;color:var(--blue);font-size:clamp(64px,11vw,140px);line-height:.9;white-space:nowrap}
+  .gm-score b i{font-style:normal;color:var(--red);padding:0 .08em}
+  .gm-score span{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--red);font-weight:700}
+  .gm-meta{margin-top:22px;color:var(--mid);font-size:14px;letter-spacing:.06em;text-align:center}
+  .gm-per{font-family:var(--display);font-weight:900;text-transform:uppercase;color:var(--ink);font-size:20px;margin:22px 0 6px}
+  .tag{display:inline-block;font-size:10px;letter-spacing:.16em;font-weight:700;color:#fff;background:var(--blue);padding:3px 6px;margin-left:6px;vertical-align:2px}
+  .tag.sh{background:var(--red)}
+  .tbl td .mini{display:inline-block;width:22px;height:22px;object-fit:contain;vertical-align:-6px;margin-right:6px}
+  a.res-link{text-decoration:none}a.res-link:hover span{text-decoration:underline}
+  @media (max-width:640px){.gm-board{gap:8px}.gm-team b{font-size:18px}.gm-team span{display:none}.gm-score b{font-size:56px}.gm-meta{font-size:12px}}
+  @media (max-width:640px){.th-head{grid-template-columns:1fr}.th-logo{order:-1;width:96px}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><img src="../assets/bhc-logo-ring.png?v=2" alt="BHC"></a>
+    <ul class="nav">
+      <li><a href="../index.html#top">About</a></li>
+      <li><a href="../index.html#news">News</a></li>
+      <li><a href="../teams.html">Teams</a></li>
+      <li><a href="../index.html#format">Format</a></li>
+      <li><a href="../index.html#calendar">Calendar</a></li>
+      <li><a href="../index.html#stats">Stats</a></li>
+      <li><a href="../index.html#join">Join</a></li>
+      <li><a href="../index.html#partners">Partners</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="page-head"><div class="wrap">
+  <div class="kick" style="text-align:center"><a href="../schedule.html" style="color:inherit;text-decoration:none">Round 1 · Game 2</a></div>
+  <div class="gm-board"><a class="gm-team" href="../teams/bulgaria-select.html"><img src="../logos/bul-t.png" alt="Bulgaria Select logo"><b>Bulgaria Select</b><span>Sofia</span></a><div class="gm-score"><b>2<i>:</i>20</b><span>Final</span></div><a class="gm-team" href="../teams/buzadam.html"><img src="../logos/buz-t.png" alt="Buzadam Jolly logo"><b>Buzadam Jolly</b><span>Istanbul</span></a></div>
+  <p class="gm-meta">30 Oct 2026 · 18:00 · Sarajevo · Attendance 100</p>
+</div></section>
+<main class="wrap"><div class="pane on" style="display:block"><h3>Score by period</h3><div class="tbl"><table><thead><tr><th>Team</th><th>1st</th><th>2nd</th><th>3rd</th><th>T</th></tr></thead><tbody><tr><td><img class="mini" src="../logos/bul-t.png" alt="">BUL</td><td>1</td><td>0</td><td>1</td><td><b>2</b></td></tr><tr><td><img class="mini" src="../logos/buz-t.png" alt="">BUZ</td><td>6</td><td>10</td><td>4</td><td><b>20</b></td></tr></tbody></table></div><h3>Shots on goal</h3><div class="tbl"><table><thead><tr><th>Team</th><th>1st</th><th>2nd</th><th>3rd</th><th>T</th></tr></thead><tbody><tr><td><img class="mini" src="../logos/bul-t.png" alt="">BUL</td><td>9</td><td>6</td><td>6</td><td><b>21</b></td></tr><tr><td><img class="mini" src="../logos/buz-t.png" alt="">BUZ</td><td>29</td><td>30</td><td>25</td><td><b>84</b></td></tr></tbody></table></div><h3>Scoring</h3><div class="tbl"><table><thead><tr><th>Time</th><th>Team</th><th>Goal</th><th>Assists</th><th>Score</th></tr></thead><tbody><tr><td colspan="5" class="gm-per">1st period</td></tr><tr><td>05:59</td><td><img class="mini" src="../logos/buz-t.png" alt="">BUZ</td><td><a href="../players/buz-lobanov-artem.html">Artem Lobanov</a></td><td><a href="../players/buz-kuchkin-konstantin.html">Konstantin Kuchkin</a></td><td><b>0:1</b></td></tr><tr><td>07:07</td><td><img class="mini" src="../logos/buz-t.png" alt="">BUZ</td><td><a href="../players/buz-taygar-fatih.html">Fatih Taygar</a></td><td><a href="../players/buz-lukin-evgenii.html">Evgenii Lukin</a></td><td><b>0:2</b></td></tr><tr><td>08:30</td><td><img class="mini" src="../logos/buz-t.png" alt="">BUZ</td><td><a href="../players/buz-lobanov-artem.html">Artem Lobanov</a></td><td><a href="../players/buz-kuchkin-konstantin.html">Konstantin Kuchkin</a></td><td><b>0:3</b></td></tr><tr><td>11:03</td><td><img class="mini" src="../logos/bul-t.png" alt="">BUL</td><td><a href="../players/bul-dikov-bogomil.html">Bogomil Dikov</a></td><td><a href="../players/bul-urumov-stefan.html">Stefan Urumov</a>, <a href="../players/bul-macmullin-dean.html">Dean MacMullin</a></td><td><b>1:3</b></td></tr><tr><td>11:52</td><td><img class="mini" src="../logos/buz-t.png" alt="">BUZ</td><td><a href="../players/buz-bakal-ferhat.html">Ferhat Bakal</a></td><td><a href="../players/buz-faner-emre.html">Emre Faner</a></td><td><b>1:4</b></td></tr><tr><td>14:26</td><td><img class="mini" src="../logos/buz-t.png" alt="">BUZ</td><td><a href="../players/buz-lobanov-artem.html">Artem Lobanov</a></td><td><a href="../players/buz-bakal-ferhat.html">Ferhat Bakal</a></td><td><b>1:5</b></td></tr><tr><td>16:29</td><td><img class="mini" src="../logos/buz-t.png" alt="">BUZ</td><td><a href="../players/buz-lukin-evgenii.html">Evgenii Lukin</a></td><td><a href="../players/buz-senturk-furkan.html">Furkan Şentürk</a></td><td><b>1:6</b></td></tr><tr><td colspan="5" class="gm-per">2nd period</td></tr><tr><td>00:56</td><td><img class="mini" src="../logos/buz-t.png" alt="">BUZ</td><td><a href="../players/buz-kuchkin-konstantin.html">Konstantin Kuchkin</a></td><td><a href="../players/buz-bakal-ferhat.html">Ferhat Bakal</a></td><td><b>1:7</b></td></tr><tr><td>04:11</td><td><img class="mini" src="../logos/buz-t.png" alt="">BUZ</td><td><a href="../players/buz-lukin-evgenii.html">Evgenii Lukin</a><span class="tag sh">SH</span></td><td><a href="../players/buz-kuchkin-konstantin.html">Konstantin Kuchkin</a></td><td><b>1:8</b></td></tr><tr><td>07:31</td><td><img class="mini" src="../logos/buz-t.png" alt="">BUZ</td><td><a href="../players/buz-lobanov-artem.html">Artem Lobanov</a></td><td><a href="../players/buz-lukin-evgenii.html">Evgenii Lukin</a></td><td><b>1:9</b></td></tr><tr><td>07:56</td><td><img class="mini" src="../logos/buz-t.png" alt="">BUZ</td><td><a href="../players/buz-lobanov-artem.html">Artem Lobanov</a></td><td><a href="../players/buz-kuchkin-konstantin.html">Konstantin Kuchkin</a>, <a href="../players/buz-bakal-ferhat.html">Ferhat Bakal</a></td><td><b>1:10</b></td></tr><tr><td>09:18</td><td><img class="mini" src="../logos/buz-t.png" alt="">BUZ</td><td><a href="../players/buz-saushkin-georgii.html">Georgii Saushkin</a><span class="tag">PP</span></td><td><a href="../players/buz-taygar-fatih.html">Fatih Taygar</a></td><td><b>1:11</b></td></tr><tr><td>09:37</td><td><img class="mini" src="../logos/buz-t.png" alt="">BUZ</td><td><a href="../players/buz-taygar-fatih.html">Fatih Taygar</a></td><td><a href="../players/buz-saushkin-georgii.html">Georgii Saushkin</a>, <a href="../players/buz-faner-fatih.html">Fatih Faner</a></td><td><b>1:12</b></td></tr><tr><td>10:40</td><td><img class="mini" src="../logos/buz-t.png" alt="">BUZ</td><td><a href="../players/buz-lukin-evgenii.html">Evgenii Lukin</a></td><td><a href="../players/buz-faner-emre.html">Emre Faner</a></td><td><b>1:13</b></td></tr><tr><td>13:04</td><td><img class="mini" src="../logos/buz-t.png" alt="">BUZ</td><td><a href="../players/buz-saushkin-georgii.html">Georgii Saushkin</a></td><td><a href="../players/buz-lukin-evgenii.html">Evgenii Lukin</a>, <a href="../players/buz-ergene-taha.html">Taha Ergene</a></td><td><b>1:14</b></td></tr><tr><td>14:28</td><td><img class="mini" src="../logos/buz-t.png" alt="">BUZ</td><td><a href="../players/buz-kuchkin-konstantin.html">Konstantin Kuchkin</a></td><td><a href="../players/buz-lobanov-artem.html">Artem Lobanov</a></td><td><b>1:15</b></td></tr><tr><td>19:35</td><td><img class="mini" src="../logos/buz-t.png" alt="">BUZ</td><td><a href="../players/buz-taygar-fatih.html">Fatih Taygar</a></td><td><a href="../players/buz-faner-fatih.html">Fatih Faner</a></td><td><b>1:16</b></td></tr><tr><td colspan="5" class="gm-per">3rd period</td></tr><tr><td>03:13</td><td><img class="mini" src="../logos/bul-t.png" alt="">BUL</td><td><a href="../players/bul-kozhuharov-alex.html">Alex Kozhuharov</a></td><td>Unassisted</td><td><b>2:16</b></td></tr><tr><td>06:20</td><td><img class="mini" src="../logos/buz-t.png" alt="">BUZ</td><td><a href="../players/buz-lukin-evgenii.html">Evgenii Lukin</a></td><td><a href="../players/buz-saushkin-georgii.html">Georgii Saushkin</a></td><td><b>2:17</b></td></tr><tr><td>11:23</td><td><img class="mini" src="../logos/buz-t.png" alt="">BUZ</td><td><a href="../players/buz-ergene-taha.html">Taha Ergene</a></td><td><a href="../players/buz-lukin-evgenii.html">Evgenii Lukin</a>, <a href="../players/buz-lobanov-artem.html">Artem Lobanov</a></td><td><b>2:18</b></td></tr><tr><td>15:48</td><td><img class="mini" src="../logos/buz-t.png" alt="">BUZ</td><td><a href="../players/buz-colak-osman-suat.html">Osman Suat Çolak</a></td><td><a href="../players/buz-taygar-fatih.html">Fatih Taygar</a>, <a href="../players/buz-saushkin-georgii.html">Georgii Saushkin</a></td><td><b>2:19</b></td></tr><tr><td>16:21</td><td><img class="mini" src="../logos/buz-t.png" alt="">BUZ</td><td><a href="../players/buz-koc-ruzgar.html">Rüzgar Koç</a></td><td><a href="../players/buz-lukin-evgenii.html">Evgenii Lukin</a>, <a href="../players/buz-lobanov-artem.html">Artem Lobanov</a></td><td><b>2:20</b></td></tr></tbody></table></div><h3>Penalties</h3><div class="tbl"><table><thead><tr><th>Per</th><th>Time</th><th>Team</th><th>Player</th><th>Min</th><th>Offence</th></tr></thead><tbody><tr><td>2</td><td>02:54</td><td><img class="mini" src="../logos/buz-t.png" alt="">BUZ</td><td><a href="../players/buz-koc-ruzgar.html">Rüzgar Koç</a></td><td>2</td><td>Slashing</td></tr><tr><td>2</td><td>08:57</td><td><img class="mini" src="../logos/bul-t.png" alt="">BUL</td><td><a href="../players/bul-mladenov-denis.html">Denis Mladenov</a></td><td>2</td><td>Hooking</td></tr></tbody></table></div><h3>Goalies</h3><div class="tbl"><table><thead><tr><th>Team</th><th>Goalie</th><th>MIN</th><th>SA</th><th>GA</th><th>SV</th><th>SV%</th></tr></thead><tbody><tr><td><img class="mini" src="../logos/bul-t.png" alt="">BUL</td><td><a href="../players/bul-vitanov-filip.html">Filip Vitanov</a></td><td>33</td><td>52</td><td>14</td><td>38</td><td>.731</td></tr><tr><td><img class="mini" src="../logos/bul-t.png" alt="">BUL</td><td><a href="../players/bul-tomov-kamen.html">Kamen Tomov</a></td><td>27</td><td>32</td><td>6</td><td>26</td><td>.812</td></tr><tr><td><img class="mini" src="../logos/buz-t.png" alt="">BUZ</td><td><a href="../players/buz-menshatov-dmitrii.html">Dmitrii Menshatov</a></td><td>60</td><td>21</td><td>2</td><td>19</td><td>.905</td></tr></tbody></table></div><h3>Bulgaria Select</h3><div class="tbl"><table><thead><tr><th>#</th><th>Player</th><th>Pos</th><th>G</th><th>A</th><th>PTS</th><th>PIM</th></tr></thead><tbody><tr><td class="pl-num">4</td><td><a href="../players/bul-dikov-bogomil.html">Bogomil Dikov</a></td><td>D</td><td>1</td><td>0</td><td><b>1</b></td><td>0</td></tr><tr><td class="pl-num">22</td><td><a href="../players/bul-kozhuharov-alex.html">Alex Kozhuharov</a></td><td>F</td><td>1</td><td>0</td><td><b>1</b></td><td>0</td></tr><tr><td class="pl-num">18</td><td><a href="../players/bul-urumov-stefan.html">Stefan Urumov</a></td><td>D</td><td>0</td><td>1</td><td><b>1</b></td><td>0</td></tr><tr><td class="pl-num">24</td><td><a href="../players/bul-macmullin-dean.html">Dean MacMullin</a></td><td>F</td><td>0</td><td>1</td><td><b>1</b></td><td>0</td></tr><tr><td class="pl-num">2</td><td><a href="../players/bul-genchev-boris.html">Boris Genchev</a></td><td>F</td><td>0</td><td>0</td><td><b>0</b></td><td>0</td></tr><tr><td class="pl-num">5</td><td><a href="../players/bul-mladenov-denis.html">Denis Mladenov</a></td><td>D</td><td>0</td><td>0</td><td><b>0</b></td><td>2</td></tr><tr><td class="pl-num">6</td><td><a href="../players/bul-bozhinov-simeon.html">Simeon Bozhinov</a></td><td>D</td><td>0</td><td>0</td><td><b>0</b></td><td>0</td></tr><tr><td class="pl-num">7</td><td><a href="../players/bul-mladenov-boris.html">Boris Mladenov</a></td><td>F</td><td>0</td><td>0</td><td><b>0</b></td><td>0</td></tr><tr><td class="pl-num">8</td><td><a href="../players/bul-tomov-tino.html">Tino Tomov</a></td><td>D</td><td>0</td><td>0</td><td><b>0</b></td><td>0</td></tr><tr><td class="pl-num">9</td><td><a href="../players/bul-gyurkov-alex.html">Alex Gyurkov</a></td><td>F</td><td>0</td><td>0</td><td><b>0</b></td><td>0</td></tr><tr><td class="pl-num">11</td><td><a href="../players/bul-lyutov-alex.html">Alex Lyutov</a></td><td>D</td><td>0</td><td>0</td><td><b>0</b></td><td>0</td></tr><tr><td class="pl-num">14</td><td><a href="../players/bul-zhelev-kris.html">Kris Zhelev</a></td><td>F</td><td>0</td><td>0</td><td><b>0</b></td><td>0</td></tr><tr><td class="pl-num">19</td><td><a href="../players/bul-lyubenov-delyan.html">Delyan Lyubenov</a></td><td>D</td><td>0</td><td>0</td><td><b>0</b></td><td>0</td></tr><tr><td class="pl-num">23</td><td><a href="../players/bul-radev-viktor.html">Viktor Radev</a></td><td>F</td><td>0</td><td>0</td><td><b>0</b></td><td>0</td></tr></tbody></table></div><h3>Buzadam Jolly</h3><div class="tbl"><table><thead><tr><th>#</th><th>Player</th><th>Pos</th><th>G</th><th>A</th><th>PTS</th><th>PIM</th></tr></thead><tbody><tr><td class="pl-num">5</td><td><a href="../players/buz-lukin-evgenii.html">Evgenii Lukin</a></td><td>D</td><td>4</td><td>5</td><td><b>9</b></td><td>0</td></tr><tr><td class="pl-num">8</td><td><a href="../players/buz-lobanov-artem.html">Artem Lobanov</a></td><td>F</td><td>5</td><td>3</td><td><b>8</b></td><td>0</td></tr><tr><td class="pl-num">72</td><td><a href="../players/buz-kuchkin-konstantin.html">Konstantin Kuchkin</a></td><td>F</td><td>2</td><td>4</td><td><b>6</b></td><td>0</td></tr><tr><td class="pl-num">10</td><td><a href="../players/buz-taygar-fatih.html">Fatih Taygar</a></td><td>F</td><td>3</td><td>2</td><td><b>5</b></td><td>0</td></tr><tr><td class="pl-num">25</td><td><a href="../players/buz-saushkin-georgii.html">Georgii Saushkin</a></td><td>F</td><td>2</td><td>3</td><td><b>5</b></td><td>0</td></tr><tr><td class="pl-num">24</td><td><a href="../players/buz-bakal-ferhat.html">Ferhat Bakal</a></td><td>F</td><td>1</td><td>3</td><td><b>4</b></td><td>0</td></tr><tr><td class="pl-num">12</td><td><a href="../players/buz-ergene-taha.html">Taha Ergene</a></td><td>F</td><td>1</td><td>1</td><td><b>2</b></td><td>0</td></tr><tr><td class="pl-num">11</td><td><a href="../players/buz-faner-emre.html">Emre Faner</a></td><td>D</td><td>0</td><td>2</td><td><b>2</b></td><td>0</td></tr><tr><td class="pl-num">97</td><td><a href="../players/buz-faner-fatih.html">Fatih Faner</a></td><td>D</td><td>0</td><td>2</td><td><b>2</b></td><td>0</td></tr><tr><td class="pl-num">15</td><td><a href="../players/buz-koc-ruzgar.html">Rüzgar Koç</a></td><td>F</td><td>1</td><td>0</td><td><b>1</b></td><td>2</td></tr><tr><td class="pl-num">92</td><td><a href="../players/buz-colak-osman-suat.html">Osman Suat Çolak</a></td><td>F</td><td>1</td><td>0</td><td><b>1</b></td><td>0</td></tr><tr><td class="pl-num">7</td><td><a href="../players/buz-senturk-furkan.html">Furkan Şentürk</a></td><td>D</td><td>0</td><td>1</td><td><b>1</b></td><td>0</td></tr><tr><td class="pl-num">3</td><td><a href="../players/buz-bacik-mehmet-akif.html">Mehmet Akif Bacık</a></td><td>D</td><td>0</td><td>0</td><td><b>0</b></td><td>0</td></tr><tr><td class="pl-num">58</td><td><a href="../players/buz-sungur-kayra-yigit.html">Kayra Yiğit Sungur</a></td><td>D</td><td>0</td><td>0</td><td><b>0</b></td><td>0</td></tr></tbody></table></div></div></main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div class="f-brand">
+        <a class="brand" href="../index.html"><img src="../assets/bhc-logo-ring.png?v=2" alt="BHC"></a>
+        <p>Balkan Hockey Championship. Sarajevo, Season 2026/27.</p>
+      </div>
+      <div>
+        <h4>Documents</h4>
+        <ul>
+          <li><a href="../regulation.html">Regulation</a></li>
+
+          <li><a href="../join.html">How to join</a></li>
+          <li><a href="../calendar.html">Calendar</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>The League</h4>
+        <ul>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../goals.html">Goals</a></li>
+          <li><a href="../broadcast.html">Broadcasts</a></li>
+          <li><a href="../sponsors.html">Partners</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="https://instagram.com/bhc.championship" target="_blank" rel="noopener">Instagram · @bhc.championship</a></li>
+          
+          <li><a href="https://t.me/bhc_championship" target="_blank" rel="noopener">Telegram · @bhc_championship</a></li>
+          
+          <li><a href="https://wa.me/66956834772" target="_blank" rel="noopener">WhatsApp · +66 95 683 4772</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="f-bottom"><span>© 2026 Balkan Hockey Championship</span><span>Season 2026/27</span></div>
+  </div>
+</footer>
+
+</body>
+</html>

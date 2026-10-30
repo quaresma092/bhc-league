@@ -51,6 +51,22 @@
   .hub span{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--mid)}
   .hub i{font-style:normal;font-size:13px;color:var(--red);font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin-top:auto}
   .pl-num{font-family:var(--display);font-weight:900;color:var(--red)}
+  .gm-board{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:clamp(12px,3vw,40px);margin-top:18px}
+  .gm-team{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;text-decoration:none}
+  .gm-team img{width:clamp(80px,13vw,150px);height:clamp(80px,13vw,150px);object-fit:contain;filter:drop-shadow(0 8px 18px rgba(17,47,99,.18))}
+  .gm-team b{font-family:var(--display);font-weight:900;text-transform:uppercase;color:var(--blue);font-size:clamp(22px,3.4vw,40px);line-height:.95}
+  .gm-team span{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--mid)}
+  .gm-score{text-align:center}
+  .gm-score b{display:block;font-family:var(--display);font-weight:900;color:var(--blue);font-size:clamp(64px,11vw,140px);line-height:.9;white-space:nowrap}
+  .gm-score b i{font-style:normal;color:var(--red);padding:0 .08em}
+  .gm-score span{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--red);font-weight:700}
+  .gm-meta{margin-top:22px;color:var(--mid);font-size:14px;letter-spacing:.06em;text-align:center}
+  .gm-per{font-family:var(--display);font-weight:900;text-transform:uppercase;color:var(--ink);font-size:20px;margin:22px 0 6px}
+  .tag{display:inline-block;font-size:10px;letter-spacing:.16em;font-weight:700;color:#fff;background:var(--blue);padding:3px 6px;margin-left:6px;vertical-align:2px}
+  .tag.sh{background:var(--red)}
+  .tbl td .mini{display:inline-block;width:22px;height:22px;object-fit:contain;vertical-align:-6px;margin-right:6px}
+  a.res-link{text-decoration:none}a.res-link:hover span{text-decoration:underline}
+  @media (max-width:640px){.gm-board{gap:8px}.gm-team b{font-size:18px}.gm-team span{display:none}.gm-score b{font-size:56px}.gm-meta{font-size:12px}}
   @media (max-width:640px){.th-head{grid-template-columns:1fr}.th-logo{order:-1;width:96px}}
 </style>
 </head>
@@ -81,7 +97,7 @@
 <main class="wrap" style="padding-bottom:clamp(56px,8vw,96px)">
   <dl class="facts"><div><dt>Team</dt><dd><a href="../teams/vukovi.html">Vukovi</a></dd></div><div><dt>Position</dt><dd>Defense</dd></div><div><dt>Born</dt><dd>2005</dd></div><div><dt>Previous club</dt><dd>HK Stari Grad Vukovi</dd></div><div><dt>Elite Prospects</dt><dd><a href="https://www.eliteprospects.com/player/839977/adnan-smajlovic" target="_blank" rel="noopener">Player profile</a></dd></div></dl>
   <div class="pane on" style="display:block;padding-bottom:0"><h3>Season stats</h3><div class="tbl"><table><thead><tr><th>Season</th><th>GP</th><th>G</th><th>A</th><th>PTS</th><th>PIM</th></tr></thead><tbody><tr><td>Season 2026/27</td><td>1</td><td>1</td><td>0</td><td><b>1</b></td><td>6</td></tr></tbody></table></div>
-  <h3>Game log</h3><div class="tbl"><table><thead><tr><th>Date</th><th>Opponent</th><th>Result</th><th>G</th><th>A</th><th>PTS</th><th>PIM</th></tr></thead><tbody><tr><td>29 Oct 2026</td><td>vs <a href="../teams/bulgaria-select.html">Bulgaria Select</a></td><td><span class="res-w">W 5:1</span></td><td>1</td><td>0</td><td>1</td><td>6</td></tr></tbody></table></div></div>
+  <h3>Game log</h3><div class="tbl"><table><thead><tr><th>Date</th><th>Opponent</th><th>Result</th><th>G</th><th>A</th><th>PTS</th><th>PIM</th></tr></thead><tbody><tr><td>29 Oct 2026</td><td>vs <a href="../teams/bulgaria-select.html">Bulgaria Select</a></td><td><a class="res-link" href="../games/g001.html"><span class="res-w">W 5:1</span></a></td><td>1</td><td>0</td><td>1</td><td>6</td></tr></tbody></table></div></div>
 </main>
 
 <footer>

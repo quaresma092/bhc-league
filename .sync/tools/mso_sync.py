@@ -137,7 +137,7 @@ def main():
     shutil.copytree(os.path.join(SRC, 'en'), os.path.join(SITE, 'en'), dirs_exist_ok=True,
                     ignore=shutil.ignore_patterns('*.bak*', '*.prev.json', '*.pre-*', '_example.json'))
     paths = ['en/*.html', 'en/stats.css', 'en/data/season-2026-27.json', 'en/data/mso-stats.json', 'teams.html', 'index.html', 'schedule.html']
-    for d in ('teams', 'players'):
+    for d in ('teams', 'players', 'games'):
         os.makedirs(os.path.join(SITE, d), exist_ok=True)
         for f in os.listdir(os.path.join(SRC, d)):
             if f.endswith('.html'):
