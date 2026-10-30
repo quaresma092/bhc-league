@@ -1,341 +1,492 @@
 {
- "skaters": [
-  {
-   "name": "Tarik Mrkva",
-   "team": "VUK",
-   "pos": "F",
-   "gp": 1,
-   "g": 2,
-   "a": 1,
-   "pts": 3,
-   "pim": 0
-  },
-  {
-   "name": "Nikko Gakovic",
-   "team": "VUK",
-   "pos": "F",
-   "gp": 1,
-   "g": 1,
-   "a": 1,
-   "pts": 2,
-   "pim": 0
-  },
-  {
-   "name": "Adnan Smajlovic",
-   "team": "VUK",
-   "pos": "D",
-   "gp": 1,
-   "g": 1,
-   "a": 0,
-   "pts": 1,
-   "pim": 6
-  },
-  {
-   "name": "Boris Genchev",
-   "team": "BUL",
-   "pos": "F",
-   "gp": 1,
-   "g": 1,
-   "a": 0,
-   "pts": 1,
-   "pim": 0
-  },
-  {
-   "name": "Mak Dizdarevic",
-   "team": "VUK",
-   "pos": "F",
-   "gp": 1,
-   "g": 1,
-   "a": 0,
-   "pts": 1,
-   "pim": 0
-  },
-  {
-   "name": "Dani Koric",
-   "team": "VUK",
-   "pos": "F",
-   "gp": 1,
-   "g": 0,
-   "a": 1,
-   "pts": 1,
-   "pim": 0
-  },
-  {
-   "name": "Denis Mladenov",
-   "team": "BUL",
-   "pos": "D",
-   "gp": 1,
-   "g": 0,
-   "a": 1,
-   "pts": 1,
-   "pim": 2
-  },
-  {
-   "name": "Ahmed Zubanovic",
-   "team": "VUK",
-   "pos": "D",
-   "gp": 1,
-   "g": 0,
-   "a": 0,
-   "pts": 0,
-   "pim": 0
-  },
-  {
-   "name": "Aleksandar Kozhuharov",
-   "team": "BUL",
-   "pos": "F",
-   "gp": 1,
-   "g": 0,
-   "a": 0,
-   "pts": 0,
-   "pim": 0
-  },
-  {
-   "name": "Alex Gyurkov",
-   "team": "BUL",
-   "pos": "F",
-   "gp": 1,
-   "g": 0,
-   "a": 0,
-   "pts": 0,
-   "pim": 0
-  },
-  {
-   "name": "Alex Lyutov",
-   "team": "BUL",
-   "pos": "D",
-   "gp": 1,
-   "g": 0,
-   "a": 0,
-   "pts": 0,
-   "pim": 0
-  },
-  {
-   "name": "Ali Mulabegovic",
-   "team": "VUK",
-   "pos": "D",
-   "gp": 1,
-   "g": 0,
-   "a": 0,
-   "pts": 0,
-   "pim": 0
-  },
-  {
-   "name": "Amar Bajramovic",
-   "team": "VUK",
-   "pos": "F",
-   "gp": 1,
-   "g": 0,
-   "a": 0,
-   "pts": 0,
-   "pim": 0
-  },
-  {
-   "name": "Arman Dizdarevic",
-   "team": "VUK",
-   "pos": "F",
-   "gp": 1,
-   "g": 0,
-   "a": 0,
-   "pts": 0,
-   "pim": 0
-  },
-  {
-   "name": "Benjamin Vranesic",
-   "team": "VUK",
-   "pos": "D",
-   "gp": 1,
-   "g": 0,
-   "a": 0,
-   "pts": 0,
-   "pim": 0
-  },
-  {
-   "name": "Bogomil Dikov",
-   "team": "BUL",
-   "pos": "D",
-   "gp": 1,
-   "g": 0,
-   "a": 0,
-   "pts": 0,
-   "pim": 2
-  },
-  {
-   "name": "Boris Mladenov",
-   "team": "BUL",
-   "pos": "F",
-   "gp": 1,
-   "g": 0,
-   "a": 0,
-   "pts": 0,
-   "pim": 0
-  },
-  {
-   "name": "Dean MacMullin",
-   "team": "BUL",
-   "pos": "F",
-   "gp": 1,
-   "g": 0,
-   "a": 0,
-   "pts": 0,
-   "pim": 2
-  },
-  {
-   "name": "Delyan Lyubenov",
-   "team": "BUL",
-   "pos": "D",
-   "gp": 1,
-   "g": 0,
-   "a": 0,
-   "pts": 0,
-   "pim": 0
-  },
-  {
-   "name": "Eldar Musovic",
-   "team": "VUK",
-   "pos": "F",
-   "gp": 1,
-   "g": 0,
-   "a": 0,
-   "pts": 0,
-   "pim": 0
-  },
-  {
-   "name": "Haris Mrkva",
-   "team": "VUK",
-   "pos": "D",
-   "gp": 1,
-   "g": 0,
-   "a": 0,
-   "pts": 0,
-   "pim": 0
-  },
-  {
-   "name": "Kio Mingasson",
-   "team": "VUK",
-   "pos": "F",
-   "gp": 1,
-   "g": 0,
-   "a": 0,
-   "pts": 0,
-   "pim": 2
-  },
-  {
-   "name": "Kris Zhelev",
-   "team": "BUL",
-   "pos": "F",
-   "gp": 1,
-   "g": 0,
-   "a": 0,
-   "pts": 0,
-   "pim": 0
-  },
-  {
-   "name": "Rijad Pleho",
-   "team": "VUK",
-   "pos": "F",
-   "gp": 1,
-   "g": 0,
-   "a": 0,
-   "pts": 0,
-   "pim": 0
-  },
-  {
-   "name": "Simeon Bozhinov",
-   "team": "BUL",
-   "pos": "D",
-   "gp": 1,
-   "g": 0,
-   "a": 0,
-   "pts": 0,
-   "pim": 0
-  },
-  {
-   "name": "Stefan Urumov",
-   "team": "BUL",
-   "pos": "D",
-   "gp": 1,
-   "g": 0,
-   "a": 0,
-   "pts": 0,
-   "pim": 0
-  },
-  {
-   "name": "Tarik Krehic",
-   "team": "VUK",
-   "pos": "F",
-   "gp": 1,
-   "g": 0,
-   "a": 0,
-   "pts": 0,
-   "pim": 6
-  },
-  {
-   "name": "Tino Tomov",
-   "team": "BUL",
-   "pos": "D",
-   "gp": 1,
-   "g": 0,
-   "a": 0,
-   "pts": 0,
-   "pim": 0
-  },
-  {
-   "name": "Viktor Radev",
-   "team": "BUL",
-   "pos": "F",
-   "gp": 1,
-   "g": 0,
-   "a": 0,
-   "pts": 0,
-   "pim": 0
-  }
- ],
- "goalies": [
-  {
-   "name": "Ivan Popov",
-   "team": "VUK",
-   "gp": 1,
-   "sa": 36,
-   "ga": 1,
-   "sv": 35,
-   "gaa": "1.00",
-   "svp": ".972",
-   "so": 0
-  },
-  {
-   "name": "Kamen Tomov",
-   "team": "BUL",
-   "gp": 1,
-   "sa": 9,
-   "ga": 1,
-   "sv": 8,
-   "gaa": "3.00",
-   "svp": ".889",
-   "so": 0
-  },
-  {
-   "name": "Filip Vitanov",
-   "team": "BUL",
-   "gp": 1,
-   "sa": 15,
-   "ga": 4,
-   "sv": 11,
-   "gaa": "6.00",
-   "svp": ".733",
-   "so": 0
-  },
-  {
-   "name": "Tarik Mulabegovic",
-   "team": "VUK",
-   "gp": 1,
-   "sa": 0,
-   "ga": 0,
-   "sv": 0,
-   "gaa": "-",
-   "svp": ".000",
-   "so": 0
-  }
- ],
- "updated": "2026-10-30T01:49"
+  "skaters": [
+    {
+      "name": "Evgenii Lukin",
+      "team": "BUZ",
+      "pos": "D",
+      "gp": 1,
+      "g": 4,
+      "a": 5,
+      "pts": 9,
+      "pim": 0
+    },
+    {
+      "name": "Artem Lobanov",
+      "team": "BUZ",
+      "pos": "F",
+      "gp": 1,
+      "g": 5,
+      "a": 3,
+      "pts": 8,
+      "pim": 0
+    },
+    {
+      "name": "Konstantin Kuchkin",
+      "team": "BUZ",
+      "pos": "F",
+      "gp": 1,
+      "g": 2,
+      "a": 4,
+      "pts": 6,
+      "pim": 0
+    },
+    {
+      "name": "Fatih Taygar",
+      "team": "BUZ",
+      "pos": "F",
+      "gp": 1,
+      "g": 3,
+      "a": 2,
+      "pts": 5,
+      "pim": 0
+    },
+    {
+      "name": "Georgii Saushkin",
+      "team": "BUZ",
+      "pos": "F",
+      "gp": 1,
+      "g": 2,
+      "a": 3,
+      "pts": 5,
+      "pim": 0
+    },
+    {
+      "name": "Ferhat Bakal",
+      "team": "BUZ",
+      "pos": "F",
+      "gp": 1,
+      "g": 1,
+      "a": 3,
+      "pts": 4,
+      "pim": 0
+    },
+    {
+      "name": "Tarik Mrkva",
+      "team": "VUK",
+      "pos": "F",
+      "gp": 1,
+      "g": 2,
+      "a": 1,
+      "pts": 3,
+      "pim": 0
+    },
+    {
+      "name": "Nikko Gakovic",
+      "team": "VUK",
+      "pos": "F",
+      "gp": 1,
+      "g": 1,
+      "a": 1,
+      "pts": 2,
+      "pim": 0
+    },
+    {
+      "name": "Taha Ergene",
+      "team": "BUZ",
+      "pos": "F",
+      "gp": 1,
+      "g": 1,
+      "a": 1,
+      "pts": 2,
+      "pim": 0
+    },
+    {
+      "name": "Emre Faner",
+      "team": "BUZ",
+      "pos": "D",
+      "gp": 1,
+      "g": 0,
+      "a": 2,
+      "pts": 2,
+      "pim": 0
+    },
+    {
+      "name": "Fatih Faner",
+      "team": "BUZ",
+      "pos": "D",
+      "gp": 1,
+      "g": 0,
+      "a": 2,
+      "pts": 2,
+      "pim": 0
+    },
+    {
+      "name": "Adnan Smajlovic",
+      "team": "VUK",
+      "pos": "D",
+      "gp": 1,
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "pim": 6
+    },
+    {
+      "name": "Mak Dizdarevic",
+      "team": "VUK",
+      "pos": "F",
+      "gp": 1,
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "pim": 0
+    },
+    {
+      "name": "Osman Suat Colak",
+      "team": "BUZ",
+      "pos": "F",
+      "gp": 1,
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "pim": 0
+    },
+    {
+      "name": "Ruzgar Koc",
+      "team": "BUZ",
+      "pos": "F",
+      "gp": 1,
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "pim": 2
+    },
+    {
+      "name": "Aleksandar Kozhuharov",
+      "team": "BUL",
+      "pos": "F",
+      "gp": 2,
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "pim": 0
+    },
+    {
+      "name": "Bogomil Dikov",
+      "team": "BUL",
+      "pos": "D",
+      "gp": 2,
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "pim": 2
+    },
+    {
+      "name": "Boris Genchev",
+      "team": "BUL",
+      "pos": "F",
+      "gp": 2,
+      "g": 1,
+      "a": 0,
+      "pts": 1,
+      "pim": 0
+    },
+    {
+      "name": "Dani Koric",
+      "team": "VUK",
+      "pos": "F",
+      "gp": 1,
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "pim": 0
+    },
+    {
+      "name": "Furkan Senturk",
+      "team": "BUZ",
+      "pos": "D",
+      "gp": 1,
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "pim": 0
+    },
+    {
+      "name": "Dean MacMullin",
+      "team": "BUL",
+      "pos": "F",
+      "gp": 2,
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "pim": 2
+    },
+    {
+      "name": "Denis Mladenov",
+      "team": "BUL",
+      "pos": "D",
+      "gp": 2,
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "pim": 4
+    },
+    {
+      "name": "Stefan Urumov",
+      "team": "BUL",
+      "pos": "D",
+      "gp": 2,
+      "g": 0,
+      "a": 1,
+      "pts": 1,
+      "pim": 0
+    },
+    {
+      "name": "Ahmed Zubanovic",
+      "team": "VUK",
+      "pos": "D",
+      "gp": 1,
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "pim": 0
+    },
+    {
+      "name": "Ali Mulabegovic",
+      "team": "VUK",
+      "pos": "D",
+      "gp": 1,
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "pim": 0
+    },
+    {
+      "name": "Amar Bajramovic",
+      "team": "VUK",
+      "pos": "F",
+      "gp": 1,
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "pim": 0
+    },
+    {
+      "name": "Arman Dizdarevic",
+      "team": "VUK",
+      "pos": "F",
+      "gp": 1,
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "pim": 0
+    },
+    {
+      "name": "Benjamin Vranesic",
+      "team": "VUK",
+      "pos": "D",
+      "gp": 1,
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "pim": 0
+    },
+    {
+      "name": "Eldar Musovic",
+      "team": "VUK",
+      "pos": "F",
+      "gp": 1,
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "pim": 0
+    },
+    {
+      "name": "Haris Mrkva",
+      "team": "VUK",
+      "pos": "D",
+      "gp": 1,
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "pim": 0
+    },
+    {
+      "name": "Kayra Yigit Sungur",
+      "team": "BUZ",
+      "pos": "D",
+      "gp": 1,
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "pim": 0
+    },
+    {
+      "name": "Kio Mingasson",
+      "team": "VUK",
+      "pos": "F",
+      "gp": 1,
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "pim": 2
+    },
+    {
+      "name": "Mehmet Akif Bacik",
+      "team": "BUZ",
+      "pos": "D",
+      "gp": 1,
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "pim": 0
+    },
+    {
+      "name": "Rijad Pleho",
+      "team": "VUK",
+      "pos": "F",
+      "gp": 1,
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "pim": 0
+    },
+    {
+      "name": "Tarik Krehic",
+      "team": "VUK",
+      "pos": "F",
+      "gp": 1,
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "pim": 6
+    },
+    {
+      "name": "Alex Gyurkov",
+      "team": "BUL",
+      "pos": "F",
+      "gp": 2,
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "pim": 0
+    },
+    {
+      "name": "Alex Lyutov",
+      "team": "BUL",
+      "pos": "D",
+      "gp": 2,
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "pim": 0
+    },
+    {
+      "name": "Boris Mladenov",
+      "team": "BUL",
+      "pos": "F",
+      "gp": 2,
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "pim": 0
+    },
+    {
+      "name": "Delyan Lyubenov",
+      "team": "BUL",
+      "pos": "D",
+      "gp": 2,
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "pim": 0
+    },
+    {
+      "name": "Kris Zhelev",
+      "team": "BUL",
+      "pos": "F",
+      "gp": 2,
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "pim": 0
+    },
+    {
+      "name": "Simeon Bozhinov",
+      "team": "BUL",
+      "pos": "D",
+      "gp": 2,
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "pim": 0
+    },
+    {
+      "name": "Tino Tomov",
+      "team": "BUL",
+      "pos": "D",
+      "gp": 2,
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "pim": 0
+    },
+    {
+      "name": "Viktor Radev",
+      "team": "BUL",
+      "pos": "F",
+      "gp": 2,
+      "g": 0,
+      "a": 0,
+      "pts": 0,
+      "pim": 0
+    }
+  ],
+  "goalies": [
+    {
+      "name": "Ivan Popov",
+      "team": "VUK",
+      "gp": 1,
+      "sa": 36,
+      "ga": 1,
+      "sv": 35,
+      "gaa": "1.00",
+      "svp": ".972",
+      "so": 0
+    },
+    {
+      "name": "Dmitirii Menshatov",
+      "team": "BUZ",
+      "gp": 1,
+      "sa": 21,
+      "ga": 2,
+      "sv": 19,
+      "gaa": "2.00",
+      "svp": ".905",
+      "so": 0
+    },
+    {
+      "name": "Kamen Tomov",
+      "team": "BUL",
+      "gp": 2,
+      "sa": 41,
+      "ga": 7,
+      "sv": 34,
+      "gaa": "8.95",
+      "svp": ".829",
+      "so": 0
+    },
+    {
+      "name": "Filip Vitanov",
+      "team": "BUL",
+      "gp": 2,
+      "sa": 67,
+      "ga": 18,
+      "sv": 49,
+      "gaa": "14.78",
+      "svp": ".731",
+      "so": 0
+    },
+    {
+      "name": "Tarik Mulabegovic",
+      "team": "VUK",
+      "gp": 1,
+      "sa": 0,
+      "ga": 0,
+      "sv": 0,
+      "gaa": "-",
+      "svp": ".000",
+      "so": 0
+    }
+  ],
+  "updated": "2026-10-30T22:39"
 }

@@ -162,7 +162,7 @@ def main():
     git('commit', '-q', '-m', 'Stats sync from MyStatsOnline: ' + '; '.join(changed), check=True)
     r = git('push', '-q', capture_output=True, text=True)
     if r.returncode:   # пока шёл запуск, кто-то запушил (локальная сборка) — подтянуть и повторить
-        git('pull', '--rebase', '-q')
+        git('pull', '--rebase', '--autostash', '-q')
         r = git('push', '-q', capture_output=True, text=True)
     if r.returncode:
         log('⚠ push не прошёл:', r.stderr.strip()); return 1

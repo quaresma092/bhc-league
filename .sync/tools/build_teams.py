@@ -238,7 +238,8 @@ def team_page(data, t, tm, pm, table, sk, gk):
                     ('Previous club', lambda p: esc(p.get('previousClub', ''))),
                     ('EP', lambda p: f'<a href="{esc(p["ep"])}" target="_blank" rel="noopener">Profile</a>' if p.get('ep') else '')]
             cols = [c for c in cols if c[0] == 'Player' or any(c[1](p) for p in ps)]
-            rows = ''.join('<tr>' + ''.join(f'<td{" class=\"pl-num\"" if h == "#" else ""}>{fn(p)}</td>' for h, fn in cols) + '</tr>' for p in ps)
+            num = ' class="pl-num"'
+            rows = ''.join('<tr>' + ''.join(f'<td{num if h == "#" else ""}>{fn(p)}</td>' for h, fn in cols) + '</tr>' for p in ps)
             rs += (f'<h3>{title}</h3><div class="tbl"><table><thead><tr>' + ''.join(f'<th>{h}</th>' for h, _ in cols) +
                    f'</tr></thead><tbody>{rows}</tbody></table></div>')
     else:

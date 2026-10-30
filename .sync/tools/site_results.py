@@ -92,7 +92,12 @@ def pull_published():
     import shutil, subprocess
     if not os.path.isdir(os.path.join(SITE, '.git')) or ROOT.startswith(SITE):
         return
+    head = lambda: subprocess.run(['git', 'rev-parse', 'HEAD'], cwd=SITE, capture_output=True, text=True).stdout.strip()
+    before = head()
     subprocess.run(['git', 'pull', '--rebase', '--autostash', '-q'], cwd=SITE)
+    # только то, что облако реально прислало этим pull; иначе в .sync лежит наша же старая копия
+    pulled = subprocess.run(['git', 'diff', '--name-only', before, head(), '--', '.sync'], cwd=SITE, capture_output=True, text=True).stdout.split()
+    if not pulled: return
     # облако владеет только результатами сыгранных матчей и mso-stats.json; расписание, игроки, команды — локальные
     remote = os.path.join(BUNDLE, os.path.relpath(SEASON_FILE, ROOT))
     if os.path.exists(remote):
