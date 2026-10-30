@@ -194,7 +194,6 @@
       "team": "buz",
       "name": "Nikita Gusev",
       "position": "D",
-      "jersey": 25,
       "previousClub": "Buz Adamlar GSK",
       "ep": "https://www.eliteprospects.com/player/708609/nikita-gusev",
       "born": 2004
@@ -253,7 +252,7 @@
       "team": "buz",
       "name": "Rüzgar Koç",
       "position": "F",
-      "jersey": 17,
+      "jersey": 15,
       "previousClub": "Buz Adamlar GSK",
       "ep": "https://www.eliteprospects.com/player/916222/ruzgar-koc",
       "born": 2007
@@ -272,13 +271,15 @@
       "id": "buz-saushkin-georgii",
       "team": "buz",
       "name": "Georgii Saushkin",
-      "position": ""
+      "position": "F",
+      "jersey": 25
     },
     {
       "id": "bul-tomov-kamen",
       "team": "bul",
       "name": "Kamen Tomov",
       "position": "G",
+      "jersey": 25,
       "previousClub": "NSA Sofia",
       "ep": "https://www.eliteprospects.com/player/957198/kamen-tomov",
       "born": 2008
@@ -288,6 +289,7 @@
       "team": "bul",
       "name": "Filip Vitanov",
       "position": "G",
+      "jersey": 20,
       "previousClub": "NSA Sofia U20",
       "ep": "https://www.eliteprospects.com/player/845068/filip-vitanov",
       "born": 2007
@@ -297,6 +299,7 @@
       "team": "bul",
       "name": "Simeon Bozhinov",
       "position": "D",
+      "jersey": 6,
       "previousClub": "HC Slavia Sofia U20",
       "ep": "https://www.eliteprospects.com/player/1036629/simeon-bozhinov",
       "born": 2011
@@ -306,6 +309,7 @@
       "team": "bul",
       "name": "Delyan Lyubenov",
       "position": "D",
+      "jersey": 19,
       "previousClub": "Irbis Skate Sofia",
       "ep": "https://www.eliteprospects.com/player/975916/delyan-lyubenov",
       "born": 2009
@@ -315,6 +319,7 @@
       "team": "bul",
       "name": "Tino Tomov",
       "position": "D",
+      "jersey": 8,
       "previousClub": "NSA Sofia",
       "ep": "https://www.eliteprospects.com/player/957197/tino-tomov",
       "born": 2008
@@ -324,6 +329,7 @@
       "team": "bul",
       "name": "Stefan Urumov",
       "position": "D",
+      "jersey": 18,
       "previousClub": "HC Slavia Sofia",
       "ep": "https://www.eliteprospects.com/player/885216/stefan-urumov",
       "born": 2009
@@ -333,6 +339,7 @@
       "team": "bul",
       "name": "Bogomil Dikov",
       "position": "D",
+      "jersey": 4,
       "previousClub": "NSA Sofia",
       "ep": "https://www.eliteprospects.com/player/845069/bogomil-dikov",
       "born": 2006
@@ -342,6 +349,7 @@
       "team": "bul",
       "name": "Denis Mladenov",
       "position": "D",
+      "jersey": 5,
       "previousClub": "HC Slavia Sofia",
       "ep": "https://www.eliteprospects.com/player/885220/denis-mladenov",
       "born": 2006
@@ -350,7 +358,8 @@
       "id": "bul-lyutov-alex",
       "team": "bul",
       "name": "Alex Lyutov",
-      "position": "D"
+      "position": "D",
+      "jersey": 11
     },
     {
       "id": "bul-mitev-boris",
@@ -366,6 +375,7 @@
       "team": "bul",
       "name": "Dean MacMullin",
       "position": "F",
+      "jersey": 24,
       "previousClub": "Irbis Skate Sofia",
       "ep": "https://www.eliteprospects.com/player/885263/dayan-mcmullin",
       "born": 2007
@@ -375,6 +385,7 @@
       "team": "bul",
       "name": "Alex Gyurkov",
       "position": "F",
+      "jersey": 9,
       "ep": "https://www.eliteprospects.com/player/887480/",
       "born": 2009
     },
@@ -383,6 +394,7 @@
       "team": "bul",
       "name": "Boris Genchev",
       "position": "F",
+      "jersey": 2,
       "previousClub": "HC Slavia Sofia",
       "ep": "https://www.eliteprospects.com/player/975914/boris-genchev",
       "born": 2009
@@ -392,6 +404,7 @@
       "team": "bul",
       "name": "Alex Kozhuharov",
       "position": "F",
+      "jersey": 22,
       "ep": "https://www.eliteprospects.com/player/794777/",
       "captain": true,
       "born": 2006
@@ -401,6 +414,7 @@
       "team": "bul",
       "name": "Boris Mladenov",
       "position": "F",
+      "jersey": 7,
       "previousClub": "HC Slavia Sofia",
       "ep": "https://www.eliteprospects.com/player/885221/boris-mladenov",
       "born": 2007
@@ -410,6 +424,7 @@
       "team": "bul",
       "name": "Kris Zhelev",
       "position": "F",
+      "jersey": 14,
       "previousClub": "HC Slavia Sofia",
       "ep": "https://www.eliteprospects.com/player/885231/kristian-zhelev",
       "born": 2008
@@ -428,6 +443,7 @@
       "team": "bul",
       "name": "Viktor Radev",
       "position": "F",
+      "jersey": 23,
       "previousClub": "HC Slavia Sofia",
       "ep": "https://www.eliteprospects.com/player/975921/viktor-radev",
       "born": 2008
@@ -1254,7 +1270,369 @@
       "round": "Round 1",
       "home": "bul",
       "away": "buz",
-      "status": "scheduled"
+      "status": "final",
+      "result": "REG",
+      "score": {
+        "home": {
+          "periods": [
+            1,
+            0,
+            1
+          ],
+          "total": 2
+        },
+        "away": {
+          "periods": [
+            6,
+            10,
+            4
+          ],
+          "total": 20
+        }
+      },
+      "events": [
+        {
+          "type": "goal",
+          "period": 1,
+          "time": "05:59",
+          "team": "buz",
+          "scorer": "buz-lobanov-artem",
+          "assists": [
+            "buz-kuchkin-konstantin"
+          ],
+          "strength": "EV"
+        },
+        {
+          "type": "goal",
+          "period": 1,
+          "time": "07:07",
+          "team": "buz",
+          "scorer": "buz-taygar-fatih",
+          "assists": [
+            "buz-lukin-evgenii"
+          ],
+          "strength": "EV"
+        },
+        {
+          "type": "goal",
+          "period": 1,
+          "time": "08:30",
+          "team": "buz",
+          "scorer": "buz-lobanov-artem",
+          "assists": [
+            "buz-kuchkin-konstantin"
+          ],
+          "strength": "EV"
+        },
+        {
+          "type": "goal",
+          "period": 1,
+          "time": "11:03",
+          "team": "bul",
+          "scorer": "bul-dikov-bogomil",
+          "assists": [
+            "bul-urumov-stefan",
+            "bul-macmullin-dean"
+          ],
+          "strength": "EV"
+        },
+        {
+          "type": "goal",
+          "period": 1,
+          "time": "11:52",
+          "team": "buz",
+          "scorer": "buz-bakal-ferhat",
+          "assists": [
+            "buz-faner-emre"
+          ],
+          "strength": "EV"
+        },
+        {
+          "type": "goal",
+          "period": 1,
+          "time": "14:26",
+          "team": "buz",
+          "scorer": "buz-lobanov-artem",
+          "assists": [
+            "buz-bakal-ferhat"
+          ],
+          "strength": "EV"
+        },
+        {
+          "type": "goal",
+          "period": 1,
+          "time": "16:29",
+          "team": "buz",
+          "scorer": "buz-lukin-evgenii",
+          "assists": [
+            "buz-senturk-furkan"
+          ],
+          "strength": "EV"
+        },
+        {
+          "type": "goal",
+          "period": 2,
+          "time": "00:56",
+          "team": "buz",
+          "scorer": "buz-kuchkin-konstantin",
+          "assists": [
+            "buz-bakal-ferhat"
+          ],
+          "strength": "EV"
+        },
+        {
+          "type": "penalty",
+          "period": 2,
+          "time": "02:54",
+          "team": "buz",
+          "player": "buz-koc-ruzgar",
+          "minutes": 2,
+          "reason": "Slashing"
+        },
+        {
+          "type": "goal",
+          "period": 2,
+          "time": "04:11",
+          "team": "buz",
+          "scorer": "buz-lukin-evgenii",
+          "assists": [
+            "buz-kuchkin-konstantin"
+          ],
+          "strength": "SH"
+        },
+        {
+          "type": "goal",
+          "period": 2,
+          "time": "07:31",
+          "team": "buz",
+          "scorer": "buz-lobanov-artem",
+          "assists": [
+            "buz-lukin-evgenii"
+          ],
+          "strength": "EV"
+        },
+        {
+          "type": "goal",
+          "period": 2,
+          "time": "07:56",
+          "team": "buz",
+          "scorer": "buz-lobanov-artem",
+          "assists": [
+            "buz-kuchkin-konstantin",
+            "buz-bakal-ferhat"
+          ],
+          "strength": "EV"
+        },
+        {
+          "type": "penalty",
+          "period": 2,
+          "time": "08:57",
+          "team": "bul",
+          "player": "bul-mladenov-denis",
+          "minutes": 2,
+          "reason": "Hooking"
+        },
+        {
+          "type": "goal",
+          "period": 2,
+          "time": "09:18",
+          "team": "buz",
+          "scorer": "buz-saushkin-georgii",
+          "assists": [
+            "buz-taygar-fatih"
+          ],
+          "strength": "PP"
+        },
+        {
+          "type": "goal",
+          "period": 2,
+          "time": "09:37",
+          "team": "buz",
+          "scorer": "buz-taygar-fatih",
+          "assists": [
+            "buz-saushkin-georgii",
+            "buz-faner-fatih"
+          ],
+          "strength": "EV"
+        },
+        {
+          "type": "goal",
+          "period": 2,
+          "time": "10:40",
+          "team": "buz",
+          "scorer": "buz-lukin-evgenii",
+          "assists": [
+            "buz-faner-emre"
+          ],
+          "strength": "EV"
+        },
+        {
+          "type": "goal",
+          "period": 2,
+          "time": "13:04",
+          "team": "buz",
+          "scorer": "buz-saushkin-georgii",
+          "assists": [
+            "buz-lukin-evgenii",
+            "buz-ergene-taha"
+          ],
+          "strength": "EV"
+        },
+        {
+          "type": "goal",
+          "period": 2,
+          "time": "14:28",
+          "team": "buz",
+          "scorer": "buz-kuchkin-konstantin",
+          "assists": [
+            "buz-lobanov-artem"
+          ],
+          "strength": "EV"
+        },
+        {
+          "type": "goal",
+          "period": 2,
+          "time": "19:35",
+          "team": "buz",
+          "scorer": "buz-taygar-fatih",
+          "assists": [
+            "buz-faner-fatih"
+          ],
+          "strength": "EV"
+        },
+        {
+          "type": "goal",
+          "period": 3,
+          "time": "03:13",
+          "team": "bul",
+          "scorer": "bul-kozhuharov-alex",
+          "assists": [],
+          "strength": "EV"
+        },
+        {
+          "type": "goal",
+          "period": 3,
+          "time": "06:20",
+          "team": "buz",
+          "scorer": "buz-lukin-evgenii",
+          "assists": [
+            "buz-saushkin-georgii"
+          ],
+          "strength": "EV"
+        },
+        {
+          "type": "goal",
+          "period": 3,
+          "time": "11:23",
+          "team": "buz",
+          "scorer": "buz-ergene-taha",
+          "assists": [
+            "buz-lukin-evgenii",
+            "buz-lobanov-artem"
+          ],
+          "strength": "EV"
+        },
+        {
+          "type": "goal",
+          "period": 3,
+          "time": "15:48",
+          "team": "buz",
+          "scorer": "buz-colak-osman-suat",
+          "assists": [
+            "buz-taygar-fatih",
+            "buz-saushkin-georgii"
+          ],
+          "strength": "EV"
+        },
+        {
+          "type": "goal",
+          "period": 3,
+          "time": "16:21",
+          "team": "buz",
+          "scorer": "buz-koc-ruzgar",
+          "assists": [
+            "buz-lukin-evgenii",
+            "buz-lobanov-artem"
+          ],
+          "strength": "EV"
+        }
+      ],
+      "goalies": [
+        {
+          "player": "bul-vitanov-filip",
+          "team": "bul",
+          "minutes": 33,
+          "shotsAgainst": 52,
+          "goalsAgainst": 14,
+          "decision": "L"
+        },
+        {
+          "player": "bul-tomov-kamen",
+          "team": "bul",
+          "minutes": 27,
+          "shotsAgainst": 32,
+          "goalsAgainst": 6
+        },
+        {
+          "player": "buz-menshatov-dmitrii",
+          "team": "buz",
+          "minutes": 60,
+          "shotsAgainst": 21,
+          "goalsAgainst": 2,
+          "decision": "W"
+        }
+      ],
+      "lineups": {
+        "home": [
+          "bul-tomov-kamen",
+          "bul-vitanov-filip",
+          "bul-bozhinov-simeon",
+          "bul-lyubenov-delyan",
+          "bul-tomov-tino",
+          "bul-urumov-stefan",
+          "bul-dikov-bogomil",
+          "bul-mladenov-denis",
+          "bul-lyutov-alex",
+          "bul-macmullin-dean",
+          "bul-gyurkov-alex",
+          "bul-genchev-boris",
+          "bul-kozhuharov-alex",
+          "bul-mladenov-boris",
+          "bul-zhelev-kris",
+          "bul-radev-viktor"
+        ],
+        "away": [
+          "buz-menshatov-dmitrii",
+          "buz-faner-emre",
+          "buz-faner-fatih",
+          "buz-bacik-mehmet-akif",
+          "buz-senturk-furkan",
+          "buz-sungur-kayra-yigit",
+          "buz-lukin-evgenii",
+          "buz-taygar-fatih",
+          "buz-ergene-taha",
+          "buz-bakal-ferhat",
+          "buz-kuchkin-konstantin",
+          "buz-lobanov-artem",
+          "buz-koc-ruzgar",
+          "buz-colak-osman-suat",
+          "buz-saushkin-georgii"
+        ]
+      },
+      "shots": {
+        "home": [
+          9,
+          6,
+          6
+        ],
+        "away": [
+          29,
+          30,
+          25
+        ]
+      },
+      "attendance": 100,
+      "sheetNo": 2
     },
     {
       "id": "G011",

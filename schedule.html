@@ -156,7 +156,7 @@ const ROUND_NOTE={0:'<b>Schedule changed on 30 October.</b> IH Pro Stars games i
 const ROUNDS=[{s:'2026-10-29',m:'October'},{s:'2026-11-12',m:'November'},{s:'2026-12-17',m:'December'}];
 const DOW=['Thu','Fri','Sat','Sun'];
 // Результаты: номер матча → [хозяин, гость, 'OT'|'SO'|'']
-const RES={1:[5,1,'']};
+const RES={10:[2,20,''],1:[5,1,'']};
 
 const team=(k,g,w)=>{const t=T[k];return `<div class="team"><div class="lg">${t.lg?`<img src="${t.lg}" alt="">`:`<i>BA</i>`}</div><div class="nm">${t.n}<small>${t.c}</small></div>${g==null?'':`<b class="g${w?' w':''}">${g}</b>`}</div>`};
 const game=(no,time,h,a,where,label)=>{const r=RES[no];return `<div class="game" data-t="${h} ${a}"><div class="t"><b>${time}</b><span>Game ${label||no}${where?' · '+where:''}</span></div>${team(h,r&&r[0],r&&r[0]>r[1])}<div class="vs">${r?'FINAL'+(r[2]?' · '+r[2]:''):'VS'}</div>${team(a,r&&r[1],r&&r[1]>r[0])}</div>`};
