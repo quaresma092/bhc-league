@@ -34,9 +34,13 @@ def text(s):
     return html.unescape(re.sub(r'<[^>]+>', ' ', s)).replace('\xa0', ' ').strip()
 
 def mso_games(page):
-    """Завершённые матчи: номер протокола → (id команды MSO хозяев, гостей, голы хозяев, гостей, REG|OT|SO)."""
-    out = {}
-    for row in re.findall(r'<tr class="detail[^"]*">(.*?)</tr>', page, re.S):
+    """Завершённые матчи: номер протокола → (id команды MSO хозяев, гостей, голы хозяев, гостей, REG|OT|SO, дата)."""
+    out, day = {}, ''
+    for kind, row in re.findall(r'<tr class="(day-row|detail[^"]*)">(.*?)</tr>', page, re.S):
+        if kind == 'day-row':   # «Friday October 30, 2026» → 2026-10-30
+            try: day = datetime.datetime.strptime(text(row), '%A %B %d, %Y').date().isoformat()
+            except ValueError: day = ''
+            continue
         if 'title="Completed"' not in row:
             continue
         num = re.search(r'class="game_datetime"[^>]*>\s*(\d+)\s*-', row)
@@ -50,7 +54,7 @@ def mso_games(page):
             continue
         ex = text(extra.group(1)).upper() if extra else ''
         res = 'SO' if 'SO' in ex or 'SHOOT' in ex else 'OT' if 'OT' in ex else 'REG'
-        out[int(num.group(1))] = (int(teams[0]), int(teams[-1]), int(h), int(a), res)
+        out[int(num.group(1))] = (int(teams[0]), int(teams[-1]), int(h), int(a), res, day)
     return out
 
 def rows(page):
@@ -80,10 +84,13 @@ def main():
     # 1. счёт матчей
     changed = []
     games = {g['id']: g for g in data['games']}
-    for n, (mh, ma, gh, ga, res) in sorted(mso_games(sched).items()):
+    for n, (mh, ma, gh, ga, res, day) in sorted(mso_games(sched).items()):
+        pair = {ours.get(mh), ours.get(ma)}
         g = games.get(f'G{n:03d}')
-        if not g or {ours.get(mh), ours.get(ma)} != {g['home'], g['away']}:
-            log(f'⚠ матч MSO {n:03d} не совпал с G{n:03d} по командам — пропущен'); continue
+        if not g or {g['home'], g['away']} != pair:   # номера на MSO могли поменять (перенос, отмена) — ищем по паре команд и дате
+            g = next((x for x in data['games'] if {x['home'], x['away']} == pair and x.get('date') == day and x.get('status') != 'cancelled'), None)
+        if not g:
+            log(f'⚠ матч MSO {n:03d} ({day}) не нашёлся в расписании — пропущен'); continue
         goals = {ours[mh]: gh, ours[ma]: ga}
         h, a = goals[g['home']], goals[g['away']]
         sc = g.get('score') or {}

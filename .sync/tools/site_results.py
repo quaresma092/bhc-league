@@ -93,15 +93,22 @@ def pull_published():
     if not os.path.isdir(os.path.join(SITE, '.git')) or ROOT.startswith(SITE):
         return
     subprocess.run(['git', 'pull', '--rebase', '--autostash', '-q'], cwd=SITE)
-    # облако владеет только счётом матчей (games) и mso-stats.json; игроки, команды и прочее — локальные
+    # облако владеет только результатами сыгранных матчей и mso-stats.json; расписание, игроки, команды — локальные
     remote = os.path.join(BUNDLE, os.path.relpath(SEASON_FILE, ROOT))
     if os.path.exists(remote):
         mine, theirs = json.load(open(SEASON_FILE, encoding='utf-8')), json.load(open(remote, encoding='utf-8'))
-        if mine.get('games') != theirs.get('games'):
-            mine['games'] = theirs['games']
+        # берём только результат сыгранных матчей; дата, время, команды и отмены — локальные (их правим здесь)
+        got = []
+        for g in mine.get('games', []):
+            r = next((x for x in theirs.get('games', []) if x['id'] == g['id']), None)
+            if r and r.get('status') == 'final' and (g.get('status') != 'final' or g.get('score') != r.get('score')):
+                for k in ('status', 'result', 'score', 'events', 'goalies', 'lineups'):
+                    if k in r: g[k] = r[k]
+                got.append(g['id'])
+        if got:
             mine['updated'] = max(mine.get('updated', ''), theirs.get('updated', ''))
             json.dump(mine, open(SEASON_FILE, 'w', encoding='utf-8'), ensure_ascii=False, indent=2)
-            print('из облачного синка: счёт матчей')
+            print('из облачного синка: счёт', ', '.join(got))
     remote = os.path.join(BUNDLE, os.path.relpath(MSO_STATS_FILE, ROOT))
     if os.path.exists(remote) and (not os.path.exists(MSO_STATS_FILE) or open(remote, 'rb').read() != open(MSO_STATS_FILE, 'rb').read()):
         shutil.copy(remote, MSO_STATS_FILE); print('из облачного синка: статистика игроков')

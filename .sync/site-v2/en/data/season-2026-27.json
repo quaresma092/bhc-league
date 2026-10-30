@@ -1166,12 +1166,12 @@
     },
     {
       "id": "G002",
-      "date": "2026-10-30",
-      "time": "17:00",
+      "date": "2026-10-31",
+      "time": "14:00",
       "venue": "Sarajevo",
       "round": "Round 1",
-      "home": "sar",
-      "away": "buz",
+      "home": "buz",
+      "away": "sar",
       "status": "scheduled"
     },
     {
@@ -1182,17 +1182,17 @@
       "round": "Round 1",
       "home": "nsd",
       "away": "bul",
-      "status": "scheduled"
+      "status": "cancelled"
     },
     {
       "id": "G004",
-      "date": "2026-10-31",
-      "time": "14:00",
+      "date": "",
+      "time": "",
       "venue": "Sarajevo",
       "round": "Round 1",
       "home": "sar",
       "away": "bel",
-      "status": "scheduled"
+      "status": "postponed"
     },
     {
       "id": "G005",
@@ -1202,12 +1202,12 @@
       "round": "Round 1",
       "home": "nsd",
       "away": "buz",
-      "status": "scheduled"
+      "status": "cancelled"
     },
     {
       "id": "G006",
       "date": "2026-10-31",
-      "time": "20:00",
+      "time": "17:00",
       "venue": "Sarajevo",
       "round": "Round 1",
       "home": "bul",
@@ -1220,8 +1220,8 @@
       "time": "10:00",
       "venue": "Sarajevo",
       "round": "Round 1",
-      "home": "bel",
-      "away": "buz",
+      "home": "buz",
+      "away": "bel",
       "status": "scheduled"
     },
     {
@@ -1232,7 +1232,7 @@
       "round": "Round 1",
       "home": "sar",
       "away": "nsd",
-      "status": "scheduled"
+      "status": "cancelled"
     },
     {
       "id": "G009",
@@ -1243,14 +1243,14 @@
       "round": "Round 1",
       "home": "nsd",
       "away": "bel",
-      "status": "scheduled"
+      "status": "cancelled"
     },
     {
       "id": "G010",
-      "date": "",
+      "date": "2026-10-30",
       "dateText": "TBD",
-      "time": "",
-      "venue": "Bulgaria / Turkey",
+      "time": "18:00",
+      "venue": "Sarajevo",
       "round": "Round 1",
       "home": "bul",
       "away": "buz",

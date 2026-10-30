@@ -350,6 +350,8 @@ def page_schedule(data):
                 score = (f'<b>{g["score"]["home"]["total"]} : {g["score"]["away"]["total"]}</b>'
                          + (f' <span class="legend">{esc(g.get("result"))}</span>'
                             if g.get("result", "REG") != "REG" else ""))
+            elif g.get("status") in ("cancelled", "postponed"):
+                score = f'<span class="legend">{g["status"].capitalize()}</span>'
             else:
                 score = "—"
             links = []

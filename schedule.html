@@ -149,13 +149,17 @@ const T={
 // Шаблон тура из xlsx: [день 0–3 (чт–вс), время, хозяин, гость]; все туры одинаковые
 const SLOTS=[[0,'20:00','vuk','bul'],[1,'17:00','vuk','buz'],[1,'20:00','ihp','bul'],[2,'14:00','vuk','wol'],[2,'17:00','ihp','buz'],[2,'20:00','bul','wol'],[3,'10:00','wol','buz'],[3,'13:00','vuk','ihp']];
 const AWAY=[['ihp','wol','Novi Sad'],['bul','buz','Bulgaria / Turkey']];
+// Тур 1 изменён 30.10: матчи IH Pro Stars отменены, Vukovi – Wolves переносится, Bulgaria – Buzadam сыгран в Сараево.
+// [день 0–3, время, хозяин, гость, номер матча в данных (G00N) — по нему берётся счёт из RES]
+const ROUND_GAMES={0:[[0,'20:00','vuk','bul',1],[1,'18:00','bul','buz',10],[2,'14:00','buz','vuk',2],[2,'17:00','bul','wol',6],[3,'10:00','buz','wol',7]]};
+const ROUND_NOTE={0:'IH Pro Stars games in Round 1 are cancelled. Vukovi – Wolves will be rescheduled, the new date will be announced.'};
 const ROUNDS=[{s:'2026-10-29',m:'October'},{s:'2026-11-12',m:'November'},{s:'2026-12-17',m:'December'}];
 const DOW=['Thu','Fri','Sat','Sun'];
 // Результаты: номер матча → [хозяин, гость, 'OT'|'SO'|'']
 const RES={1:[5,1,'']};
 
 const team=(k,g,w)=>{const t=T[k];return `<div class="team"><div class="lg">${t.lg?`<img src="${t.lg}" alt="">`:`<i>BA</i>`}</div><div class="nm">${t.n}<small>${t.c}</small></div>${g==null?'':`<b class="g${w?' w':''}">${g}</b>`}</div>`};
-const game=(no,time,h,a,where)=>{const r=RES[no];return `<div class="game" data-t="${h} ${a}"><div class="t"><b>${time}</b><span>Game ${no}${where?' · '+where:''}</span></div>${team(h,r&&r[0],r&&r[0]>r[1])}<div class="vs">${r?'FINAL'+(r[2]?' · '+r[2]:''):'VS'}</div>${team(a,r&&r[1],r&&r[1]>r[0])}</div>`};
+const game=(no,time,h,a,where,label)=>{const r=RES[no];return `<div class="game" data-t="${h} ${a}"><div class="t"><b>${time}</b><span>Game ${label||no}${where?' · '+where:''}</span></div>${team(h,r&&r[0],r&&r[0]>r[1])}<div class="vs">${r?'FINAL'+(r[2]?' · '+r[2]:''):'VS'}</div>${team(a,r&&r[1],r&&r[1]>r[0])}</div>`};
 
 let html='',nav='';
 ROUNDS.forEach((r,i)=>{
@@ -167,14 +171,15 @@ ROUNDS.forEach((r,i)=>{
   nav+=`<a href="#round-${i+1}"><div class="k">Round ${i+1}</div><b>${span(false)}</b><span>Thu – Sun · Sarajevo</span></a>`;
   let days='';
   for(let k=0;k<4;k++){
-    const gs=SLOTS.map((s,j)=>[s,j]).filter(([s])=>s[0]===k).map(([s,j])=>game(base+j+1,s[1],s[2],s[3])).join('');
+    const gs=ROUND_GAMES[i]?ROUND_GAMES[i].map((s,j)=>[s,j]).filter(([s])=>s[0]===k).map(([s,j])=>game(s[4],s[1],s[2],s[3],'',j+1)).join('')
+      :SLOTS.map((s,j)=>[s,j]).filter(([s])=>s[0]===k).map(([s,j])=>game(base+j+1,s[1],s[2],s[3])).join('');
     days+=`<div class="day"><h3>${DOW[k]} ${day(k)} <small>${mon(k)}</small></h3>${gs}</div>`;
   }
   const aw=AWAY.map((a,j)=>game(base+9+j,'TBD',a[0],a[1],a[2])).join('');
   html+=`<section class="round" id="round-${i+1}">
     <div class="round-head"><h2>Round ${i+1}<span>${span(true)}</span></h2><div class="where">Venue<b>Sarajevo</b></div></div>
     <div class="days">${days}</div>
-    <div class="away"><div class="lbl">Away games<small>Dates TBD</small></div>${aw}</div>
+    ${ROUND_NOTE[i]?`<p class="note" style="margin-top:18px">${ROUND_NOTE[i]}</p>`:`<div class="away"><div class="lbl">Away games<small>Dates TBD</small></div>${aw}</div>`}
   </section>`;
 });
 document.getElementById('season').innerHTML=html;

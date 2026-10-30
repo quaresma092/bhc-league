@@ -150,6 +150,8 @@ def game_date(g):
 
 
 def result_for(g, tid):
+    if g.get('status') in ('cancelled', 'postponed'):
+        return f'<span class="res-l">{g["status"].capitalize()}</span>'
     if g.get('status') != 'final':
         return ''
     me, them = ('home', 'away') if g['home'] == tid else ('away', 'home')
@@ -180,10 +182,10 @@ def hub(data, tm, table):
 def team_page(data, t, tm, pm, table, sk, gk):
     tid = t['id']
     st = next(r for r in table if r['team'] == tid)
-    games = [g for g in data['games'] if tid in (g['home'], g['away'])]
+    games = sorted((g for g in data['games'] if tid in (g['home'], g['away'])), key=lambda g: (g.get('date') or '9999', g.get('time', ''), g['id']))
     rn = lambda g: int(re.sub(r'\D', '', g.get('round', '')) or 0)
     games.sort(key=lambda g: (rn(g), g.get('date') or '9999', g.get('time', '')))
-    nxt = next((g for g in games if g.get('status') != 'final' and g.get('date')), None)
+    nxt = next((g for g in games if g.get('status') == 'scheduled' and g.get('date')), None)
     last = next((g for g in reversed(games) if g.get('status') == 'final'), None)
     roster = [p for p in data.get('players', []) if p.get('team') == tid]
 
