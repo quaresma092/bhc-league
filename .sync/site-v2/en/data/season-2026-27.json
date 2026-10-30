@@ -122,6 +122,614 @@
   ],
   "players": [
     {
+      "id": "buz-menshatov-dmitrii",
+      "team": "buz",
+      "name": "Dmitrii Menshatov",
+      "position": "G",
+      "jersey": 50,
+      "ep": "https://www.eliteprospects.com/player/537765/",
+      "born": 2002
+    },
+    {
+      "id": "buz-faner-emre",
+      "team": "buz",
+      "name": "Emre Faner",
+      "position": "D",
+      "jersey": 11,
+      "previousClub": "Buz Adamlar GSK",
+      "ep": "https://www.eliteprospects.com/player/235483/emre-faner",
+      "born": 1994
+    },
+    {
+      "id": "buz-faner-fatih",
+      "team": "buz",
+      "name": "Fatih Faner",
+      "position": "D",
+      "jersey": 97,
+      "previousClub": "Buz Adamlar GSK",
+      "ep": "https://www.eliteprospects.com/player/235485/fatih-faner",
+      "born": 1997
+    },
+    {
+      "id": "buz-bacik-mehmet-akif",
+      "team": "buz",
+      "name": "Mehmet Akif Bacık",
+      "position": "D",
+      "jersey": 3,
+      "previousClub": "Buz Adamlar GSK",
+      "ep": "https://www.eliteprospects.com/player/1092316/mehmet-akif-bacik",
+      "born": 2009
+    },
+    {
+      "id": "buz-senturk-furkan",
+      "team": "buz",
+      "name": "Furkan Şentürk",
+      "position": "D",
+      "jersey": 7,
+      "previousClub": "Buz Adamlar GSK",
+      "ep": "https://www.eliteprospects.com/player/595247/furkan-senturk",
+      "born": 2001
+    },
+    {
+      "id": "buz-sungur-kayra-yigit",
+      "team": "buz",
+      "name": "Kayra Yiğit Sungur",
+      "position": "D",
+      "jersey": 58,
+      "previousClub": "Buz Adamlar GSK",
+      "ep": "https://www.eliteprospects.com/player/1008991/kayra-yigit-sungur",
+      "born": 2008
+    },
+    {
+      "id": "buz-lukin-evgenii",
+      "team": "buz",
+      "name": "Evgenii Lukin",
+      "position": "D",
+      "jersey": 5,
+      "ep": "https://www.eliteprospects.com/player/339991/",
+      "born": 1999
+    },
+    {
+      "id": "buz-gusev-nikita",
+      "team": "buz",
+      "name": "Nikita Gusev",
+      "position": "D",
+      "jersey": 25,
+      "previousClub": "Buz Adamlar GSK",
+      "ep": "https://www.eliteprospects.com/player/708609/nikita-gusev",
+      "born": 2004
+    },
+    {
+      "id": "buz-taygar-fatih",
+      "team": "buz",
+      "name": "Fatih Taygar",
+      "position": "F",
+      "jersey": 10,
+      "previousClub": "Buz Adamlar GSK",
+      "ep": "https://www.eliteprospects.com/player/336633/fatih-taygar",
+      "born": 1999
+    },
+    {
+      "id": "buz-ergene-taha",
+      "team": "buz",
+      "name": "Taha Ergene",
+      "position": "F",
+      "jersey": 12,
+      "previousClub": "Buz Adamlar GSK",
+      "ep": "https://www.eliteprospects.com/player/655183/tahar-ergene",
+      "born": 2003
+    },
+    {
+      "id": "buz-bakal-ferhat",
+      "team": "buz",
+      "name": "Ferhat Bakal",
+      "position": "F",
+      "jersey": 24,
+      "previousClub": "Buz Adamlar GSK",
+      "ep": "https://www.eliteprospects.com/player/280048/ferhat-bakal",
+      "born": 1998
+    },
+    {
+      "id": "buz-kuchkin-konstantin",
+      "team": "buz",
+      "name": "Konstantin Kuchkin",
+      "position": "F",
+      "jersey": 72,
+      "previousClub": "Buz Adamlar GSK",
+      "ep": "https://www.eliteprospects.com/player/87921/konstantin-kuchkin",
+      "born": 1996
+    },
+    {
+      "id": "buz-lobanov-artem",
+      "team": "buz",
+      "name": "Artem Lobanov",
+      "position": "F",
+      "jersey": 8,
+      "ep": "https://www.eliteprospects.com/player/384364/",
+      "born": 1999
+    },
+    {
+      "id": "buz-koc-ruzgar",
+      "team": "buz",
+      "name": "Rüzgar Koç",
+      "position": "F",
+      "jersey": 17,
+      "previousClub": "Buz Adamlar GSK",
+      "ep": "https://www.eliteprospects.com/player/916222/ruzgar-koc",
+      "born": 2007
+    },
+    {
+      "id": "buz-colak-osman-suat",
+      "team": "buz",
+      "name": "Osman Suat Çolak",
+      "position": "F",
+      "jersey": 92,
+      "previousClub": "Buz Adamlar GSK",
+      "ep": "https://www.eliteprospects.com/player/643025/osman-cholak",
+      "born": 1999
+    },
+    {
+      "id": "buz-saushkin-georgii",
+      "team": "buz",
+      "name": "Georgii Saushkin",
+      "position": ""
+    },
+    {
+      "id": "bul-tomov-kamen",
+      "team": "bul",
+      "name": "Kamen Tomov",
+      "position": "G",
+      "previousClub": "NSA Sofia",
+      "ep": "https://www.eliteprospects.com/player/957198/kamen-tomov",
+      "born": 2008
+    },
+    {
+      "id": "bul-vitanov-filip",
+      "team": "bul",
+      "name": "Filip Vitanov",
+      "position": "G",
+      "previousClub": "NSA Sofia U20",
+      "ep": "https://www.eliteprospects.com/player/845068/filip-vitanov",
+      "born": 2007
+    },
+    {
+      "id": "bul-bozhinov-simeon",
+      "team": "bul",
+      "name": "Simeon Bozhinov",
+      "position": "D",
+      "previousClub": "HC Slavia Sofia U20",
+      "ep": "https://www.eliteprospects.com/player/1036629/simeon-bozhinov",
+      "born": 2011
+    },
+    {
+      "id": "bul-lyubenov-delyan",
+      "team": "bul",
+      "name": "Delyan Lyubenov",
+      "position": "D",
+      "previousClub": "Irbis Skate Sofia",
+      "ep": "https://www.eliteprospects.com/player/975916/delyan-lyubenov",
+      "born": 2009
+    },
+    {
+      "id": "bul-tomov-tino",
+      "team": "bul",
+      "name": "Tino Tomov",
+      "position": "D",
+      "previousClub": "NSA Sofia",
+      "ep": "https://www.eliteprospects.com/player/957197/tino-tomov",
+      "born": 2008
+    },
+    {
+      "id": "bul-urumov-stefan",
+      "team": "bul",
+      "name": "Stefan Urumov",
+      "position": "D",
+      "previousClub": "HC Slavia Sofia",
+      "ep": "https://www.eliteprospects.com/player/885216/stefan-urumov",
+      "born": 2009
+    },
+    {
+      "id": "bul-dikov-bogomil",
+      "team": "bul",
+      "name": "Bogomil Dikov",
+      "position": "D",
+      "previousClub": "NSA Sofia",
+      "ep": "https://www.eliteprospects.com/player/845069/bogomil-dikov",
+      "born": 2006
+    },
+    {
+      "id": "bul-mladenov-denis",
+      "team": "bul",
+      "name": "Denis Mladenov",
+      "position": "D",
+      "previousClub": "HC Slavia Sofia",
+      "ep": "https://www.eliteprospects.com/player/885220/denis-mladenov",
+      "born": 2006
+    },
+    {
+      "id": "bul-lyutov-alex",
+      "team": "bul",
+      "name": "Alex Lyutov",
+      "position": "D"
+    },
+    {
+      "id": "bul-mitev-boris",
+      "team": "bul",
+      "name": "Boris Mitev",
+      "position": "F",
+      "previousClub": "NSA Sofia",
+      "ep": "https://www.eliteprospects.com/player/887485/boris-mitev",
+      "born": 2009
+    },
+    {
+      "id": "bul-macmullin-dean",
+      "team": "bul",
+      "name": "Dean MacMullin",
+      "position": "F",
+      "previousClub": "Irbis Skate Sofia",
+      "ep": "https://www.eliteprospects.com/player/885263/dayan-mcmullin",
+      "born": 2007
+    },
+    {
+      "id": "bul-gyurkov-alex",
+      "team": "bul",
+      "name": "Alex Gyurkov",
+      "position": "F",
+      "ep": "https://www.eliteprospects.com/player/887480/",
+      "born": 2009
+    },
+    {
+      "id": "bul-genchev-boris",
+      "team": "bul",
+      "name": "Boris Genchev",
+      "position": "F",
+      "previousClub": "HC Slavia Sofia",
+      "ep": "https://www.eliteprospects.com/player/975914/boris-genchev",
+      "born": 2009
+    },
+    {
+      "id": "bul-kozhuharov-alex",
+      "team": "bul",
+      "name": "Alex Kozhuharov",
+      "position": "F",
+      "ep": "https://www.eliteprospects.com/player/794777/",
+      "captain": true,
+      "born": 2006
+    },
+    {
+      "id": "bul-mladenov-boris",
+      "team": "bul",
+      "name": "Boris Mladenov",
+      "position": "F",
+      "previousClub": "HC Slavia Sofia",
+      "ep": "https://www.eliteprospects.com/player/885221/boris-mladenov",
+      "born": 2007
+    },
+    {
+      "id": "bul-zhelev-kris",
+      "team": "bul",
+      "name": "Kris Zhelev",
+      "position": "F",
+      "previousClub": "HC Slavia Sofia",
+      "ep": "https://www.eliteprospects.com/player/885231/kristian-zhelev",
+      "born": 2008
+    },
+    {
+      "id": "bul-deshev-kaloyan",
+      "team": "bul",
+      "name": "Kaloyan Deshev",
+      "position": "F",
+      "previousClub": "Balkan Botevgrad",
+      "ep": "https://www.eliteprospects.com/player/971490/kaloyan-deshev",
+      "born": 2009
+    },
+    {
+      "id": "bul-radev-viktor",
+      "team": "bul",
+      "name": "Viktor Radev",
+      "position": "F",
+      "previousClub": "HC Slavia Sofia",
+      "ep": "https://www.eliteprospects.com/player/975921/viktor-radev",
+      "born": 2008
+    },
+    {
+      "id": "buz-akbulut-doruk",
+      "team": "buz",
+      "name": "Doruk Akbulut",
+      "position": "G",
+      "jersey": 2,
+      "born": 2009
+    },
+    {
+      "id": "buz-ilicali-sinan",
+      "team": "buz",
+      "name": "Sinan Ilıcalı",
+      "position": "G",
+      "born": 2011
+    },
+    {
+      "id": "buz-yuksekdag-metehan",
+      "team": "buz",
+      "name": "Metehan Yüksekdağ",
+      "position": "G",
+      "born": 2011
+    },
+    {
+      "id": "buz-ocal-demir",
+      "team": "buz",
+      "name": "Demir Öçal",
+      "position": "D",
+      "jersey": 41,
+      "born": 2011
+    },
+    {
+      "id": "buz-kalashnikov-mikhail",
+      "team": "buz",
+      "name": "Mikhail Kalashnikov",
+      "position": "F",
+      "jersey": 87,
+      "born": 2001
+    },
+    {
+      "id": "buz-kulagin-aleksandr",
+      "team": "buz",
+      "name": "Aleksandr Kulagin",
+      "position": "F",
+      "born": 2002
+    },
+    {
+      "id": "buz-sener-kuzey",
+      "team": "buz",
+      "name": "Kuzey Şener",
+      "position": "F",
+      "jersey": 29,
+      "born": 2009
+    },
+    {
+      "id": "buz-alpaslan-ege",
+      "team": "buz",
+      "name": "Ege Alpaslan",
+      "position": "F",
+      "jersey": 64,
+      "born": 2010
+    },
+    {
+      "id": "buz-dede-ahmet-serhat",
+      "team": "buz",
+      "name": "Ahmet Serhat Dede",
+      "position": "F",
+      "jersey": 26,
+      "born": 2008
+    },
+    {
+      "id": "buz-koksal-arsan",
+      "team": "buz",
+      "name": "Arsan Köksal",
+      "position": "F",
+      "jersey": 33,
+      "born": 2010
+    },
+    {
+      "id": "buz-tubaliev-ansar",
+      "team": "buz",
+      "name": "Ansar Tubaliev",
+      "position": "F",
+      "jersey": 23,
+      "born": 2010
+    },
+    {
+      "id": "bel-yartsev-egor",
+      "team": "bel",
+      "name": "Egor Yartsev",
+      "position": "G",
+      "born": 2005,
+      "ep": "https://www.eliteprospects.com/player/885894/"
+    },
+    {
+      "id": "bel-nugmanov-egor",
+      "team": "bel",
+      "name": "Egor Nugmanov",
+      "position": "D",
+      "born": 2005,
+      "ep": "https://www.eliteprospects.com/player/1156065/"
+    },
+    {
+      "id": "bel-smajlovic-omar",
+      "team": "bel",
+      "name": "Omar Smajlovic",
+      "position": "D",
+      "born": 2009,
+      "previousClub": "HK Medvjedi Sarajevo",
+      "ep": "https://www.eliteprospects.com/player/1087896/omar-smajlovic"
+    },
+    {
+      "id": "bel-burazerovic-orhan",
+      "team": "bel",
+      "name": "Orhan Burazerovic",
+      "position": "D",
+      "born": 2010,
+      "previousClub": "HK Stari Grad Vukovi",
+      "ep": "https://www.eliteprospects.com/player/1137094/orhan-burazerovic"
+    },
+    {
+      "id": "bel-shchenkov-sergei",
+      "team": "bel",
+      "name": "Sergei Shchenkov",
+      "position": "D",
+      "born": 1996,
+      "ep": "https://www.eliteprospects.com/player/270891/"
+    },
+    {
+      "id": "bel-alibegovic-denis",
+      "team": "bel",
+      "name": "Denis Alibegovic",
+      "position": "D",
+      "born": 2000
+    },
+    {
+      "id": "bel-kuzmin-sergei",
+      "team": "bel",
+      "name": "Sergei Kuzmin",
+      "position": "D",
+      "born": 1990
+    },
+    {
+      "id": "bel-lavrichenko-vladimir",
+      "team": "bel",
+      "name": "Vladimir Lavrichenko",
+      "position": "D"
+    },
+    {
+      "id": "bel-girichev-ivan",
+      "team": "bel",
+      "name": "Ivan Girichev",
+      "position": "D",
+      "born": 1994
+    },
+    {
+      "id": "bel-sarac-petar",
+      "team": "bel",
+      "name": "Petar Sarac",
+      "position": "D",
+      "born": 2002,
+      "previousClub": "Crvena Zvezda U19",
+      "ep": "https://www.eliteprospects.com/player/721876/petar-sarac"
+    },
+    {
+      "id": "bel-grachev-dmitry",
+      "team": "bel",
+      "name": "Dmitry Grachev",
+      "position": "D",
+      "born": 1999,
+      "previousClub": "LKH Lodz",
+      "ep": "https://www.eliteprospects.com/player/1175670/dmitriy-grachev"
+    },
+    {
+      "id": "bel-moiseev-dmitrii",
+      "team": "bel",
+      "name": "Dmitrii Moiseev",
+      "position": "F",
+      "born": 1995,
+      "ep": "https://www.eliteprospects.com/player/240417/"
+    },
+    {
+      "id": "bel-pechenik-dmitrii",
+      "team": "bel",
+      "name": "Dmitrii Pechenik",
+      "position": "F",
+      "born": 1995
+    },
+    {
+      "id": "bel-kosarev-daniil",
+      "team": "bel",
+      "name": "Daniil Kosarev",
+      "position": "F",
+      "born": 2000,
+      "previousClub": "Narva HK PSK",
+      "ep": "https://www.eliteprospects.com/player/396228/daniil-kosarev"
+    },
+    {
+      "id": "bel-ryzhenko-konstantin",
+      "team": "bel",
+      "name": "Konstantin Ryzhenko",
+      "position": "F",
+      "born": 2000,
+      "previousClub": "HK REU Moskva",
+      "ep": "https://www.eliteprospects.com/player/549902/konstantin-ryzhenko"
+    },
+    {
+      "id": "bel-varlamov-nikita",
+      "team": "bel",
+      "name": "Nikita Varlamov",
+      "position": "F",
+      "born": 2003,
+      "previousClub": "Polyot Rybinsk",
+      "ep": "https://www.eliteprospects.com/player/526268/nikita-varlamov"
+    },
+    {
+      "id": "bel-monakhov-georgii",
+      "team": "bel",
+      "name": "Georgii Monakhov",
+      "position": "F",
+      "born": 2006,
+      "ep": "https://www.eliteprospects.com/player/882910/"
+    },
+    {
+      "id": "bel-sukhar-arsenii",
+      "team": "bel",
+      "name": "Arsenii Sukhar",
+      "position": "F",
+      "born": 2007,
+      "ep": "https://www.eliteprospects.com/player/1018640/"
+    },
+    {
+      "id": "bel-omeragic-hamza",
+      "team": "bel",
+      "name": "Hamza Omeragic",
+      "position": "F",
+      "born": 2010,
+      "previousClub": "HK Medvjedi Sarajevo",
+      "ep": "https://www.eliteprospects.com/player/1137075/hamza-omeragic"
+    },
+    {
+      "id": "bel-giusti-gianni",
+      "team": "bel",
+      "name": "Gianni Giusti",
+      "position": "F",
+      "born": 2010,
+      "previousClub": "HK Medvjedi Sarajevo",
+      "ep": "https://www.eliteprospects.com/player/1137077/gianni-giusti"
+    },
+    {
+      "id": "bel-grishunin-maksim",
+      "team": "bel",
+      "name": "Maksim Grishunin",
+      "position": "F",
+      "born": 1992,
+      "ep": "https://www.eliteprospects.com/player/1050288/"
+    },
+    {
+      "id": "bel-savchenko-valentin",
+      "team": "bel",
+      "name": "Valentin Savchenko",
+      "position": "F",
+      "born": 1999
+    },
+    {
+      "id": "bel-bozhok-zhan",
+      "team": "bel",
+      "name": "Zhan Bozhok",
+      "position": "F",
+      "born": 1997,
+      "previousClub": "Severnye Rysi SPbTEI",
+      "ep": "https://www.eliteprospects.com/player/690237/zhan-bozhok"
+    },
+    {
+      "id": "bel-krotenko-belchakov-gleb",
+      "team": "bel",
+      "name": "Gleb Krotenko-Belchakov",
+      "position": "F",
+      "born": 2005,
+      "previousClub": "Angel Sibiri Tobolsk U18",
+      "ep": "https://www.eliteprospects.com/player/713997/gleb-krotenko-belchakov"
+    },
+    {
+      "id": "bel-garaev-nikita",
+      "team": "bel",
+      "name": "Nikita Garaev",
+      "position": "F",
+      "born": 2000
+    },
+    {
+      "id": "bel-klevtsov-german",
+      "team": "bel",
+      "name": "German Klevtsov",
+      "position": "F",
+      "born": 2000,
+      "previousClub": "CZVS Novosibirsk U16",
+      "ep": "https://www.eliteprospects.com/player/452096/german-klevtsov"
+    },
+    {
       "id": "sar-mlivic-adnan",
       "team": "sar",
       "name": "Adnan Mlivic",
@@ -363,505 +971,169 @@
       "ep": "https://www.eliteprospects.com/player/1088423/tarik-mulabegovic"
     },
     {
-      "id": "bel-yartsev-egor",
-      "team": "bel",
-      "name": "Egor Yartsev",
+      "id": "bul-rangelov-viktor",
+      "team": "bul",
+      "name": "Viktor Rangelov",
       "position": "G",
-      "born": 2005,
-      "ep": "https://www.eliteprospects.com/player/885894/"
+      "born": 2006,
+      "previousClub": "Irbis Skate Sofia",
+      "ep": "https://www.eliteprospects.com/player/885211/viktor-rangelov"
     },
     {
-      "id": "bel-nugmanov-egor",
-      "team": "bel",
-      "name": "Egor Nugmanov",
+      "id": "bul-stamenov-aleksandar",
+      "team": "bul",
+      "name": "Aleksandar Stamenov",
       "position": "D",
-      "born": 2005,
-      "ep": "https://www.eliteprospects.com/player/1156065/"
+      "born": 2006,
+      "ep": "https://www.eliteprospects.com/player/885238/"
     },
     {
-      "id": "bel-smajlovic-omar",
-      "team": "bel",
-      "name": "Omar Smajlovic",
+      "id": "bul-dimitrov-andrea",
+      "team": "bul",
+      "name": "Andrea Dimitrov",
       "position": "D",
+      "born": 2007,
+      "previousClub": "Irbis Skate Sofia",
+      "ep": "https://www.eliteprospects.com/player/885265/andrea-dimitrov"
+    },
+    {
+      "id": "bul-valov-filip",
+      "team": "bul",
+      "name": "Filip Valov",
+      "position": "D",
+      "born": 2007,
+      "previousClub": "Irbis Skate Sofia",
+      "ep": "https://www.eliteprospects.com/player/885269/filip-valov"
+    },
+    {
+      "id": "bul-jekov-george",
+      "team": "bul",
+      "name": "George Jekov",
+      "position": "F",
       "born": 2009,
-      "previousClub": "HK Medvjedi Sarajevo",
-      "ep": "https://www.eliteprospects.com/player/1087896/omar-smajlovic"
+      "ep": "https://www.eliteprospects.com/player/975901/"
     },
     {
-      "id": "bel-burazerovic-orhan",
-      "team": "bel",
-      "name": "Orhan Burazerovic",
-      "position": "D",
-      "born": 2010,
-      "previousClub": "HK Stari Grad Vukovi",
-      "ep": "https://www.eliteprospects.com/player/1137094/orhan-burazerovic"
-    },
-    {
-      "id": "bel-shchenkov-sergei",
-      "team": "bel",
-      "name": "Sergei Shchenkov",
-      "position": "D",
-      "born": 1996,
-      "ep": "https://www.eliteprospects.com/player/270891/"
-    },
-    {
-      "id": "bel-alibegovic-denis",
-      "team": "bel",
-      "name": "Denis Alibegovic",
-      "position": "D",
-      "born": 2000
-    },
-    {
-      "id": "bel-kuzmin-sergei",
-      "team": "bel",
-      "name": "Sergei Kuzmin",
-      "position": "D",
-      "born": 1990
-    },
-    {
-      "id": "bel-lavrichenko-vladimir",
-      "team": "bel",
-      "name": "Vladimir Lavrichenko",
-      "position": "D"
-    },
-    {
-      "id": "bel-girichev-ivan",
-      "team": "bel",
-      "name": "Ivan Girichev",
-      "position": "D",
-      "born": 1994
-    },
-    {
-      "id": "bel-sarac-petar",
-      "team": "bel",
-      "name": "Petar Sarac",
-      "position": "D",
-      "born": 2002,
-      "previousClub": "Crvena Zvezda U19",
-      "ep": "https://www.eliteprospects.com/player/721876/petar-sarac"
-    },
-    {
-      "id": "bel-grachev-dmitry",
-      "team": "bel",
-      "name": "Dmitry Grachev",
-      "position": "D",
-      "born": 1999,
-      "previousClub": "LKH Lodz",
-      "ep": "https://www.eliteprospects.com/player/1175670/dmitriy-grachev"
-    },
-    {
-      "id": "bel-moiseev-dmitrii",
-      "team": "bel",
-      "name": "Dmitrii Moiseev",
+      "id": "bul-todorov-anthony",
+      "team": "bul",
+      "name": "Anthony Todorov",
       "position": "F",
-      "born": 1995,
-      "ep": "https://www.eliteprospects.com/player/240417/"
+      "born": 2007,
+      "ep": "https://www.eliteprospects.com/player/885256/"
     },
     {
-      "id": "bel-pechenik-dmitrii",
-      "team": "bel",
-      "name": "Dmitrii Pechenik",
+      "id": "bul-stanimirov-aleksandar",
+      "team": "bul",
+      "name": "Aleksandar Stanimirov",
       "position": "F",
-      "born": 1995
+      "born": 2007,
+      "previousClub": "RT Bad Nauheim U20",
+      "ep": "https://www.eliteprospects.com/player/885226/aleksandar-stanimirov"
     },
     {
-      "id": "bel-kosarev-daniil",
-      "team": "bel",
-      "name": "Daniil Kosarev",
+      "id": "bul-krushichki-george",
+      "team": "bul",
+      "name": "George Krushichki",
       "position": "F",
-      "born": 2000,
-      "previousClub": "Narva HK PSK",
-      "ep": "https://www.eliteprospects.com/player/396228/daniil-kosarev"
+      "born": 2008,
+      "ep": "https://www.eliteprospects.com/player/887443/"
     },
     {
-      "id": "bel-ryzhenko-konstantin",
-      "team": "bel",
-      "name": "Konstantin Ryzhenko",
+      "id": "bul-mitrikov-kaloyan",
+      "team": "bul",
+      "name": "Kaloyan Mitrikov",
       "position": "F",
-      "born": 2000,
-      "previousClub": "HK REU Moskva",
-      "ep": "https://www.eliteprospects.com/player/549902/konstantin-ryzhenko"
+      "born": 2007,
+      "previousClub": "NSA Sofia",
+      "ep": "https://www.eliteprospects.com/player/845075/kaloyan-mitrikov"
     },
     {
-      "id": "bel-varlamov-nikita",
-      "team": "bel",
-      "name": "Nikita Varlamov",
+      "id": "bul-peychev-alex",
+      "team": "bul",
+      "name": "Alex Peychev",
       "position": "F",
-      "born": 2003,
-      "previousClub": "Polyot Rybinsk",
-      "ep": "https://www.eliteprospects.com/player/526268/nikita-varlamov"
+      "born": 2008,
+      "ep": "https://www.eliteprospects.com/player/887453/"
     },
     {
-      "id": "bel-monakhov-georgii",
-      "team": "bel",
-      "name": "Georgii Monakhov",
+      "id": "bul-pandilov-kristian",
+      "team": "bul",
+      "name": "Kristian Pandilov",
       "position": "F",
       "born": 2006,
-      "ep": "https://www.eliteprospects.com/player/882910/"
-    },
-    {
-      "id": "bel-sukhar-arsenii",
-      "team": "bel",
-      "name": "Arsenii Sukhar",
-      "position": "F",
-      "born": 2007,
-      "ep": "https://www.eliteprospects.com/player/1018640/"
-    },
-    {
-      "id": "bel-omeragic-hamza",
-      "team": "bel",
-      "name": "Hamza Omeragic",
-      "position": "F",
-      "born": 2010,
-      "previousClub": "HK Medvjedi Sarajevo",
-      "ep": "https://www.eliteprospects.com/player/1137075/hamza-omeragic"
-    },
-    {
-      "id": "bel-giusti-gianni",
-      "team": "bel",
-      "name": "Gianni Giusti",
-      "position": "F",
-      "born": 2010,
-      "previousClub": "HK Medvjedi Sarajevo",
-      "ep": "https://www.eliteprospects.com/player/1137077/gianni-giusti"
-    },
-    {
-      "id": "bel-grishunin-maksim",
-      "team": "bel",
-      "name": "Maksim Grishunin",
-      "position": "F",
-      "born": 1992,
-      "ep": "https://www.eliteprospects.com/player/1050288/"
-    },
-    {
-      "id": "bel-savchenko-valentin",
-      "team": "bel",
-      "name": "Valentin Savchenko",
-      "position": "F",
-      "born": 1999
-    },
-    {
-      "id": "bel-bozhok-zhan",
-      "team": "bel",
-      "name": "Zhan Bozhok",
-      "position": "F",
-      "born": 1997,
-      "previousClub": "Severnye Rysi SPbTEI",
-      "ep": "https://www.eliteprospects.com/player/690237/zhan-bozhok"
-    },
-    {
-      "id": "bel-krotenko-belchakov-gleb",
-      "team": "bel",
-      "name": "Gleb Krotenko-Belchakov",
-      "position": "F",
-      "born": 2005,
-      "previousClub": "Angel Sibiri Tobolsk U18",
-      "ep": "https://www.eliteprospects.com/player/713997/gleb-krotenko-belchakov"
-    },
-    {
-      "id": "bel-garaev-nikita",
-      "team": "bel",
-      "name": "Nikita Garaev",
-      "position": "F",
-      "born": 2000
-    },
-    {
-      "id": "bel-klevtsov-german",
-      "team": "bel",
-      "name": "German Klevtsov",
-      "position": "F",
-      "born": 2000,
-      "previousClub": "CZVS Novosibirsk U16",
-      "ep": "https://www.eliteprospects.com/player/452096/german-klevtsov"
-    },
-    {
-      "id": "bul-tomov-kamen",
-      "team": "bul",
-      "name": "Kamen Tomov",
-      "position": "G",
-      "born": 2008,
       "previousClub": "NSA Sofia",
-      "ep": "https://www.eliteprospects.com/player/957198/kamen-tomov"
+      "ep": "https://www.eliteprospects.com/player/744221/kristian-pandilov"
     },
     {
-      "id": "bul-vitanov-filip",
+      "id": "bul-pashov-borislav",
       "team": "bul",
-      "name": "Filip Vitanov",
-      "position": "G",
-      "born": 2007,
+      "name": "Borislav Pashov",
+      "position": "F",
+      "born": 2008,
+      "previousClub": "Irbis Skate Sofia",
+      "ep": "https://www.eliteprospects.com/player/885229/borislav-pashov"
+    },
+    {
+      "id": "bul-peychinov-martin",
+      "team": "bul",
+      "name": "Martin Peychinov",
+      "position": "F",
+      "born": 2008,
+      "previousClub": "Irbis Skate Sofia",
+      "ep": "https://www.eliteprospects.com/player/885254/martin-peychinov"
+    },
+    {
+      "id": "bul-lungov-sava",
+      "team": "bul",
+      "name": "Sava Lungov",
+      "position": "F",
+      "born": 2009,
       "previousClub": "NSA Sofia U20",
-      "ep": "https://www.eliteprospects.com/player/845068/filip-vitanov"
+      "ep": "https://www.eliteprospects.com/player/887481/sava-lungov"
     },
     {
-      "id": "bul-bozhinov-simeon",
+      "id": "bul-borisov-yavor",
       "team": "bul",
-      "name": "Simeon Bozhinov",
-      "position": "D",
-      "born": 2011,
-      "previousClub": "HC Slavia Sofia U20",
-      "ep": "https://www.eliteprospects.com/player/1036629/simeon-bozhinov"
-    },
-    {
-      "id": "bul-lyubenov-delyan",
-      "team": "bul",
-      "name": "Delyan Lyubenov",
-      "position": "D",
-      "born": 2009,
-      "previousClub": "Irbis Skate Sofia",
-      "ep": "https://www.eliteprospects.com/player/975916/delyan-lyubenov"
-    },
-    {
-      "id": "bul-tomov-tino",
-      "team": "bul",
-      "name": "Tino Tomov",
-      "position": "D",
-      "born": 2008,
-      "previousClub": "NSA Sofia",
-      "ep": "https://www.eliteprospects.com/player/957197/tino-tomov"
-    },
-    {
-      "id": "bul-urumov-stefan",
-      "team": "bul",
-      "name": "Stefan Urumov",
-      "position": "D",
-      "born": 2007,
-      "previousClub": "HC Slavia Sofia",
-      "ep": "https://www.eliteprospects.com/player/885216/stefan-urumov"
-    },
-    {
-      "id": "bul-dikov-bogomil",
-      "team": "bul",
-      "name": "Bogomil Dikov",
-      "position": "D",
-      "born": 2006,
-      "previousClub": "NSA Sofia",
-      "ep": "https://www.eliteprospects.com/player/845069/bogomil-dikov"
-    },
-    {
-      "id": "bul-mladenov-denis",
-      "team": "bul",
-      "name": "Denis Mladenov",
-      "position": "D",
-      "born": 2006,
-      "previousClub": "HC Slavia Sofia",
-      "ep": "https://www.eliteprospects.com/player/885220/denis-mladenov"
-    },
-    {
-      "id": "bul-lyutov-alex",
-      "team": "bul",
-      "name": "Alex Lyutov",
-      "position": "D"
-    },
-    {
-      "id": "bul-mitev-boris",
-      "team": "bul",
-      "name": "Boris Mitev",
+      "name": "Yavor Borisov",
       "position": "F",
       "born": 2009,
-      "previousClub": "NSA Sofia",
-      "ep": "https://www.eliteprospects.com/player/887485/boris-mitev"
+      "previousClub": "NSA Sofia U20",
+      "ep": "https://www.eliteprospects.com/player/971492/yavor-borisov"
     },
     {
-      "id": "bul-macmullin-dean",
-      "team": "bul",
-      "name": "Dean MacMullin",
+      "id": "sar-music-samir",
+      "team": "sar",
+      "name": "Samir Music",
       "position": "F",
-      "born": 2007,
-      "previousClub": "Irbis Skate Sofia",
-      "ep": "https://www.eliteprospects.com/player/885263/dayan-mcmullin"
+      "born": 1998
     },
     {
-      "id": "bul-gyurkov-alex",
-      "team": "bul",
-      "name": "Alex Gyurkov",
+      "id": "sar-curcic-malik",
+      "team": "sar",
+      "name": "Malik Curcic",
       "position": "F",
-      "ep": "https://www.eliteprospects.com/player/887480/"
+      "born": 2007
     },
     {
-      "id": "bul-genchev-boris",
-      "team": "bul",
-      "name": "Boris Genchev",
+      "id": "sar-sehalic-nihad",
+      "team": "sar",
+      "name": "Nihad Sehalic",
       "position": "F",
-      "born": 2009,
-      "previousClub": "HC Slavia Sofia",
-      "ep": "https://www.eliteprospects.com/player/975914/boris-genchev"
+      "born": 2008
     },
     {
-      "id": "bul-kozhuharov-alex",
-      "team": "bul",
-      "name": "Alex Kozhuharov",
-      "position": "F",
-      "ep": "https://www.eliteprospects.com/player/794777/",
-      "captain": true
+      "id": "sar-mezet-mak",
+      "team": "sar",
+      "name": "Mak Mezet",
+      "position": "D",
+      "born": 2009
     },
     {
-      "id": "bul-mladenov-boris",
-      "team": "bul",
-      "name": "Boris Mladenov",
-      "position": "F",
-      "born": 2007,
-      "previousClub": "HC Slavia Sofia",
-      "ep": "https://www.eliteprospects.com/player/885221/boris-mladenov"
-    },
-    {
-      "id": "bul-zhelev-kris",
-      "team": "bul",
-      "name": "Kris Zhelev",
-      "position": "F",
-      "born": 2008,
-      "previousClub": "HC Slavia Sofia",
-      "ep": "https://www.eliteprospects.com/player/885231/kristian-zhelev"
-    },
-    {
-      "id": "bul-deshev-kaloyan",
-      "team": "bul",
-      "name": "Kaloyan Deshev",
-      "position": "F",
-      "born": 2009,
-      "previousClub": "Balkan Botevgrad",
-      "ep": "https://www.eliteprospects.com/player/971490/kaloyan-deshev"
-    },
-    {
-      "id": "bul-radev-viktor",
-      "team": "bul",
-      "name": "Viktor Radev",
-      "position": "F",
-      "born": 2008,
-      "previousClub": "HC Slavia Sofia",
-      "ep": "https://www.eliteprospects.com/player/975921/viktor-radev"
-    },
-    {
-      "id": "buz-50",
-      "team": "buz",
-      "name": "Dmitrii Menshatov",
+      "id": "sar-bajramovic-arman",
+      "team": "sar",
+      "name": "Arman Bajramovic",
       "position": "G",
-      "jersey": 50
-    },
-    {
-      "id": "buz-11",
-      "team": "buz",
-      "name": "Emre Faner",
-      "position": "D",
-      "jersey": 11,
-      "born": 1994,
-      "previousClub": "Buz Adamlar GSK",
-      "ep": "https://www.eliteprospects.com/player/235483/emre-faner"
-    },
-    {
-      "id": "buz-97",
-      "team": "buz",
-      "name": "Fatih Faner",
-      "position": "D",
-      "jersey": 97,
-      "born": 1997,
-      "previousClub": "Buz Adamlar GSK",
-      "ep": "https://www.eliteprospects.com/player/235485/fatih-faner"
-    },
-    {
-      "id": "buz-3",
-      "team": "buz",
-      "name": "Mehmet Akif Bacık",
-      "position": "D",
-      "jersey": 3,
-      "born": 2009,
-      "previousClub": "Buz Adamlar GSK",
-      "ep": "https://www.eliteprospects.com/player/1092316/mehmet-akif-bacik"
-    },
-    {
-      "id": "buz-7",
-      "team": "buz",
-      "name": "Furkan Şentürk",
-      "position": "D",
-      "jersey": 7,
-      "born": 2001,
-      "previousClub": "Buz Adamlar GSK",
-      "ep": "https://www.eliteprospects.com/player/595247/furkan-senturk"
-    },
-    {
-      "id": "buz-58",
-      "team": "buz",
-      "name": "Kayra Yiğit Sungur",
-      "position": "D",
-      "jersey": 58,
-      "born": 2008,
-      "previousClub": "Buz Adamlar GSK",
-      "ep": "https://www.eliteprospects.com/player/1008991/kayra-yigit-sungur"
-    },
-    {
-      "id": "buz-5",
-      "team": "buz",
-      "name": "Evgenii Lukin",
-      "position": "D",
-      "jersey": 5,
-      "ep": "https://www.eliteprospects.com/player/339991/"
-    },
-    {
-      "id": "buz-10",
-      "team": "buz",
-      "name": "Fatih Taygar",
-      "position": "F",
-      "jersey": 10,
-      "born": 1999,
-      "previousClub": "Buz Adamlar GSK",
-      "ep": "https://www.eliteprospects.com/player/336633/fatih-taygar"
-    },
-    {
-      "id": "buz-12",
-      "team": "buz",
-      "name": "Taha Ergene",
-      "position": "F",
-      "jersey": 12,
-      "born": 2003,
-      "previousClub": "Buz Adamlar GSK",
-      "ep": "https://www.eliteprospects.com/player/655183/tahar-ergene"
-    },
-    {
-      "id": "buz-24",
-      "team": "buz",
-      "name": "Ferhat Bakal",
-      "position": "F",
-      "jersey": 24,
-      "born": 1998,
-      "previousClub": "Buz Adamlar GSK",
-      "ep": "https://www.eliteprospects.com/player/280048/ferhat-bakal"
-    },
-    {
-      "id": "buz-72",
-      "team": "buz",
-      "name": "Konstantin Kuchkin",
-      "position": "F",
-      "jersey": 72,
-      "born": 1993,
-      "previousClub": "Buz Adamlar GSK",
-      "ep": "https://www.eliteprospects.com/player/87921/konstantin-kuchkin"
-    },
-    {
-      "id": "buz-8",
-      "team": "buz",
-      "name": "Artem Lobanov",
-      "position": "F",
-      "jersey": 8,
-      "ep": "https://www.eliteprospects.com/player/384364/"
-    },
-    {
-      "id": "buz-17",
-      "team": "buz",
-      "name": "Rüzgar Koç",
-      "position": "F",
-      "jersey": 17,
-      "born": 2007,
-      "previousClub": "Buz Adamlar GSK",
-      "ep": "https://www.eliteprospects.com/player/916222/ruzgar-koc"
-    },
-    {
-      "id": "buz-92",
-      "team": "buz",
-      "name": "Osman Suat Çolak",
-      "position": "F",
-      "jersey": 92,
-      "born": 1999,
-      "previousClub": "Buz Adamlar GSK",
-      "ep": "https://www.eliteprospects.com/player/643025/osman-cholak"
+      "born": 2009
     }
   ],
   "games": [
