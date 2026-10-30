@@ -64,6 +64,8 @@
 .team .nm{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:20px;line-height:1;color:var(--ink)}
 .team .nm small{display:block;font-family:var(--body);font-size:10px;letter-spacing:.24em;color:var(--dim);font-weight:500;margin-top:3px}
 .vs{font-size:10px;letter-spacing:.3em;color:var(--red);font-weight:700;margin:6px 0 0 48px}
+.team .g{margin-left:auto;font-family:var(--display);font-weight:900;font-size:30px;line-height:1;color:var(--dim)}
+.team .g.w{color:var(--blue)}
 .game.dim{opacity:.22}
 .game.hit{box-shadow:inset 0 0 0 2px var(--red)}
 
@@ -149,9 +151,11 @@ const SLOTS=[[0,'20:00','vuk','bul'],[1,'17:00','vuk','buz'],[1,'20:00','ihp','b
 const AWAY=[['ihp','wol','Novi Sad'],['bul','buz','Bulgaria / Turkey']];
 const ROUNDS=[{s:'2026-10-29',m:'October'},{s:'2026-11-12',m:'November'},{s:'2026-12-17',m:'December'}];
 const DOW=['Thu','Fri','Sat','Sun'];
+// Результаты: номер матча → [хозяин, гость, 'OT'|'SO'|'']
+const RES={1:[5,1,'']};
 
-const team=(k)=>{const t=T[k];return `<div class="team"><div class="lg">${t.lg?`<img src="${t.lg}" alt="">`:`<i>BA</i>`}</div><div class="nm">${t.n}<small>${t.c}</small></div></div>`};
-const game=(no,time,h,a,where)=>`<div class="game" data-t="${h} ${a}"><div class="t"><b>${time}</b><span>Game ${no}${where?' · '+where:''}</span></div>${team(h)}<div class="vs">VS</div>${team(a)}</div>`;
+const team=(k,g,w)=>{const t=T[k];return `<div class="team"><div class="lg">${t.lg?`<img src="${t.lg}" alt="">`:`<i>BA</i>`}</div><div class="nm">${t.n}<small>${t.c}</small></div>${g==null?'':`<b class="g${w?' w':''}">${g}</b>`}</div>`};
+const game=(no,time,h,a,where)=>{const r=RES[no];return `<div class="game" data-t="${h} ${a}"><div class="t"><b>${time}</b><span>Game ${no}${where?' · '+where:''}</span></div>${team(h,r&&r[0],r&&r[0]>r[1])}<div class="vs">${r?'FINAL'+(r[2]?' · '+r[2]:''):'VS'}</div>${team(a,r&&r[1],r&&r[1]>r[0])}</div>`};
 
 let html='',nav='';
 ROUNDS.forEach((r,i)=>{

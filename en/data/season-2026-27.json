@@ -32,7 +32,7 @@
     "status": "preseason",
     "notes": "Regular season 29 October – 20 December 2026 in three Thu–Sun rounds; play-offs (Final Four) — dates and venue TBA."
   },
-  "updated": "2026-10-13",
+  "updated": "2026-10-30",
   "teams": [
     {
       "id": "nsd",
@@ -130,7 +130,24 @@
       "round": "Round 1",
       "home": "sar",
       "away": "bul",
-      "status": "scheduled"
+      "status": "final",
+      "result": "REG",
+      "score": {
+        "home": {
+          "periods": [],
+          "total": 5
+        },
+        "away": {
+          "periods": [],
+          "total": 1
+        }
+      },
+      "events": [],
+      "goalies": [],
+      "lineups": {
+        "home": [],
+        "away": []
+      }
     },
     {
       "id": "G002",
