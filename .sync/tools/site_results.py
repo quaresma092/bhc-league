@@ -52,29 +52,41 @@ def _tbody(s, pane, rows):
 def results_fill(p, s):
     season = json.load(open(SEASON_FILE, encoding='utf-8'))
     tm = {t['id']: t['name'] for t in season.get('teams', [])}
+    tslug = {t['id']: t.get('slug', t['id']) for t in season.get('teams', [])}
+    tlink = lambda tid: f'<a href="teams/{tslug[tid]}.html">{hesc(tm[tid])}</a>'
+    import unicodedata
+    fold = lambda x: unicodedata.normalize('NFKD', x.replace('ı', 'i')).encode('ascii', 'ignore').decode().lower()
+    abbr = {t.get('abbr'): t['id'] for t in season.get('teams', [])}
+    pid = {(p['team'], fold(p['name'])): p['id'] for p in season.get('players', [])}
+    def plink(name, team):   # игрок MSO → страница игрока, если нашёлся в ростере
+        i = pid.get((abbr.get(team), fold(name)))
+        if not i:   # опечатка в имени на MSO (Dmitirii) — по фамилии, если в команде она одна
+            same = [v for (t, n), v in pid.items() if t == abbr.get(team) and n.split()[-1] == fold(name).split()[-1]]
+            i = same[0] if len(same) == 1 else None
+        return f'<a href="players/{i}.html">{hesc(name)}</a>' if i else hesc(name)
     games = sorted(final_games(season), key=lambda g: (g['date'], g.get('time', '')), reverse=True)
     res_tag = lambda g: '' if g.get('result', 'REG') == 'REG' else g['result']
     if p == 'index':
         if games:
             s = _tbody(s, 'res', ''.join(
-                f'<tr class="gm-row" onclick="location.href=\'games/{g["id"].lower()}.html\'"><td>{fmt_date(g["date"])}</td><td class="l"><b>{hesc(tm[g["home"]])}</b></td>'
+                f'<tr class="gm-row" onclick="location.href=\'games/{g["id"].lower()}.html\'"><td>{fmt_date(g["date"])}</td><td class="l"><b>{tlink(g["home"])}</b></td>'
                 f'<td><a href="games/{g["id"].lower()}.html"><b>{g["score"]["home"]["total"]}:{g["score"]["away"]["total"]}</b></a></td>'
-                f'<td class="l"><b>{hesc(tm[g["away"]])}</b></td><td>{res_tag(g)}</td></tr>' for g in games))
+                f'<td class="l"><b>{tlink(g["away"])}</b></td><td>{res_tag(g)} <a class="gm" href="games/{g["id"].lower()}.html">Game →</a></td></tr>' for g in games))
         s = _tbody(s, 'tm', ''.join(
-            f'<tr><td>{r["pos"] if games else "—"}</td><td class="l"><b>{hesc(tm[r["team"]])}</b></td><td>{r["gp"]}</td><td>{r["w"]}</td>'
+            f'<tr><td>{r["pos"] if games else "—"}</td><td class="l"><b>{tlink(r["team"])}</b></td><td>{r["gp"]}</td><td>{r["w"]}</td>'
             f'<td>{r["otw"]}</td><td>{r["otl"]}</td><td>{r["l"]}</td><td>{r["gf"]}–{r["ga"]}</td><td><b>{r["pts"]}</b></td></tr>'
             for r in compute_standings(season)))
         mso = json.load(open(MSO_STATS_FILE, encoding='utf-8')) if os.path.exists(MSO_STATS_FILE) else {}
         sk = [x for x in mso.get('skaters', []) if x['pts'] or x['pim']][:10]
         if sk:
             s = _tbody(s, 'pl', ''.join(
-                f'<tr><td>{i}</td><td class="l"><b>{hesc(x["name"])}</b></td><td class="l">{hesc(x["team"])}</td><td>{hesc(x["pos"])}</td>'
+                f'<tr><td>{i}</td><td class="l"><b>{plink(x["name"], x["team"])}</b></td><td class="l">{hesc(x["team"])}</td><td>{hesc(x["pos"])}</td>'
                 f'<td>{x["gp"]}</td><td>{x["g"]}</td><td>{x["a"]}</td><td><b>{x["pts"]}</b></td><td>{x["pim"]}</td></tr>'
                 for i, x in enumerate(sk, 1)))
         gk = [x for x in mso.get('goalies', []) if x['sa']]
         if gk:
             s = _tbody(s, 'gk', ''.join(
-                f'<tr><td>{i}</td><td class="l"><b>{hesc(x["name"])}</b></td><td class="l">{hesc(x["team"])}</td><td>{x["gp"]}</td>'
+                f'<tr><td>{i}</td><td class="l"><b>{plink(x["name"], x["team"])}</b></td><td class="l">{hesc(x["team"])}</td><td>{x["gp"]}</td>'
                 f'<td><b>{hesc(x["svp"])}</b></td><td>{hesc(x["gaa"])}</td><td>{x["so"]}</td></tr>'
                 for i, x in enumerate(gk, 1)))
     if p == 'schedule':
