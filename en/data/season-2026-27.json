@@ -1697,7 +1697,25 @@
       "round": "Round 1",
       "home": "bul",
       "away": "bel",
-      "status": "scheduled"
+      "status": "final",
+      "result": "REG",
+      "score": {
+        "home": {
+          "periods": [],
+          "total": 2
+        },
+        "away": {
+          "periods": [],
+          "total": 5
+        }
+      },
+      "sheetNo": 4,
+      "events": [],
+      "goalies": [],
+      "lineups": {
+        "home": [],
+        "away": []
+      }
     },
     {
       "id": "G007",
