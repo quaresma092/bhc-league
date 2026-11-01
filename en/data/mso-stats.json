@@ -1,70 +1,90 @@
 {
  "skaters": [
   {
-   "name": "Evgenii Lukin",
-   "team": "BUZ",
-   "pos": "D",
-   "gp": 2,
-   "g": 6,
-   "a": 7,
-   "pts": 13,
-   "pim": 0
-  },
-  {
    "name": "Artem Lobanov",
    "team": "BUZ",
    "pos": "F",
-   "gp": 2,
-   "g": 5,
+   "gp": 3,
+   "g": 7,
+   "a": 14,
+   "pts": 21,
+   "pim": 0
+  },
+  {
+   "name": "Evgenii Lukin",
+   "team": "BUZ",
+   "pos": "D",
+   "gp": 3,
+   "g": 8,
    "a": 8,
-   "pts": 13,
-   "pim": 0
-  },
-  {
-   "name": "Konstantin Kuchkin",
-   "team": "BUZ",
-   "pos": "F",
-   "gp": 2,
-   "g": 4,
-   "a": 4,
-   "pts": 8,
-   "pim": 2
-  },
-  {
-   "name": "Ferhat Bakal",
-   "team": "BUZ",
-   "pos": "F",
-   "gp": 2,
-   "g": 2,
-   "a": 4,
-   "pts": 6,
-   "pim": 0
-  },
-  {
-   "name": "Fatih Taygar",
-   "team": "BUZ",
-   "pos": "F",
-   "gp": 2,
-   "g": 3,
-   "a": 2,
-   "pts": 5,
+   "pts": 16,
    "pim": 0
   },
   {
    "name": "Georgii Saushkin",
    "team": "BUZ",
    "pos": "F",
-   "gp": 2,
-   "g": 2,
-   "a": 3,
-   "pts": 5,
+   "gp": 3,
+   "g": 5,
+   "a": 7,
+   "pts": 12,
+   "pim": 4
+  },
+  {
+   "name": "Konstantin Kuchkin",
+   "team": "BUZ",
+   "pos": "F",
+   "gp": 3,
+   "g": 5,
+   "a": 7,
+   "pts": 12,
    "pim": 2
+  },
+  {
+   "name": "Ferhat Bakal",
+   "team": "BUZ",
+   "pos": "F",
+   "gp": 3,
+   "g": 5,
+   "a": 5,
+   "pts": 10,
+   "pim": 0
+  },
+  {
+   "name": "Fatih Taygar",
+   "team": "BUZ",
+   "pos": "F",
+   "gp": 3,
+   "g": 6,
+   "a": 2,
+   "pts": 8,
+   "pim": 0
   },
   {
    "name": "Emre Faner",
    "team": "BUZ",
    "pos": "D",
-   "gp": 2,
+   "gp": 3,
+   "g": 1,
+   "a": 4,
+   "pts": 5,
+   "pim": 0
+  },
+  {
+   "name": "Fatih Faner",
+   "team": "BUZ",
+   "pos": "D",
+   "gp": 3,
+   "g": 1,
+   "a": 3,
+   "pts": 4,
+   "pim": 0
+  },
+  {
+   "name": "Osman Suat Colak",
+   "team": "BUZ",
+   "pos": "F",
+   "gp": 3,
    "g": 1,
    "a": 3,
    "pts": 4,
@@ -94,20 +114,30 @@
    "name": "Taha Ergene",
    "team": "BUZ",
    "pos": "F",
-   "gp": 2,
+   "gp": 3,
    "g": 1,
-   "a": 1,
-   "pts": 2,
+   "a": 2,
+   "pts": 3,
    "pim": 0
   },
   {
-   "name": "Fatih Faner",
+   "name": "Furkan Senturk",
    "team": "BUZ",
    "pos": "D",
-   "gp": 2,
+   "gp": 3,
    "g": 0,
-   "a": 2,
-   "pts": 2,
+   "a": 3,
+   "pts": 3,
+   "pim": 0
+  },
+  {
+   "name": "Daniil Kosarev",
+   "team": "WOL",
+   "pos": "F",
+   "gp": 1,
+   "g": 1,
+   "a": 0,
+   "pts": 1,
    "pim": 0
   },
   {
@@ -171,24 +201,24 @@
    "pim": 0
   },
   {
-   "name": "Osman Suat Colak",
-   "team": "BUZ",
-   "pos": "F",
-   "gp": 2,
-   "g": 1,
-   "a": 0,
-   "pts": 1,
-   "pim": 0
-  },
-  {
    "name": "Ruzgar Koc",
    "team": "BUZ",
    "pos": "F",
-   "gp": 2,
+   "gp": 3,
    "g": 1,
    "a": 0,
    "pts": 1,
    "pim": 2
+  },
+  {
+   "name": "Dmitrii Moiseev",
+   "team": "WOL",
+   "pos": "F",
+   "gp": 1,
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
   },
   {
    "name": "Dani Koric",
@@ -221,16 +251,6 @@
    "pim": 4
   },
   {
-   "name": "Furkan Senturk",
-   "team": "BUZ",
-   "pos": "D",
-   "gp": 2,
-   "g": 0,
-   "a": 1,
-   "pts": 1,
-   "pim": 0
-  },
-  {
    "name": "Stefan Urumov",
    "team": "BUL",
    "pos": "D",
@@ -251,6 +271,26 @@
    "pim": 0
   },
   {
+   "name": "Arsenii Sukhar",
+   "team": "WOL",
+   "pos": "F",
+   "gp": 1,
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "name": "Denis Alibegovic",
+   "team": "WOL",
+   "pos": "D",
+   "gp": 1,
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
    "name": "Dino Cordalija",
    "team": "VUK",
    "pos": "F",
@@ -259,6 +299,126 @@
    "a": 0,
    "pts": 0,
    "pim": 2
+  },
+  {
+   "name": "Dmitrii Pechenik",
+   "team": "WOL",
+   "pos": "F",
+   "gp": 1,
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "name": "Egor Nugmanov",
+   "team": "WOL",
+   "pos": "D",
+   "gp": 1,
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "name": "Georgii Monakhov",
+   "team": "WOL",
+   "pos": "F",
+   "gp": 1,
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "name": "German Klevtsov",
+   "team": "WOL",
+   "pos": "F",
+   "gp": 1,
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "name": "Gleb Krotenko-Belchakov",
+   "team": "WOL",
+   "pos": "F",
+   "gp": 1,
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "name": "Ivan Girichev",
+   "team": "WOL",
+   "pos": "D",
+   "gp": 1,
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "name": "Konstantin Ryzhenko",
+   "team": "WOL",
+   "pos": "F",
+   "gp": 1,
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "name": "Maksim Grishunin",
+   "team": "WOL",
+   "pos": "F",
+   "gp": 1,
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "name": "Nikita Varlamov",
+   "team": "WOL",
+   "pos": "F",
+   "gp": 1,
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "name": "Petar Sarac",
+   "team": "WOL",
+   "pos": "D",
+   "gp": 1,
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "name": "Sergei Kuzmin",
+   "team": "WOL",
+   "pos": "D",
+   "gp": 1,
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "name": "Vladimir Lavrichenko",
+   "team": "WOL",
+   "pos": "D",
+   "gp": 1,
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
   },
   {
    "name": "Ahmed Zubanovic",
@@ -351,16 +511,6 @@
    "pim": 0
   },
   {
-   "name": "Kayra Yigit Sungur",
-   "team": "BUZ",
-   "pos": "D",
-   "gp": 2,
-   "g": 0,
-   "a": 0,
-   "pts": 0,
-   "pim": 0
-  },
-  {
    "name": "Kio Mingasson",
    "team": "VUK",
    "pos": "F",
@@ -374,16 +524,6 @@
    "name": "Kris Zhelev",
    "team": "BUL",
    "pos": "F",
-   "gp": 2,
-   "g": 0,
-   "a": 0,
-   "pts": 0,
-   "pim": 0
-  },
-  {
-   "name": "Mehmet Akif Bacik",
-   "team": "BUZ",
-   "pos": "D",
    "gp": 2,
    "g": 0,
    "a": 0,
@@ -439,9 +579,40 @@
    "a": 0,
    "pts": 0,
    "pim": 0
+  },
+  {
+   "name": "Kayra Yigit Sungur",
+   "team": "BUZ",
+   "pos": "D",
+   "gp": 3,
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "name": "Mehmet Akif Bacik",
+   "team": "BUZ",
+   "pos": "D",
+   "gp": 3,
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
   }
  ],
  "goalies": [
+  {
+   "name": "Dmitirii Menshatov",
+   "team": "BUZ",
+   "gp": 3,
+   "sa": 65,
+   "ga": 4,
+   "sv": 61,
+   "gaa": "1.33",
+   "svp": ".938",
+   "so": 0
+  },
   {
    "name": "Ivan Popov",
    "team": "VUK",
@@ -450,17 +621,6 @@
    "ga": 7,
    "sv": 101,
    "gaa": "3.50",
-   "svp": ".935",
-   "so": 0
-  },
-  {
-   "name": "Dmitirii Menshatov",
-   "team": "BUZ",
-   "gp": 2,
-   "sa": 46,
-   "ga": 3,
-   "sv": 43,
-   "gaa": "1.50",
    "svp": ".935",
    "so": 0
   },
@@ -476,6 +636,17 @@
    "so": 0
   },
   {
+   "name": "Roman Lomakin",
+   "team": "WOL",
+   "gp": 1,
+   "sa": 28,
+   "ga": 7,
+   "sv": 21,
+   "gaa": "10.50",
+   "svp": ".750",
+   "so": 0
+  },
+  {
    "name": "Filip Vitanov",
    "team": "BUL",
    "gp": 2,
@@ -484,6 +655,17 @@
    "sv": 49,
    "gaa": "14.78",
    "svp": ".731",
+   "so": 0
+  },
+  {
+   "name": "Egor Yartsev",
+   "team": "WOL",
+   "gp": 1,
+   "sa": 21,
+   "ga": 8,
+   "sv": 13,
+   "gaa": "24.00",
+   "svp": ".619",
    "so": 0
   },
   {
@@ -498,5 +680,5 @@
    "so": 0
   }
  ],
- "updated": "2026-10-31T23:35"
+ "updated": "2026-11-02T00:48"
 }
