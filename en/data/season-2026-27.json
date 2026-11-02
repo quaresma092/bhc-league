@@ -125,7 +125,10 @@
       "id": "bel-lomakin-roman",
       "team": "bel",
       "name": "Roman Lomakin",
-      "position": "G"
+      "position": "G",
+      "previousClub": "SKA-Zvezda St. Petersburg U18",
+      "ep": "https://www.eliteprospects.com/player/1077527/roman-lomakin",
+      "born": 2008
     },
     {
       "id": "sar-popov-ivan",
