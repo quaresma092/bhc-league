@@ -71,6 +71,16 @@
    "pim": 0
   },
   {
+   "name": "Georgii Monakhov",
+   "team": "WOL",
+   "pos": "F",
+   "gp": 2,
+   "g": 1,
+   "a": 3,
+   "pts": 4,
+   "pim": 0
+  },
+  {
    "name": "Fatih Faner",
    "team": "BUZ",
    "pos": "D",
@@ -89,6 +99,16 @@
    "a": 3,
    "pts": 4,
    "pim": 0
+  },
+  {
+   "name": "Arsenii Sukhar",
+   "team": "WOL",
+   "pos": "F",
+   "gp": 2,
+   "g": 2,
+   "a": 1,
+   "pts": 3,
+   "pim": 2
   },
   {
    "name": "Tarik Mrkva",
@@ -131,14 +151,24 @@
    "pim": 0
   },
   {
-   "name": "Daniil Kosarev",
-   "team": "WOL",
+   "name": "Aleksandar Kozhuharov",
+   "team": "BUL",
    "pos": "F",
-   "gp": 1,
-   "g": 1,
+   "gp": 3,
+   "g": 2,
    "a": 0,
-   "pts": 1,
+   "pts": 2,
    "pim": 0
+  },
+  {
+   "name": "Denis Mladenov",
+   "team": "BUL",
+   "pos": "D",
+   "gp": 3,
+   "g": 0,
+   "a": 2,
+   "pts": 2,
+   "pim": 6
   },
   {
    "name": "Adnan Smajlovic",
@@ -151,16 +181,6 @@
    "pim": 8
   },
   {
-   "name": "Aleksandar Kozhuharov",
-   "team": "BUL",
-   "pos": "F",
-   "gp": 2,
-   "g": 1,
-   "a": 0,
-   "pts": 1,
-   "pim": 0
-  },
-  {
    "name": "Benjamin Vranesic",
    "team": "VUK",
    "pos": "D",
@@ -171,10 +191,60 @@
    "pim": 0
   },
   {
+   "name": "Daniil Kosarev",
+   "team": "WOL",
+   "pos": "F",
+   "gp": 2,
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "name": "Mak Dizdarevic",
+   "team": "VUK",
+   "pos": "F",
+   "gp": 2,
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "name": "Nikita Varlamov",
+   "team": "WOL",
+   "pos": "F",
+   "gp": 2,
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "name": "Sergei Kuzmin",
+   "team": "WOL",
+   "pos": "D",
+   "gp": 2,
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "name": "Alex Lyutov",
+   "team": "BUL",
+   "pos": "D",
+   "gp": 3,
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 2
+  },
+  {
    "name": "Bogomil Dikov",
    "team": "BUL",
    "pos": "D",
-   "gp": 2,
+   "gp": 3,
    "g": 1,
    "a": 0,
    "pts": 1,
@@ -184,17 +254,7 @@
    "name": "Boris Genchev",
    "team": "BUL",
    "pos": "F",
-   "gp": 2,
-   "g": 1,
-   "a": 0,
-   "pts": 1,
-   "pim": 0
-  },
-  {
-   "name": "Mak Dizdarevic",
-   "team": "VUK",
-   "pos": "F",
-   "gp": 2,
+   "gp": 3,
    "g": 1,
    "a": 0,
    "pts": 1,
@@ -211,16 +271,6 @@
    "pim": 2
   },
   {
-   "name": "Dmitrii Moiseev",
-   "team": "WOL",
-   "pos": "F",
-   "gp": 1,
-   "g": 0,
-   "a": 1,
-   "pts": 1,
-   "pim": 0
-  },
-  {
    "name": "Dani Koric",
    "team": "VUK",
    "pos": "F",
@@ -231,30 +281,50 @@
    "pim": 0
   },
   {
+   "name": "Dmitrii Moiseev",
+   "team": "WOL",
+   "pos": "F",
+   "gp": 2,
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "name": "Dmitrii Pechenik",
+   "team": "WOL",
+   "pos": "F",
+   "gp": 2,
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 22
+  },
+  {
    "name": "Dean MacMullin",
    "team": "BUL",
    "pos": "F",
-   "gp": 2,
+   "gp": 3,
    "g": 0,
    "a": 1,
    "pts": 1,
    "pim": 2
   },
   {
-   "name": "Denis Mladenov",
-   "team": "BUL",
-   "pos": "D",
-   "gp": 2,
-   "g": 0,
-   "a": 1,
-   "pts": 1,
-   "pim": 4
-  },
-  {
    "name": "Stefan Urumov",
    "team": "BUL",
    "pos": "D",
-   "gp": 2,
+   "gp": 3,
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "name": "Tino Tomov",
+   "team": "BUL",
+   "pos": "D",
+   "gp": 3,
    "g": 0,
    "a": 1,
    "pts": 1,
@@ -264,26 +334,6 @@
    "name": "Amar Bajramovic",
    "team": "VUK",
    "pos": "F",
-   "gp": 1,
-   "g": 0,
-   "a": 0,
-   "pts": 0,
-   "pim": 0
-  },
-  {
-   "name": "Arsenii Sukhar",
-   "team": "WOL",
-   "pos": "F",
-   "gp": 1,
-   "g": 0,
-   "a": 0,
-   "pts": 0,
-   "pim": 0
-  },
-  {
-   "name": "Denis Alibegovic",
-   "team": "WOL",
-   "pos": "D",
    "gp": 1,
    "g": 0,
    "a": 0,
@@ -301,57 +351,7 @@
    "pim": 2
   },
   {
-   "name": "Dmitrii Pechenik",
-   "team": "WOL",
-   "pos": "F",
-   "gp": 1,
-   "g": 0,
-   "a": 0,
-   "pts": 0,
-   "pim": 0
-  },
-  {
-   "name": "Egor Nugmanov",
-   "team": "WOL",
-   "pos": "D",
-   "gp": 1,
-   "g": 0,
-   "a": 0,
-   "pts": 0,
-   "pim": 2
-  },
-  {
-   "name": "Georgii Monakhov",
-   "team": "WOL",
-   "pos": "F",
-   "gp": 1,
-   "g": 0,
-   "a": 0,
-   "pts": 0,
-   "pim": 0
-  },
-  {
-   "name": "German Klevtsov",
-   "team": "WOL",
-   "pos": "F",
-   "gp": 1,
-   "g": 0,
-   "a": 0,
-   "pts": 0,
-   "pim": 0
-  },
-  {
-   "name": "Gleb Krotenko-Belchakov",
-   "team": "WOL",
-   "pos": "F",
-   "gp": 1,
-   "g": 0,
-   "a": 0,
-   "pts": 0,
-   "pim": 0
-  },
-  {
-   "name": "Ivan Girichev",
+   "name": "Dmitry Grachev",
    "team": "WOL",
    "pos": "D",
    "gp": 1,
@@ -361,17 +361,7 @@
    "pim": 0
   },
   {
-   "name": "Konstantin Ryzhenko",
-   "team": "WOL",
-   "pos": "F",
-   "gp": 1,
-   "g": 0,
-   "a": 0,
-   "pts": 0,
-   "pim": 2
-  },
-  {
-   "name": "Maksim Grishunin",
+   "name": "Gianni Giusti",
    "team": "WOL",
    "pos": "F",
    "gp": 1,
@@ -381,7 +371,17 @@
    "pim": 0
   },
   {
-   "name": "Nikita Varlamov",
+   "name": "Hamza Omeragic",
+   "team": "WOL",
+   "pos": "F",
+   "gp": 1,
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 5
+  },
+  {
+   "name": "Nikita Garaev",
    "team": "WOL",
    "pos": "F",
    "gp": 1,
@@ -391,17 +391,7 @@
    "pim": 0
   },
   {
-   "name": "Petar Sarac",
-   "team": "WOL",
-   "pos": "D",
-   "gp": 1,
-   "g": 0,
-   "a": 0,
-   "pts": 0,
-   "pim": 2
-  },
-  {
-   "name": "Sergei Kuzmin",
+   "name": "Omar Smajlovic",
    "team": "WOL",
    "pos": "D",
    "gp": 1,
@@ -411,9 +401,39 @@
    "pim": 0
   },
   {
-   "name": "Vladimir Lavrichenko",
+   "name": "Orhan Burazerovic",
    "team": "WOL",
    "pos": "D",
+   "gp": 1,
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "name": "Sergei Shchenkov",
+   "team": "WOL",
+   "pos": "D",
+   "gp": 1,
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "name": "Valentin Savchenko",
+   "team": "WOL",
+   "pos": "F",
+   "gp": 1,
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "name": "Zhan Bozhok",
+   "team": "WOL",
+   "pos": "F",
    "gp": 1,
    "g": 0,
    "a": 0,
@@ -429,26 +449,6 @@
    "a": 0,
    "pts": 0,
    "pim": 2
-  },
-  {
-   "name": "Alex Gyurkov",
-   "team": "BUL",
-   "pos": "F",
-   "gp": 2,
-   "g": 0,
-   "a": 0,
-   "pts": 0,
-   "pim": 0
-  },
-  {
-   "name": "Alex Lyutov",
-   "team": "BUL",
-   "pos": "D",
-   "gp": 2,
-   "g": 0,
-   "a": 0,
-   "pts": 0,
-   "pim": 0
   },
   {
    "name": "Ali Mulabegovic",
@@ -471,9 +471,9 @@
    "pim": 0
   },
   {
-   "name": "Boris Mladenov",
-   "team": "BUL",
-   "pos": "F",
+   "name": "Denis Alibegovic",
+   "team": "WOL",
+   "pos": "D",
    "gp": 2,
    "g": 0,
    "a": 0,
@@ -481,14 +481,14 @@
    "pim": 0
   },
   {
-   "name": "Delyan Lyubenov",
-   "team": "BUL",
+   "name": "Egor Nugmanov",
+   "team": "WOL",
    "pos": "D",
    "gp": 2,
    "g": 0,
    "a": 0,
    "pts": 0,
-   "pim": 0
+   "pim": 2
   },
   {
    "name": "Eldar Musovic",
@@ -501,8 +501,38 @@
    "pim": 0
   },
   {
+   "name": "German Klevtsov",
+   "team": "WOL",
+   "pos": "F",
+   "gp": 2,
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "name": "Gleb Krotenko-Belchakov",
+   "team": "WOL",
+   "pos": "F",
+   "gp": 2,
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 6
+  },
+  {
    "name": "Haris Mrkva",
    "team": "VUK",
+   "pos": "D",
+   "gp": 2,
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "name": "Ivan Girichev",
+   "team": "WOL",
    "pos": "D",
    "gp": 2,
    "g": 0,
@@ -521,29 +551,39 @@
    "pim": 2
   },
   {
-   "name": "Kris Zhelev",
-   "team": "BUL",
+   "name": "Konstantin Ryzhenko",
+   "team": "WOL",
+   "pos": "F",
+   "gp": 2,
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 4
+  },
+  {
+   "name": "Maksim Grishunin",
+   "team": "WOL",
    "pos": "F",
    "gp": 2,
    "g": 0,
    "a": 0,
    "pts": 0,
    "pim": 0
+  },
+  {
+   "name": "Petar Sarac",
+   "team": "WOL",
+   "pos": "D",
+   "gp": 2,
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 4
   },
   {
    "name": "Rijad Pleho",
    "team": "VUK",
    "pos": "F",
-   "gp": 2,
-   "g": 0,
-   "a": 0,
-   "pts": 0,
-   "pim": 0
-  },
-  {
-   "name": "Simeon Bozhinov",
-   "team": "BUL",
-   "pos": "D",
    "gp": 2,
    "g": 0,
    "a": 0,
@@ -561,8 +601,8 @@
    "pim": 6
   },
   {
-   "name": "Tino Tomov",
-   "team": "BUL",
+   "name": "Vladimir Lavrichenko",
+   "team": "WOL",
    "pos": "D",
    "gp": 2,
    "g": 0,
@@ -571,10 +611,30 @@
    "pim": 0
   },
   {
-   "name": "Viktor Radev",
+   "name": "Alex Gyurkov",
    "team": "BUL",
    "pos": "F",
-   "gp": 2,
+   "gp": 3,
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "name": "Boris Mladenov",
+   "team": "BUL",
+   "pos": "F",
+   "gp": 3,
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "name": "Delyan Lyubenov",
+   "team": "BUL",
+   "pos": "D",
+   "gp": 3,
    "g": 0,
    "a": 0,
    "pts": 0,
@@ -591,9 +651,39 @@
    "pim": 0
   },
   {
+   "name": "Kris Zhelev",
+   "team": "BUL",
+   "pos": "F",
+   "gp": 3,
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
    "name": "Mehmet Akif Bacik",
    "team": "BUZ",
    "pos": "D",
+   "gp": 3,
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "name": "Simeon Bozhinov",
+   "team": "BUL",
+   "pos": "D",
+   "gp": 3,
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "name": "Viktor Radev",
+   "team": "BUL",
+   "pos": "F",
    "gp": 3,
    "g": 0,
    "a": 0,
@@ -627,12 +717,23 @@
   {
    "name": "Kamen Tomov",
    "team": "BUL",
-   "gp": 2,
+   "gp": 3,
    "sa": 41,
    "ga": 7,
    "sv": 34,
    "gaa": "8.95",
    "svp": ".829",
+   "so": 0
+  },
+  {
+   "name": "Egor Yartsev",
+   "team": "WOL",
+   "gp": 2,
+   "sa": 57,
+   "ga": 10,
+   "sv": 47,
+   "gaa": "7.50",
+   "svp": ".825",
    "so": 0
   },
   {
@@ -649,23 +750,12 @@
   {
    "name": "Filip Vitanov",
    "team": "BUL",
-   "gp": 2,
-   "sa": 67,
-   "ga": 18,
-   "sv": 49,
-   "gaa": "14.78",
-   "svp": ".731",
-   "so": 0
-  },
-  {
-   "name": "Egor Yartsev",
-   "team": "WOL",
-   "gp": 1,
-   "sa": 21,
-   "ga": 8,
-   "sv": 13,
-   "gaa": "24.00",
-   "svp": ".619",
+   "gp": 3,
+   "sa": 90,
+   "ga": 23,
+   "sv": 67,
+   "gaa": "10.37",
+   "svp": ".744",
    "so": 0
   },
   {
@@ -680,5 +770,5 @@
    "so": 0
   }
  ],
- "updated": "2026-11-02T00:48"
+ "updated": "2026-11-02T11:39"
 }
