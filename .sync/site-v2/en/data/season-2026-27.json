@@ -122,6 +122,12 @@
   ],
   "players": [
     {
+      "id": "bel-lomakin-roman",
+      "team": "bel",
+      "name": "Roman Lomakin",
+      "position": "G"
+    },
+    {
       "id": "sar-popov-ivan",
       "team": "sar",
       "name": "Ivan Popov",
