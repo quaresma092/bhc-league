@@ -1710,20 +1710,275 @@
       "result": "REG",
       "score": {
         "home": {
-          "periods": [],
+          "periods": [
+            1,
+            0,
+            1
+          ],
           "total": 2
         },
         "away": {
-          "periods": [],
+          "periods": [
+            2,
+            1,
+            2
+          ],
           "total": 5
         }
       },
       "sheetNo": 4,
-      "events": [],
-      "goalies": [],
+      "events": [
+        {
+          "type": "goal",
+          "period": 1,
+          "time": "01:58",
+          "team": "bel",
+          "scorer": "bel-varlamov-nikita",
+          "assists": [
+            "bel-pechenik-dmitrii"
+          ],
+          "strength": "EV"
+        },
+        {
+          "type": "penalty",
+          "period": 1,
+          "time": "02:38",
+          "team": "bel",
+          "player": "bel-kosarev-daniil",
+          "minutes": 2,
+          "reason": "Slashing"
+        },
+        {
+          "type": "goal",
+          "period": 1,
+          "time": "05:17",
+          "team": "bel",
+          "scorer": "bel-kuzmin-sergei",
+          "assists": [
+            "bel-monakhov-georgii"
+          ],
+          "strength": "EV"
+        },
+        {
+          "type": "penalty",
+          "period": 1,
+          "time": "11:47",
+          "team": "bel",
+          "player": "bel-pechenik-dmitrii",
+          "minutes": 2,
+          "reason": "Slashing"
+        },
+        {
+          "type": "penalty",
+          "period": 1,
+          "time": "15:53",
+          "team": "bel",
+          "player": "bel-krotenko-belchakov-gleb",
+          "minutes": 2,
+          "reason": "Tripping"
+        },
+        {
+          "type": "goal",
+          "period": 1,
+          "time": "17:34",
+          "team": "bul",
+          "scorer": "bul-kozhuharov-alex",
+          "assists": [
+            "bul-mladenov-denis"
+          ],
+          "strength": "EV"
+        },
+        {
+          "type": "penalty",
+          "period": 1,
+          "time": "18:53",
+          "team": "bel",
+          "player": "bel-krotenko-belchakov-gleb",
+          "minutes": 2,
+          "reason": "Cross-checking"
+        },
+        {
+          "type": "penalty",
+          "period": 1,
+          "time": "18:58",
+          "team": "bul",
+          "player": "bul-lyutov-alex",
+          "minutes": 2,
+          "reason": "Slashing"
+        },
+        {
+          "type": "penalty",
+          "period": 2,
+          "time": "08:21",
+          "team": "bul",
+          "player": "bul-mladenov-denis",
+          "minutes": 2,
+          "reason": "Cross-checking"
+        },
+        {
+          "type": "penalty",
+          "period": 2,
+          "time": "11:51",
+          "team": "bel",
+          "player": "bel-sarac-petar",
+          "minutes": 2,
+          "reason": "Too many men"
+        },
+        {
+          "type": "goal",
+          "period": 2,
+          "time": "15:33",
+          "team": "bel",
+          "scorer": "bel-monakhov-georgii",
+          "assists": [
+            "bel-sukhar-arsenii"
+          ],
+          "strength": "EV"
+        },
+        {
+          "type": "penalty",
+          "period": 3,
+          "time": "02:15",
+          "team": "bel",
+          "player": "bel-sukhar-arsenii",
+          "minutes": 2,
+          "reason": "Holding"
+        },
+        {
+          "type": "penalty",
+          "period": 3,
+          "time": "02:15",
+          "team": "bel",
+          "player": "bel-omeragic-hamza",
+          "minutes": 5,
+          "reason": "Unsportsmanlike conduct (major)"
+        },
+        {
+          "type": "penalty",
+          "period": 3,
+          "time": "02:15",
+          "team": "bel",
+          "player": "bel-pechenik-dmitrii",
+          "minutes": 20,
+          "reason": "Unsportsmanlike conduct (game misconduct)"
+        },
+        {
+          "type": "goal",
+          "period": 3,
+          "time": "04:07",
+          "team": "bul",
+          "scorer": "bul-lyutov-alex",
+          "assists": [
+            "bul-tomov-tino"
+          ],
+          "strength": "PP"
+        },
+        {
+          "type": "penalty",
+          "period": 3,
+          "time": "04:12",
+          "team": "bel",
+          "player": "bel-ryzhenko-konstantin",
+          "minutes": 2,
+          "reason": "Tripping"
+        },
+        {
+          "type": "goal",
+          "period": 3,
+          "time": "11:18",
+          "team": "bel",
+          "scorer": "bel-sukhar-arsenii",
+          "assists": [
+            "bel-monakhov-georgii"
+          ],
+          "strength": "EV"
+        },
+        {
+          "type": "goal",
+          "period": 3,
+          "time": "15:48",
+          "team": "bel",
+          "scorer": "bel-sukhar-arsenii",
+          "assists": [
+            "bel-monakhov-georgii"
+          ],
+          "strength": "EV"
+        },
+        {
+          "type": "penalty",
+          "period": 3,
+          "time": "19:18",
+          "team": "bel",
+          "player": "bel-krotenko-belchakov-gleb",
+          "minutes": 2,
+          "reason": "Too many men"
+        }
+      ],
+      "goalies": [
+        {
+          "player": "bul-vitanov-filip",
+          "team": "bul",
+          "minutes": 60,
+          "shotsAgainst": 23,
+          "goalsAgainst": 5,
+          "decision": "L"
+        },
+        {
+          "player": "bel-yartsev-egor",
+          "team": "bel",
+          "minutes": 60,
+          "shotsAgainst": 36,
+          "goalsAgainst": 2,
+          "decision": "W"
+        }
+      ],
       "lineups": {
-        "home": [],
-        "away": []
+        "home": [
+          "bul-tomov-kamen",
+          "bul-vitanov-filip",
+          "bul-bozhinov-simeon",
+          "bul-dikov-bogomil",
+          "bul-lyubenov-delyan",
+          "bul-tomov-tino",
+          "bul-urumov-stefan",
+          "bul-genchev-boris",
+          "bul-gyurkov-alex",
+          "bul-kozhuharov-alex",
+          "bul-lyutov-alex",
+          "bul-macmullin-dean",
+          "bul-mladenov-boris",
+          "bul-radev-viktor",
+          "bul-zhelev-kris",
+          "bul-mladenov-denis"
+        ],
+        "away": [
+          "bel-yartsev-egor",
+          "bel-smajlovic-omar",
+          "bel-omeragic-hamza",
+          "bel-burazerovic-orhan",
+          "bel-giusti-gianni",
+          "bel-nugmanov-egor",
+          "bel-shchenkov-sergei",
+          "bel-alibegovic-denis",
+          "bel-girichev-ivan",
+          "bel-grachev-dmitry",
+          "bel-kuzmin-sergei",
+          "bel-lavrichenko-vladimir",
+          "bel-moiseev-dmitrii",
+          "bel-pechenik-dmitrii",
+          "bel-sarac-petar",
+          "bel-bozhok-zhan",
+          "bel-garaev-nikita",
+          "bel-grishunin-maksim",
+          "bel-klevtsov-german",
+          "bel-kosarev-daniil",
+          "bel-krotenko-belchakov-gleb",
+          "bel-monakhov-georgii",
+          "bel-ryzhenko-konstantin",
+          "bel-savchenko-valentin",
+          "bel-sukhar-arsenii",
+          "bel-varlamov-nikita"
+        ]
       }
     },
     {
