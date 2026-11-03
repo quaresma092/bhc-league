@@ -1993,19 +1993,306 @@
       "result": "REG",
       "score": {
         "home": {
-          "periods": [],
+          "periods": [
+            1,
+            6,
+            8
+          ],
           "total": 15
         },
         "away": {
-          "periods": [],
+          "periods": [
+            0,
+            1,
+            0
+          ],
           "total": 1
         }
       },
-      "events": [],
-      "goalies": [],
+      "events": [
+        {
+          "type": "goal",
+          "period": 1,
+          "time": "04:27",
+          "team": "buz",
+          "scorer": "buz-saushkin-georgii",
+          "assists": [
+            "buz-senturk-furkan"
+          ],
+          "strength": "EV"
+        },
+        {
+          "type": "penalty",
+          "period": 1,
+          "time": "09:37",
+          "team": "buz",
+          "player": "buz-saushkin-georgii",
+          "minutes": 2,
+          "reason": "Tripping"
+        },
+        {
+          "type": "goal",
+          "period": 2,
+          "time": "01:06",
+          "team": "buz",
+          "scorer": "buz-lukin-evgenii",
+          "assists": [
+            "buz-lobanov-artem",
+            "buz-ergene-taha"
+          ],
+          "strength": "EV"
+        },
+        {
+          "type": "penalty",
+          "period": 2,
+          "time": "01:20",
+          "team": "bel",
+          "player": "bel-sarac-petar",
+          "minutes": 2,
+          "reason": "Tripping"
+        },
+        {
+          "type": "penalty",
+          "period": 2,
+          "time": "04:47",
+          "team": "bel",
+          "player": "bel-nugmanov-egor",
+          "minutes": 2,
+          "reason": "Hooking"
+        },
+        {
+          "type": "goal",
+          "period": 2,
+          "time": "05:53",
+          "team": "buz",
+          "scorer": "buz-lukin-evgenii",
+          "assists": [
+            "buz-senturk-furkan",
+            "buz-lobanov-artem"
+          ],
+          "strength": "PP"
+        },
+        {
+          "type": "goal",
+          "period": 2,
+          "time": "06:23",
+          "team": "buz",
+          "scorer": "buz-bakal-ferhat",
+          "assists": [
+            "buz-kuchkin-konstantin",
+            "buz-lobanov-artem"
+          ],
+          "strength": "EV"
+        },
+        {
+          "type": "goal",
+          "period": 2,
+          "time": "07:27",
+          "team": "buz",
+          "scorer": "buz-faner-fatih",
+          "assists": [
+            "buz-saushkin-georgii"
+          ],
+          "strength": "EV"
+        },
+        {
+          "type": "goal",
+          "period": 2,
+          "time": "13:41",
+          "team": "bel",
+          "scorer": "bel-kosarev-daniil",
+          "assists": [
+            "bel-moiseev-dmitrii"
+          ],
+          "strength": "EV"
+        },
+        {
+          "type": "goal",
+          "period": 2,
+          "time": "14:02",
+          "team": "buz",
+          "scorer": "buz-taygar-fatih",
+          "assists": [
+            "buz-saushkin-georgii",
+            "buz-colak-osman-suat"
+          ],
+          "strength": "EV"
+        },
+        {
+          "type": "goal",
+          "period": 2,
+          "time": "18:33",
+          "team": "buz",
+          "scorer": "buz-saushkin-georgii",
+          "assists": [],
+          "strength": "EV"
+        },
+        {
+          "type": "goal",
+          "period": 3,
+          "time": "03:38",
+          "team": "buz",
+          "scorer": "buz-bakal-ferhat",
+          "assists": [
+            "buz-lobanov-artem",
+            "buz-kuchkin-konstantin"
+          ],
+          "strength": "EV"
+        },
+        {
+          "type": "penalty",
+          "period": 3,
+          "time": "07:29",
+          "team": "bel",
+          "player": "bel-ryzhenko-konstantin",
+          "minutes": 2,
+          "reason": "Tripping"
+        },
+        {
+          "type": "goal",
+          "period": 3,
+          "time": "07:39",
+          "team": "buz",
+          "scorer": "buz-saushkin-georgii",
+          "assists": [
+            "buz-faner-fatih",
+            "buz-colak-osman-suat"
+          ],
+          "strength": "PP"
+        },
+        {
+          "type": "goal",
+          "period": 3,
+          "time": "07:58",
+          "team": "buz",
+          "scorer": "buz-taygar-fatih",
+          "assists": [
+            "buz-saushkin-georgii"
+          ],
+          "strength": "EV"
+        },
+        {
+          "type": "goal",
+          "period": 3,
+          "time": "14:04",
+          "team": "buz",
+          "scorer": "buz-kuchkin-konstantin",
+          "assists": [
+            "buz-lobanov-artem",
+            "buz-faner-emre"
+          ],
+          "strength": "EV"
+        },
+        {
+          "type": "goal",
+          "period": 3,
+          "time": "17:03",
+          "team": "buz",
+          "scorer": "buz-bakal-ferhat",
+          "assists": [
+            "buz-lobanov-artem",
+            "buz-lukin-evgenii"
+          ],
+          "strength": "EV"
+        },
+        {
+          "type": "goal",
+          "period": 3,
+          "time": "17:31",
+          "team": "buz",
+          "scorer": "buz-lobanov-artem",
+          "assists": [
+            "buz-bakal-ferhat"
+          ],
+          "strength": "EV"
+        },
+        {
+          "type": "goal",
+          "period": 3,
+          "time": "18:26",
+          "team": "buz",
+          "scorer": "buz-lobanov-artem",
+          "assists": [
+            "buz-kuchkin-konstantin"
+          ],
+          "strength": "EV"
+        },
+        {
+          "type": "goal",
+          "period": 3,
+          "time": "18:43",
+          "team": "buz",
+          "scorer": "buz-taygar-fatih",
+          "assists": [
+            "buz-saushkin-georgii",
+            "buz-colak-osman-suat"
+          ],
+          "strength": "EV"
+        }
+      ],
+      "goalies": [
+        {
+          "player": "buz-menshatov-dmitrii",
+          "team": "buz",
+          "minutes": 60,
+          "shotsAgainst": 19,
+          "goalsAgainst": 1,
+          "decision": "W"
+        },
+        {
+          "player": "bel-lomakin-roman",
+          "team": "bel",
+          "minutes": 40,
+          "shotsAgainst": 28,
+          "goalsAgainst": 7,
+          "decision": "L"
+        },
+        {
+          "player": "bel-yartsev-egor",
+          "team": "bel",
+          "minutes": 20,
+          "shotsAgainst": 21,
+          "goalsAgainst": 8
+        }
+      ],
       "lineups": {
-        "home": [],
-        "away": []
+        "home": [
+          "buz-menshatov-dmitrii",
+          "buz-faner-emre",
+          "buz-faner-fatih",
+          "buz-bacik-mehmet-akif",
+          "buz-lukin-evgenii",
+          "buz-senturk-furkan",
+          "buz-sungur-kayra-yigit",
+          "buz-bakal-ferhat",
+          "buz-colak-osman-suat",
+          "buz-ergene-taha",
+          "buz-koc-ruzgar",
+          "buz-kuchkin-konstantin",
+          "buz-lobanov-artem",
+          "buz-taygar-fatih",
+          "buz-saushkin-georgii"
+        ],
+        "away": [
+          "bel-lomakin-roman",
+          "bel-yartsev-egor",
+          "bel-nugmanov-egor",
+          "bel-alibegovic-denis",
+          "bel-girichev-ivan",
+          "bel-grishunin-maksim",
+          "bel-klevtsov-german",
+          "bel-kosarev-daniil",
+          "bel-krotenko-belchakov-gleb",
+          "bel-kuzmin-sergei",
+          "bel-lavrichenko-vladimir",
+          "bel-moiseev-dmitrii",
+          "bel-monakhov-georgii",
+          "bel-pechenik-dmitrii",
+          "bel-ryzhenko-konstantin",
+          "bel-sarac-petar",
+          "bel-sukhar-arsenii",
+          "bel-varlamov-nikita"
+        ]
       }
     },
     {
