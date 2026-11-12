@@ -58,7 +58,9 @@ def results_fill(p, s):
     fold = lambda x: unicodedata.normalize('NFKD', x.replace('ı', 'i')).encode('ascii', 'ignore').decode().lower()
     abbr = {t.get('abbr'): t['id'] for t in season.get('teams', [])}
     pid = {(p['team'], fold(p['name'])): p['id'] for p in season.get('players', [])}
+    MSO_NAMES = {'Vladimir Lavrichenko': 'Vladimir Lavrenchenko'}   # написание на MSO → правильное (владелец 12.11)
     def plink(name, team):   # игрок MSO → страница игрока, если нашёлся в ростере
+        name = MSO_NAMES.get(name, name)
         i = pid.get((abbr.get(team), fold(name)))
         if not i:   # опечатка в имени на MSO (Dmitirii) — по фамилии, если в команде она одна
             same = [v for (t, n), v in pid.items() if t == abbr.get(team) and n.split()[-1] == fold(name).split()[-1]]
