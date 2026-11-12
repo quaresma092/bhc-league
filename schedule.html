@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Schedule 2026/27 · BHC</title>
-<meta name="description" content="Balkan Hockey Championship 2026/27 regular season: 5 teams, 3 rounds, 30 games. Round 1 29 October – 1 November, Round 2 12–15 November, Round 3 17–20 December.">
+<meta name="description" content="Balkan Hockey Championship 2026/27 regular season: 5 teams, 3 rounds, 30 games. Round 1 29 October – 1 November in Sarajevo. Round 2 in December and Round 3 in January, in Novi Sad or Istanbul. Play-offs in February or March.">
 <link rel="icon" href="assets/bhc-logo-white.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,7 +24,7 @@
 .facts span{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--mid);font-weight:500}
 
 /* три тура — таймлайн */
-.rounds{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-bottom:clamp(40px,6vw,64px);position:relative}
+.rounds{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-bottom:clamp(40px,6vw,64px);position:relative}
 .rounds::before{content:"";position:absolute;left:0;right:0;top:9px;height:2px;background:var(--blue)}
 .rounds a{text-decoration:none;padding:34px 16px 0 0;position:relative;display:block}
 .rounds a::before{content:"";position:absolute;top:2px;left:0;width:16px;height:16px;border-radius:50%;background:var(--paper);border:2px solid var(--blue)}
@@ -118,7 +118,7 @@ a.game:hover{box-shadow:inset 0 0 0 2px var(--red)}
     <img class="brush" src="assets/season-1-red.png" alt="">
     <div class="kick">Balkan Hockey Championship · Season 2026/27</div>
     <h1>Schedule<span class="accent">Regular season</span></h1>
-    <p class="lead">Three hockey weekends in Sarajevo, Thursday to Sunday. Every team plays every other team three times — once in each round.</p>
+    <p class="lead">Three hockey rounds, Thursday to Sunday, then the play-offs. Round 1 was played in Sarajevo. Rounds 2 and 3 move to December and January, in Novi Sad or Istanbul.</p>
   </div>
 </section>
 
@@ -137,7 +137,7 @@ a.game:hover{box-shadow:inset 0 0 0 2px var(--red)}
 
   <div id="season"></div>
 
-  <p class="note">All games in Sarajevo unless marked. <b>Away games</b> — IH Pro Stars vs Wolves in Novi Sad and Bulgaria Select vs Buzadam Jolly in Bulgaria or Turkey — are played once per round; dates and times will be announced.</p>
+  <p class="note"><b>Rescheduled on 12 November.</b> The BHC Board of Directors has moved Rounds 2 and 3. Host city: Novi Sad or Istanbul. Venue, exact dates and game times, as well as the IH Pro Stars schedule, will be announced soon.</p>
 </main>
 
 <script>
@@ -156,7 +156,9 @@ const AWAY=[['ihp','wol','Novi Sad'],['bul','buz','Bulgaria / Turkey']];
 // [день 0–3, время, хозяин, гость, номер матча в данных (G00N) — по нему берётся счёт из RES]
 const ROUND_GAMES={0:[[0,'20:00','vuk','bul',1],[1,'18:00','bul','buz',10],[2,'14:00','buz','vuk',2],[2,'18:00','bul','wol',6],[3,'10:00','buz','wol',7]]};
 const ROUND_NOTE={0:'<b>Schedule changed on 30 October.</b> IH Pro Stars games in Round 1 are cancelled. Vukovi – Wolves is postponed, the new date will be announced. Bulgaria Select – Buzadam Jolly moved to Sarajevo (Fri 18:00), Buzadam Jolly – Vukovi to Sat 14:00, Bulgaria Select – Wolves to Sat 18:00.'};
-const ROUNDS=[{s:'2026-10-29',m:'October'},{s:'2026-11-12',m:'November'},{s:'2026-12-17',m:'December'}];
+// 12.11: туры 2 и 3 перенесены (декабрь / январь, Нови-Сад или Стамбул), дат пока нет → tba
+const ROUNDS=[{s:'2026-10-29',m:'October',city:'Sarajevo'},{tba:'December',was:'12–15 November'},{tba:'January',was:'17–20 December'}];
+const TBA_CITY='Novi Sad or Istanbul';
 const DOW=['Thu','Fri','Sat','Sun'];
 // Результаты: номер матча → [хозяин, гость, 'OT'|'SO'|'']
 const RES={7:[15,1,''],6:[2,5,''],2:[6,1,''],10:[2,20,''],1:[5,1,'']};
@@ -166,12 +168,20 @@ const game=(no,time,h,a,where,label)=>{const r=RES[no];return `<${r?'a href="gam
 
 let html='',nav='';
 ROUNDS.forEach((r,i)=>{
+  if(r.tba){
+    nav+=`<a href="#round-${i+1}"><div class="k">Round ${i+1}</div><b>${r.tba}</b><span>Dates TBA · ${TBA_CITY}</span></a>`;
+    html+=`<section class="round" id="round-${i+1}">
+    <div class="round-head"><h2>Round ${i+1}<span>${r.tba}</span></h2><div class="where">Host city<b>${TBA_CITY}</b></div></div>
+    <p class="note" style="margin-top:18px"><b>Rescheduled.</b> Was ${r.was}, now ${r.tba}. Venue, exact dates and game times will be announced soon.</p>
+  </section>`;
+    return;
+  }
   const d0=new Date(r.s+'T12:00:00'); const dt=(k)=>{const d=new Date(d0);d.setDate(d.getDate()+k);return d}; const day=(k)=>dt(k).getDate();
   const mon=(k,long)=>dt(k).toLocaleString('en-GB',{month:long?'long':'short'});
   // тур может переходить через месяц (Round 1: 29 Oct – 1 Nov)
   const span=(long)=>mon(0)===mon(3)?`${day(0)}–${day(3)} ${mon(0,long)}`:`${day(0)} ${mon(0,long)} – ${day(3)} ${mon(3,long)}`;
   const base=i*10;
-  nav+=`<a href="#round-${i+1}"><div class="k">Round ${i+1}</div><b>${span(false)}</b><span>Thu – Sun · Sarajevo</span></a>`;
+  nav+=`<a href="#round-${i+1}"><div class="k">Round ${i+1}</div><b>${span(false)}</b><span>Thu – Sun · ${r.city}</span></a>`;
   let days='';
   for(let k=0;k<4;k++){
     const gs=ROUND_GAMES[i]?ROUND_GAMES[i].map((s,j)=>[s,j]).filter(([s])=>s[0]===k).map(([s,j])=>game(s[4],s[1],s[2],s[3],'',j+1)).join('')
@@ -180,11 +190,16 @@ ROUNDS.forEach((r,i)=>{
   }
   const aw=AWAY.map((a,j)=>game(base+9+j,'TBD',a[0],a[1],a[2])).join('');
   html+=`<section class="round" id="round-${i+1}">
-    <div class="round-head"><h2>Round ${i+1}<span>${span(true)}</span></h2><div class="where">Venue<b>Sarajevo</b></div></div>
+    <div class="round-head"><h2>Round ${i+1}<span>${span(true)}</span></h2><div class="where">Venue<b>${r.city}</b></div></div>
     <div class="days">${days}</div>
     ${ROUND_NOTE[i]?`<p class="note" style="margin-top:18px">${ROUND_NOTE[i]}</p>`:`<div class="away"><div class="lbl">Away games<small>Dates TBD</small></div>${aw}</div>`}
   </section>`;
 });
+nav+=`<a href="#playoffs"><div class="k">Play-offs</div><b>Feb – Mar</b><span>Dates and venue TBA</span></a>`;
+html+=`<section class="round" id="playoffs">
+    <div class="round-head"><h2>Play-offs<span>February or March</span></h2><div class="where">Venue<b>TBA</b></div></div>
+    <p class="note" style="margin-top:18px">Format, dates and venue will be announced.</p>
+  </section>`;
 document.getElementById('season').innerHTML=html;
 document.getElementById('rounds').innerHTML=nav;
 

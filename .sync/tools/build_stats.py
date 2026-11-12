@@ -269,8 +269,8 @@ def page_index(data):
   <h2>Season format</h2>
   <p>{esc(s['notes'])} Teams gather for several days about once a month and play several rounds at a time.
      Every pair of teams meets the same number of times and every team plays the same number of games.
-     One table, place decided by total points. The season ends with a play-off weekend in January 2027:
-     a Final Four with a third-place game.</p>
+     One table, place decided by total points. The season ends with the play-offs in February or March 2027;
+     format, dates and venue TBA.</p>
 
   <h2>Teams</h2>
   <div class="cards">{teams}</div>
